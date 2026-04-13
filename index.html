@@ -1,0 +1,2242 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fahad Al-Mutairi | Data Analyst & Automation Specialist</title>
+<meta name="description" content="Fahad Al-Mutairi - محلل بيانات ومتخصص أتمتة. خبرة في Power BI, Excel, وبناء الداشبوردات. Data Analyst & Automation Specialist based in Saudi Arabia.">
+<meta name="keywords" content="Fahad Al-Mutairi, فهد المطيري, Data Analyst, محلل بيانات, Power BI, Excel, Automation, أتمتة, Dashboard, Saudi Arabia, Portfolio">
+<meta name="author" content="Fahad M. Al-Mutairi">
+<meta name="google-site-verification" content="O0l5Fd0SoMNQKLC6nLsDy_BRkiIUjRqyu9pQHLVdqN0">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://your-site.netlify.app/">
+
+<!-- Open Graph (Facebook, LinkedIn) -->
+<meta property="og:title" content="Fahad Al-Mutairi | Data Analyst & Automation Specialist">
+<meta property="og:description" content="محلل بيانات ومتخصص أتمتة بخلفية قوية في بناء الداشبوردات وتحسين كفاءة العمليات. Portfolio showcasing Power BI dashboards, data analysis, and automation solutions.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://your-site.netlify.app/">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:locale:alternate" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Fahad Al-Mutairi | Data Analyst Portfolio">
+<meta name="twitter:description" content="Data Analyst & Automation Specialist - Power BI, Excel, Process Automation">
+
+<!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Fahad M. Al-Mutairi","jobTitle":"Data Analyst & Automation Specialist","url":"https://your-site.netlify.app/","email":"fahad.mf@outlook.com","telephone":"+966556949590","address":{"@type":"PostalAddress","addressCountry":"SA"},"knowsAbout":["Data Analysis","Power BI","Excel","Process Automation","Dashboard Development"],"sameAs":["https://linkedin.com/in/fahad-m-al-mutairi-34474371"]}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg-primary: #0a0e1a;
+  --bg-secondary: #111827;
+  --bg-card: #1a2035;
+  --bg-card-hover: #1e2744;
+  --accent-blue: #3b82f6;
+  --accent-cyan: #06b6d4;
+  --accent-emerald: #10b981;
+  --accent-amber: #f59e0b;
+  --accent-purple: #8b5cf6;
+  --accent-rose: #f43f5e;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border: #1e293b;
+  --border-light: #334155;
+  --glow-blue: rgba(59, 130, 246, 0.15);
+  --glow-cyan: rgba(6, 182, 212, 0.15);
+  --donut-hole: #1a2035;
+  --grid-color: rgba(59,130,246,0.03);
+}
+
+[data-theme="light"] {
+  --bg-primary: #f0f4f8;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --border: #e2e8f0;
+  --border-light: #cbd5e1;
+  --donut-hole: #ffffff;
+  --grid-color: rgba(59,130,246,0.06);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  font-size: 16px;
+}
+.theme-toggle:hover {
+  border-color: var(--accent-amber);
+  color: var(--accent-amber);
+  transform: rotate(30deg);
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Animated Background Grid */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: 
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: -50%; right: -30%;
+  width: 800px; height: 800px;
+  background: radial-gradient(circle, rgba(59,130,246,0.06) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+  animation: floatOrb 20s ease-in-out infinite;
+}
+
+@keyframes floatOrb {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-100px, 80px); }
+}
+
+/* Top Navigation Bar - Power BI Style */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 0 32px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(20px);
+  transition: background 0.4s ease;
+}
+
+[data-theme="light"] .topbar {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+[data-theme="light"] .filter-bar {
+  background: #ffffff;
+}
+
+[data-theme="light"] .hero-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #f8fafc 100%);
+}
+
+[data-theme="light"] body::after {
+  background: radial-gradient(circle, rgba(59,130,246,0.04) 0%, transparent 70%);
+}
+
+.topbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar-logo {
+  width: 28px; height: 28px;
+  background: linear-gradient(135deg, var(--accent-amber), var(--accent-rose));
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+}
+
+.topbar-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+}
+
+.topbar-subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-right: 8px;
+  padding-right: 8px;
+  border-right: 1px solid var(--border-light);
+}
+
+.topbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 100%;
+}
+
+.nav-tab {
+  padding: 0 16px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  font-family: 'Cairo', sans-serif;
+}
+
+.nav-tab:hover { color: var(--text-primary); }
+.nav-tab.active {
+  color: var(--accent-amber);
+  border-bottom-color: var(--accent-amber);
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.status-dot {
+  width: 8px; height: 8px;
+  background: var(--accent-emerald);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(16,185,129,0.4); }
+  50% { opacity: 0.8; box-shadow: 0 0 0 6px rgba(16,185,129,0); }
+}
+
+.topbar-time {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Filter Bar */
+.filter-bar {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 10;
+}
+
+.filter-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Cairo', sans-serif;
+}
+
+.filter-chip:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.filter-chip.active {
+  background: rgba(59,130,246,0.1);
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.filter-chip svg { width: 14px; height: 14px; }
+
+.filter-divider {
+  width: 1px;
+  height: 24px;
+  background: var(--border-light);
+}
+
+/* Main Dashboard */
+.dashboard {
+  padding: 24px 32px;
+  position: relative;
+  z-index: 1;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Page Sections */
+.page { display: none; }
+.page.active { display: block; }
+
+/* Hero Header Card */
+.hero-card {
+  background: linear-gradient(135deg, #111c3a 0%, #1a2744 50%, #162035 100%);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: 
+    radial-gradient(ellipse at 10% 50%, rgba(59,130,246,0.08), transparent 50%),
+    radial-gradient(ellipse at 90% 20%, rgba(245,158,11,0.06), transparent 40%);
+  pointer-events: none;
+}
+
+.hero-info {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-name {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 6px;
+}
+
+.hero-role {
+  font-size: 16px;
+  color: var(--accent-amber);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.hero-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  max-width: 550px;
+  line-height: 1.8;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-stat {
+  text-align: center;
+  padding: 16px 24px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  min-width: 110px;
+}
+
+.hero-stat-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent-cyan);
+}
+
+.hero-stat-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* KPI Row */
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.kpi-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: default;
+}
+
+.kpi-card:hover {
+  border-color: var(--border-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.kpi-card::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.15;
+}
+
+.kpi-card:nth-child(1)::after { background: var(--accent-blue); }
+.kpi-card:nth-child(2)::after { background: var(--accent-emerald); }
+.kpi-card:nth-child(3)::after { background: var(--accent-amber); }
+.kpi-card:nth-child(4)::after { background: var(--accent-purple); }
+
+.kpi-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.kpi-icon {
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kpi-icon svg { width: 18px; height: 18px; }
+
+.kpi-trend {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.kpi-trend.up {
+  background: rgba(16,185,129,0.1);
+  color: var(--accent-emerald);
+}
+
+.kpi-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.kpi-label {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.kpi-bar {
+  height: 3px;
+  background: var(--border);
+  border-radius: 3px;
+  margin-top: 14px;
+  overflow: hidden;
+}
+
+.kpi-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 1.5s ease;
+}
+
+/* Grid Layouts */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.grid-3-1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* Card Base */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s, background 0.4s ease;
+}
+
+.card:hover {
+  border-color: var(--border-light);
+}
+
+.card-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-title-dot {
+  width: 8px; height: 8px;
+  border-radius: 2px;
+}
+
+.card-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: rgba(59,130,246,0.1);
+  color: var(--accent-blue);
+}
+
+.card-body { padding: 20px; }
+
+/* Skills Chart */
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.skill-item:last-child { margin-bottom: 0; }
+
+.skill-icon {
+  width: 32px; height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.skill-info { flex: 1; }
+
+.skill-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill-percent {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.skill-bar {
+  height: 6px;
+  background: var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.skill-bar-fill::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15));
+}
+
+/* Experience Timeline */
+.timeline-item {
+  position: relative;
+  padding-right: 28px;
+  padding-bottom: 28px;
+  border-right: 2px solid var(--border);
+}
+
+.timeline-item:last-child { padding-bottom: 0; }
+
+.timeline-dot {
+  position: absolute;
+  right: -7px;
+  top: 4px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-blue);
+  background: var(--bg-card);
+}
+
+.timeline-item:first-child .timeline-dot {
+  background: var(--accent-blue);
+  box-shadow: 0 0 0 4px rgba(59,130,246,0.2);
+}
+
+.timeline-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--accent-cyan);
+  margin-bottom: 6px;
+}
+
+.timeline-role {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.timeline-company {
+  font-size: 12px;
+  color: var(--accent-amber);
+  margin-bottom: 8px;
+}
+
+.timeline-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* Projects Cards */
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.4s;
+  cursor: default;
+}
+
+.project-card:hover {
+  border-color: var(--accent-blue);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(59,130,246,0.1);
+}
+
+.project-preview {
+  height: 160px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-preview canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.project-tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+.project-content {
+  padding: 18px;
+}
+
+.project-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.project-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tech-tag {
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  background: rgba(59,130,246,0.08);
+  color: var(--accent-blue);
+  border: 1px solid rgba(59,130,246,0.15);
+}
+
+/* Certifications */
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  margin-bottom: 10px;
+  transition: all 0.2s;
+}
+
+.cert-item:hover {
+  background: rgba(255,255,255,0.04);
+  border-color: var(--border-light);
+}
+
+.cert-item:last-child { margin-bottom: 0; }
+
+.cert-icon {
+  width: 40px; height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.cert-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.cert-org {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Contact Cards */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  transition: all 0.3s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-item:hover {
+  background: rgba(59,130,246,0.05);
+  border-color: var(--accent-blue);
+}
+
+.contact-icon {
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.contact-value {
+  font-size: 12px;
+  color: var(--text-primary);
+  font-weight: 500;
+  direction: ltr;
+  text-align: right;
+}
+
+/* Donut Chart */
+.donut-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.donut-chart {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.donut-chart svg {
+  transform: rotate(-90deg);
+  width: 150px;
+  height: 150px;
+}
+
+.donut-center {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.donut-center-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.donut-center-label {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.donut-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.legend-dot {
+  width: 10px; height: 10px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* Languages */
+.lang-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lang-item {}
+
+.lang-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.lang-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.lang-level {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.lang-bar {
+  height: 8px;
+  background: var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.lang-bar-fill {
+  height: 100%;
+  border-radius: 8px;
+  transition: width 1.5s ease;
+}
+
+/* Education */
+.edu-card {
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(139,92,246,0.05), rgba(59,130,246,0.05));
+  border: 1px solid rgba(139,92,246,0.15);
+  border-radius: 10px;
+}
+
+.edu-degree {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.edu-gpa {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: rgba(16,185,129,0.1);
+  border: 1px solid rgba(16,185,129,0.2);
+  border-radius: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--accent-emerald);
+  font-weight: 600;
+}
+
+/* Project Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-overlay.show {
+  display: flex;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.modal {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 780px;
+  max-height: 85vh;
+  overflow-y: auto;
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.modal::-webkit-scrollbar { width: 6px; }
+.modal::-webkit-scrollbar-track { background: transparent; }
+.modal::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 3px; }
+
+.modal-header {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.modal-header canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-header-overlay {
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 60%;
+  background: linear-gradient(to top, var(--bg-secondary), transparent);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  z-index: 10;
+}
+
+.modal-close:hover {
+  background: rgba(255,255,255,0.15);
+  transform: scale(1.1);
+}
+
+.modal-tag-top {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.modal-body {
+  padding: 28px;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.modal-subtitle {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.9;
+  margin-bottom: 24px;
+}
+
+.modal-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-section-title::before {
+  content: '';
+  width: 3px;
+  height: 16px;
+  border-radius: 3px;
+}
+
+.modal-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.modal-metric {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.modal-metric:hover {
+  border-color: var(--border-light);
+  background: rgba(255,255,255,0.05);
+}
+
+.modal-metric-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.modal-metric-label {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.modal-features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.modal-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.modal-feature-icon {
+  width: 28px; height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.modal-feature-text {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.modal-feature-text strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 2px;
+  font-size: 13px;
+}
+
+.modal-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.modal-tech-tag {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  background: rgba(59,130,246,0.08);
+  color: var(--accent-blue);
+  border: 1px solid rgba(59,130,246,0.15);
+}
+
+.modal-chart-container {
+  background: rgba(0,0,0,0.2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.modal-chart-container canvas {
+  width: 100%;
+  height: 180px;
+}
+
+@media (max-width: 640px) {
+  .modal-metrics { grid-template-columns: 1fr 1fr; }
+  .modal { max-height: 90vh; }
+  .modal-body { padding: 20px; }
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 11px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  margin-top: 24px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.animate-right {
+  animation: fadeInRight 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.animate-scale {
+  animation: scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+.delay-6 { animation-delay: 0.6s; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .kpi-row { grid-template-columns: repeat(2, 1fr); }
+  .grid-2, .grid-3-1 { grid-template-columns: 1fr; }
+  .hero-card { flex-direction: column; gap: 24px; text-align: center; }
+  .hero-stats { justify-content: center; flex-wrap: wrap; }
+  .hero-desc { max-width: 100%; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .modal { max-width: 95vw; }
+}
+
+@media (max-width: 768px) {
+  .exp-grid { grid-template-columns: 1fr !important; }
+  .topbar {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 10px 16px;
+    gap: 8px;
+  }
+  .topbar-brand { width: 100%; justify-content: center; }
+  .topbar-nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+  .nav-tab {
+    padding: 0 10px;
+    font-size: 12px;
+    height: 36px;
+  }
+  .topbar-actions {
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    gap: 8px;
+  }
+  .topbar-time { display: none; }
+  .topbar-subtitle { display: none; }
+  .dashboard { padding: 12px; }
+  .hero-name { font-size: 22px; }
+  .hero-role { font-size: 14px; }
+  .hero-desc { font-size: 12px; }
+  .hero-stat { padding: 12px 16px; min-width: 90px; }
+  .hero-stat-value { font-size: 22px; }
+  .kpi-row { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .kpi-value { font-size: 22px; }
+  .projects-grid { grid-template-columns: 1fr !important; }
+  .donut-container { flex-direction: column; }
+  .modal-metrics { grid-template-columns: 1fr 1fr !important; }
+}
+
+@media (max-width: 480px) {
+  .exp-grid { grid-template-columns: 1fr !important; }
+  .topbar-brand { justify-content: center; }
+  .topbar-title { font-size: 13px; }
+  .kpi-row { grid-template-columns: 1fr; }
+  .hero-card { padding: 20px; }
+  .hero-stats { flex-direction: column; align-items: center; }
+  .hero-stat { width: 100%; }
+  .hero-name { font-size: 20px; }
+  .card-body { padding: 14px; }
+  .grid-2, .grid-3-1 { gap: 12px; }
+  .nav-tab { padding: 0 8px; font-size: 11px; height: 32px; }
+  /* Experience cards: stack chart below tasks */
+  .card-body > div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+  .projects-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .projects-grid { grid-template-columns: 1fr; }
+}
+
+/* Mini bar chart in canvas */
+.chart-canvas {
+  width: 100%;
+  height: 200px;
+}
+</style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="topbar">
+  <div class="topbar-brand">
+    <div class="topbar-logo">FM</div>
+    <span class="topbar-subtitle">Portfolio</span>
+    <span class="topbar-title">Fahad Al-Mutairi</span>
+  </div>
+  <div class="topbar-nav">
+    <div class="nav-tab active" onclick="showPage('overview', this)" data-i18n="nav_overview">نظرة عامة</div>
+    <div class="nav-tab" onclick="showPage('projects', this)" data-i18n="nav_projects">المشاريع</div>
+    <div class="nav-tab" onclick="showPage('experience', this)" data-i18n="nav_experience">الخبرات</div>
+    <div class="nav-tab" onclick="showPage('contact', this)" data-i18n="nav_contact">تواصل معي</div>
+  </div>
+  <div class="topbar-actions">
+    <button class="theme-toggle" onclick="toggleLang()" id="langBtn" title="تبديل اللغة" style="font-size:12px;font-weight:700;font-family:'JetBrains Mono',monospace">EN</button>
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="تبديل الثيم">🌙</button>
+    <span class="topbar-time" id="liveTime"></span>
+  </div>
+</div>
+
+<!-- ===== PAGE: OVERVIEW ===== -->
+<div class="dashboard">
+<div class="page active" id="page-overview">
+
+  <!-- Hero Card -->
+  <div class="hero-card animate-in">
+    <div class="hero-info">
+      <div class="hero-name" data-i18n="hero_name">فهد محمد المطيري</div>
+      <div class="hero-role">Data Analyst & Automation Specialist</div>
+      <div class="hero-desc" data-i18n="hero_desc">
+        محلل بيانات ومتخصص أتمتة بخلفية قوية في بناء الداشبوردات وتحسين كفاءة العمليات. خبرة في Microsoft Excel و Power BI لتحليل البيانات وأتمتة سير العمل ودعم اتخاذ القرارات.
+        <a href="Fahad_AlMutairi_CV.pdf" download style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:10px 24px;background:linear-gradient(135deg,#3b82f6,#1d4ed8);border-radius:8px;color:white;text-decoration:none;font-size:13px;font-weight:700;font-family:Cairo,sans-serif;transition:all 0.3s;box-shadow:0 4px 15px rgba(59,130,246,0.3)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 25px rgba(59,130,246,0.4)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 15px rgba(59,130,246,0.3)'">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span data-i18n="download_cv">تحميل السيرة الذاتية</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-value">+5</div>
+        <div class="hero-stat-label" data-i18n="stat_years">سنوات خبرة</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-value">3</div>
+        <div class="hero-stat-label" data-i18n="stat_projects">مشاريع رئيسية</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-value">4.91</div>
+        <div class="hero-stat-label" data-i18n="stat_gpa">GPA</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KPI Cards -->
+  <div class="kpi-row">
+    <div class="kpi-card animate-in delay-1">
+      <div class="kpi-header">
+        <div class="kpi-icon" style="background:rgba(59,130,246,0.1)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+        </div>
+        <div class="kpi-trend up">↑ YoY</div>
+      </div>
+      <div class="kpi-value">50K+</div>
+      <div class="kpi-label" data-i18n="kpi_dashboards">سجلات بيانات محللّة</div>
+      <div class="kpi-bar"><div class="kpi-bar-fill" style="width:92%;background:linear-gradient(90deg,#3b82f6,#06b6d4)"></div></div>
+    </div>
+
+    <div class="kpi-card animate-in delay-2">
+      <div class="kpi-header">
+        <div class="kpi-icon" style="background:rgba(16,185,129,0.1)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+        </div>
+        <div class="kpi-trend up">↑ 40%</div>
+      </div>
+      <div class="kpi-value">+40%</div>
+      <div class="kpi-label" data-i18n="kpi_efficiency">تحسين كفاءة العمليات</div>
+      <div class="kpi-bar"><div class="kpi-bar-fill" style="width:95%;background:linear-gradient(90deg,#10b981,#34d399)"></div></div>
+    </div>
+
+    <div class="kpi-card animate-in delay-3">
+      <div class="kpi-header">
+        <div class="kpi-icon" style="background:rgba(245,158,11,0.1)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        </div>
+        <div class="kpi-trend up">↑ 850h</div>
+      </div>
+      <div class="kpi-value">850h</div>
+      <div class="kpi-label" data-i18n="kpi_automation">ساعات عمل موفّرة بالأتمتة</div>
+      <div class="kpi-bar"><div class="kpi-bar-fill" style="width:88%;background:linear-gradient(90deg,#f59e0b,#fbbf24)"></div></div>
+    </div>
+
+    <div class="kpi-card animate-in delay-4">
+      <div class="kpi-header">
+        <div class="kpi-icon" style="background:rgba(139,92,246,0.1)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div class="kpi-trend up">↑ 120%</div>
+      </div>
+      <div class="kpi-value">20+</div>
+      <div class="kpi-label" data-i18n="kpi_certs">تقارير وداشبوردات مُنجزة</div>
+      <div class="kpi-bar"><div class="kpi-bar-fill" style="width:85%;background:linear-gradient(90deg,#8b5cf6,#a78bfa)"></div></div>
+    </div>
+  </div>
+
+  <!-- Skills + Donut -->
+  <div class="grid-2 animate-in delay-3">
+    <!-- Skills -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">
+          <span class="card-title-dot" style="background:var(--accent-blue)"></span>
+          <span data-i18n="skills_title">المهارات التقنية</span>
+        </div>
+        <div class="card-badge">CORE SKILLS</div>
+      </div>
+      <div class="card-body">
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px">
+          <div style="display:flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.15);border-radius:10px;flex:1;min-width:140px">
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(16,185,129,0.12);display:flex;align-items:center;justify-content:center;font-size:16px">📊</div>
+            <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)">Microsoft Excel</div><div style="font-size:10px;color:#10b981;font-weight:600">Advanced</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.15);border-radius:10px;flex:1;min-width:140px">
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(245,158,11,0.12);display:flex;align-items:center;justify-content:center;font-size:16px">📈</div>
+            <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)">Power BI</div><div style="font-size:10px;color:#f59e0b;font-weight:600">Advanced</div></div>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px">
+          <div style="display:flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.15);border-radius:10px;flex:1;min-width:140px">
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(59,130,246,0.12);display:flex;align-items:center;justify-content:center;font-size:16px">⚙️</div>
+            <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)">Process Automation</div><div style="font-size:10px;color:#3b82f6;font-weight:600">Advanced</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.15);border-radius:10px;flex:1;min-width:140px">
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(139,92,246,0.12);display:flex;align-items:center;justify-content:center;font-size:16px">🔍</div>
+            <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)">Data Analysis</div><div style="font-size:10px;color:#8b5cf6;font-weight:600">Advanced</div></div>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <div style="display:flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(244,63,94,0.06);border:1px solid rgba(244,63,94,0.15);border-radius:10px;flex:1;min-width:140px">
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(244,63,94,0.12);display:flex;align-items:center;justify-content:center;font-size:16px">💻</div>
+            <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)">Software Engineering</div><div style="font-size:10px;color:#f43f5e;font-weight:600">Intermediate</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(6,182,212,0.06);border:1px solid rgba(6,182,212,0.15);border-radius:10px;flex:1;min-width:140px">
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(6,182,212,0.12);display:flex;align-items:center;justify-content:center;font-size:16px">📋</div>
+            <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)">KPI Tracking</div><div style="font-size:10px;color:#06b6d4;font-weight:600">Advanced</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Expertise Donut + Languages -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">
+          <span class="card-title-dot" style="background:var(--accent-amber)"></span>
+          <span data-i18n="expertise_title">توزيع الخبرات</span>
+        </div>
+        <div class="card-badge">BREAKDOWN</div>
+      </div>
+      <div class="card-body">
+        <div class="donut-container" style="margin-bottom:24px">
+          <div class="donut-chart">
+            <svg viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#1e293b" stroke-width="12"/>
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#3b82f6" stroke-width="12" stroke-dasharray="110 204" stroke-linecap="round" class="donut-seg"/>
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#f59e0b" stroke-width="12" stroke-dasharray="75 239" stroke-dashoffset="-110" stroke-linecap="round" class="donut-seg"/>
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#10b981" stroke-width="12" stroke-dasharray="60 254" stroke-dashoffset="-185" stroke-linecap="round" class="donut-seg"/>
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#8b5cf6" stroke-width="12" stroke-dasharray="69 245" stroke-dashoffset="-245" stroke-linecap="round" class="donut-seg"/>
+            </svg>
+            <div class="donut-center">
+              <div class="donut-center-value">+5</div>
+              <div class="donut-center-label" data-i18n="donut_years">سنوات</div>
+            </div>
+          </div>
+          <div class="donut-legend">
+            <div class="legend-item"><div class="legend-dot" style="background:#3b82f6"></div><span data-i18n="legend_data">تحليل البيانات 35%</span></div>
+            <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div><span data-i18n="legend_dash">الداشبوردات 24%</span></div>
+            <div class="legend-item"><div class="legend-dot" style="background:#10b981"></div><span data-i18n="legend_auto">الأتمتة 19%</span></div>
+            <div class="legend-item"><div class="legend-dot" style="background:#8b5cf6"></div><span data-i18n="legend_eng">هندسة البرمجيات 22%</span></div>
+          </div>
+        </div>
+
+        <div style="border-top:1px solid var(--border);padding-top:20px">
+          <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:14px;display:flex;align-items:center;gap:8px">
+            <span style="width:8px;height:8px;border-radius:2px;background:var(--accent-cyan)"></span>
+            اللغات
+          </div>
+          <div class="lang-bars">
+            <div class="lang-item">
+              <div class="lang-header">
+                <span class="lang-name" data-i18n="lang_arabic">العربية</span>
+                <span class="lang-level">Native</span>
+              </div>
+              <div class="lang-bar"><div class="lang-bar-fill" style="width:0%;background:linear-gradient(90deg,#06b6d4,#22d3ee)" data-width="100%"></div></div>
+            </div>
+            <div class="lang-item">
+              <div class="lang-header">
+                <span class="lang-name">English</span>
+                <span class="lang-level">Professional</span>
+              </div>
+              <div class="lang-bar"><div class="lang-bar-fill" style="width:0%;background:linear-gradient(90deg,#3b82f6,#60a5fa)" data-width="80%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Education + Certifications + Contact -->
+  <div class="grid-2 animate-in delay-4">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">
+          <span class="card-title-dot" style="background:var(--accent-purple)"></span>
+          <span data-i18n="edu_title">التعليم والشهادات</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="edu-card" style="margin-bottom:16px">
+          <div class="edu-degree" data-i18n="edu_degree">بكالوريوس هندسة البرمجيات</div>
+          <div class="edu-gpa">⭐ GPA: 4.91</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon" style="background:rgba(59,130,246,0.1)">📜</div>
+          <div>
+            <div class="cert-name">Data Analysis</div>
+            <div class="cert-org">Misk Foundation</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon" style="background:rgba(244,63,94,0.1)">🛡️</div>
+          <div>
+            <div class="cert-name">Cybersecurity Camp</div>
+            <div class="cert-org">Atta Digital</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">
+          <span class="card-title-dot" style="background:var(--accent-emerald)"></span>
+          <span data-i18n="contact_info_title">معلومات التواصل</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="contact-grid">
+          <div class="contact-item">
+            <div class="contact-icon" style="background:rgba(59,130,246,0.1)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="contact-label" data-i18n="lbl_phone">الهاتف</div>
+              <div class="contact-value">0556949590</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon" style="background:rgba(16,185,129,0.1)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            </div>
+            <div>
+              <div class="contact-label" data-i18n="lbl_email">الإيميل</div>
+              <div class="contact-value">fahad.mf@outlook.com</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon" style="background:rgba(139,92,246,0.1)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">LinkedIn</div>
+              <div class="contact-value" style="font-size:10px">fahad-m-al-mutairi</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon" style="background:rgba(245,158,11,0.1)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="contact-label" data-i18n="lbl_location">الموقع</div>
+              <div class="contact-value" data-i18n="val_location">السعودية</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===== PAGE: PROJECTS ===== -->
+<div class="page" id="page-projects">
+  <div class="projects-grid">
+    <!-- Project 1 -->
+    <div class="project-card animate-in delay-1" onclick="openProject(0)">
+      <div class="project-preview" style="background:linear-gradient(135deg,#0f172a,#1e3a5f)">
+        <canvas id="chart1"></canvas>
+        <div class="project-tag" style="background:rgba(59,130,246,0.2);color:#60a5fa;border:1px solid rgba(59,130,246,0.3)">Power BI</div>
+      </div>
+      <div class="project-content">
+        <div class="project-title" data-i18n="proj1_title">Power BI Sales Dashboard</div>
+        <div class="project-desc" data-i18n="proj1_desc">داشبورد تفاعلي لتتبع مؤشرات الأداء الرئيسية وأداء المبيعات مع فلاتر ديناميكية وتحليل مقارن للفترات الزمنية</div>
+        <div class="project-tech">
+          <span class="tech-tag">Power BI</span>
+          <span class="tech-tag">DAX</span>
+          <span class="tech-tag">Power Query</span>
+          <span class="tech-tag">KPI</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card animate-in delay-2" onclick="openProject(1)">
+      <div class="project-preview" style="background:linear-gradient(135deg,#0f172a,#1a3a2a)">
+        <canvas id="chart2"></canvas>
+        <div class="project-tag" style="background:rgba(16,185,129,0.2);color:#34d399;border:1px solid rgba(16,185,129,0.3)">Excel</div>
+      </div>
+      <div class="project-content">
+        <div class="project-title" data-i18n="proj2_title">Excel Data Analysis</div>
+        <div class="project-desc" data-i18n="proj2_desc">تحليل بيانات متقدم لاكتشاف الأنماط والاتجاهات واستخراج رؤى قابلة للتنفيذ باستخدام Pivot Tables و Advanced Formulas</div>
+        <div class="project-tech">
+          <span class="tech-tag">Excel</span>
+          <span class="tech-tag">Pivot Tables</span>
+          <span class="tech-tag">VLOOKUP</span>
+          <span class="tech-tag">Charts</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card animate-in delay-3" onclick="openProject(2)">
+      <div class="project-preview" style="background:linear-gradient(135deg,#0f172a,#2d1a3a)">
+        <canvas id="chart3"></canvas>
+        <div class="project-tag" style="background:rgba(139,92,246,0.2);color:#a78bfa;border:1px solid rgba(139,92,246,0.3)">Automation</div>
+      </div>
+      <div class="project-content">
+        <div class="project-title" data-i18n="proj3_title">Automation Solutions</div>
+        <div class="project-desc" data-i18n="proj3_desc">بناء حلول أتمتة لتقليل المهام المتكررة والأخطاء البشرية وتحسين الإنتاجية بنسبة تزيد عن 40%</div>
+        <div class="project-tech">
+          <span class="tech-tag">VBA</span>
+          <span class="tech-tag">Scripts</span>
+          <span class="tech-tag">Workflow</span>
+          <span class="tech-tag">APIs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Impact -->
+  <div class="card animate-in delay-4">
+    <div class="card-header">
+      <div class="card-title">
+        <span class="card-title-dot" style="background:var(--accent-cyan)"></span>
+        <span data-i18n="impact_title">تأثير المشاريع</span>
+      </div>
+      <div class="card-badge">IMPACT METRICS</div>
+    </div>
+    <div class="card-body">
+      <canvas id="impactChart" class="chart-canvas"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PAGE: EXPERIENCE ===== -->
+<div class="page" id="page-experience">
+
+  <!-- Job 1: Software Engineer -->
+  <div class="card animate-in delay-1" style="margin-bottom:20px">
+    <div class="card-header" style="background:linear-gradient(135deg,rgba(59,130,246,0.08),rgba(6,182,212,0.05))">
+      <div style="display:flex;align-items:center;gap:14px">
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#3b82f6,#06b6d4);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">💻</div>
+        <div>
+          <div style="font-size:16px;font-weight:800;color:var(--text-primary)">Software Engineer</div>
+          <div style="font-size:13px;color:var(--accent-amber);font-weight:600">Creativity Obsession</div>
+        </div>
+      </div>
+      <div style="text-align:left">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent-cyan);font-weight:600">2024 — الحالي</div>
+        <div style="font-size:11px;color:var(--text-muted);margin-top:2px" data-i18n="dur_1yr">+1 سنة</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="exp-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <!-- Left: Tasks & Achievements -->
+        <div>
+          <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:12px;display:flex;align-items:center;gap:8px">
+            <span style="width:3px;height:14px;border-radius:3px;background:#3b82f6"></span> <span data-i18n="tasks_title">المهام والإنجازات</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(59,130,246,0.04);border:1px solid rgba(59,130,246,0.1);border-radius:8px">
+              <span style="color:#3b82f6;font-size:14px;margin-top:2px">⚡</span>
+              <div style="font-size:12px;color:var(--text-secondary);line-height:1.7"><strong style="color:var(--text-primary);display:block;margin-bottom:2px" data-i18n="job1_task1">أتمتة سير العمل</strong><span data-i18n="job1_d1">أتمتة العمليات الداخلية لتقليل الجهد اليدوي وتحسين إنتاجية الفريق بشكل ملحوظ</span></div>
+            </div>
+            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(16,185,129,0.04);border:1px solid rgba(16,185,129,0.1);border-radius:8px">
+              <span style="color:#10b981;font-size:14px;margin-top:2px">🚀</span>
+              <div style="font-size:12px;color:var(--text-secondary);line-height:1.7"><strong style="color:var(--text-primary);display:block;margin-bottom:2px" data-i18n="job1_task2">تحسين أداء الأنظمة</strong><span data-i18n="job1_d2">تحسين كفاءة المعالجة وسرعة الاستجابة للأنظمة القائمة</span></div>
+            </div>
+            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(139,92,246,0.04);border:1px solid rgba(139,92,246,0.1);border-radius:8px">
+              <span style="color:#8b5cf6;font-size:14px;margin-top:2px">🏗️</span>
+              <div style="font-size:12px;color:var(--text-secondary);line-height:1.7"><strong style="color:var(--text-primary);display:block;margin-bottom:2px" data-i18n="job1_task3">حلول قابلة للتوسع</strong><span data-i18n="job1_d3">تطوير وصيانة حلول برمجية متوافقة مع متطلبات العمل المتغيرة</span></div>
+            </div>
+          </div>
+          <!-- KPI mini cards -->
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px">
+            <div style="text-align:center;padding:10px;background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.12);border-radius:8px">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#3b82f6">+35%</div>
+              <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_perf">تحسين الأداء</div>
+            </div>
+            <div style="text-align:center;padding:10px;background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.12);border-radius:8px">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#10b981">5+</div>
+              <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_built">حلول مبنية</div>
+            </div>
+            <div style="text-align:center;padding:10px;background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.12);border-radius:8px">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#f59e0b">90%</div>
+              <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_team">رضا الفريق</div>
+            </div>
+          </div>
+        </div>
+        <!-- Right: Chart -->
+        <div>
+          <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:12px;display:flex;align-items:center;gap:8px">
+            <span style="width:3px;height:14px;border-radius:3px;background:#06b6d4"></span> <span data-i18n="chart1_title">أداء الأتمتة الشهري</span>
+          </div>
+          <div style="background:rgba(0,0,0,0.2);border:1px solid var(--border);border-radius:10px;padding:16px">
+            <canvas id="expChart1" style="width:100%;height:200px"></canvas>
+          </div>
+          <div style="display:flex;gap:16px;margin-top:12px;justify-content:center">
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-muted)"><span style="width:10px;height:10px;border-radius:3px;background:#3b82f6"></span> <span data-i18n="leg_tasks">مهام مؤتمتة</span></div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-muted)"><span style="width:10px;height:10px;border-radius:3px;background:#06b6d4"></span> <span data-i18n="leg_hours">وقت موفّر (ساعات)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Job 2: Executive Assistant -->
+  <div class="card animate-in delay-2" style="margin-bottom:20px">
+    <div class="card-header" style="background:linear-gradient(135deg,rgba(245,158,11,0.08),rgba(244,63,94,0.05))">
+      <div style="display:flex;align-items:center;gap:14px">
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#f59e0b,#f43f5e);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">📊</div>
+        <div>
+          <div style="font-size:16px;font-weight:800;color:var(--text-primary)">Executive Assistant</div>
+          <div style="font-size:13px;color:var(--accent-amber);font-weight:600">ALHATHAL Construction</div>
+        </div>
+      </div>
+      <div style="text-align:left">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent-cyan);font-weight:600">2020 — 2024</div>
+        <div style="font-size:11px;color:var(--text-muted);margin-top:2px" data-i18n="dur_4yr">4 سنوات</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="exp-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div>
+          <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:12px;display:flex;align-items:center;gap:8px">
+            <span style="width:3px;height:14px;border-radius:3px;background:#f59e0b"></span> <span data-i18n="tasks_title">المهام والإنجازات</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.1);border-radius:8px">
+              <span style="color:#f59e0b;font-size:14px;margin-top:2px">📈</span>
+              <div style="font-size:12px;color:var(--text-secondary);line-height:1.7"><strong style="color:var(--text-primary);display:block;margin-bottom:2px" data-i18n="job2_task1">تقارير وداشبوردات</strong><span data-i18n="job2_d1">إنشاء تقارير وداشبوردات تفاعلية لدعم اتخاذ القرارات الإدارية</span></div>
+            </div>
+            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(244,63,94,0.04);border:1px solid rgba(244,63,94,0.1);border-radius:8px">
+              <span style="color:#f43f5e;font-size:14px;margin-top:2px">⏱️</span>
+              <div style="font-size:12px;color:var(--text-secondary);line-height:1.7"><strong style="color:var(--text-primary);display:block;margin-bottom:2px" data-i18n="job2_task2">تبسيط العمليات</strong><span data-i18n="job2_d2">تبسيط عمليات إعداد التقارير وتقليل وقت الإنجاز بنسبة كبيرة</span></div>
+            </div>
+            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(6,182,212,0.04);border:1px solid rgba(6,182,212,0.1);border-radius:8px">
+              <span style="color:#06b6d4;font-size:14px;margin-top:2px">🤝</span>
+              <div style="font-size:12px;color:var(--text-secondary);line-height:1.7"><strong style="color:var(--text-primary);display:block;margin-bottom:2px" data-i18n="job2_task3">تنسيق العمليات</strong><span data-i18n="job2_d3">تنسيق العمليات بين الأقسام وتحسين كفاءة التواصل الداخلي</span></div>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px">
+            <div style="text-align:center;padding:10px;background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.12);border-radius:8px">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#f59e0b">20+</div>
+              <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_dash">داشبورد</div>
+            </div>
+            <div style="text-align:center;padding:10px;background:rgba(244,63,94,0.06);border:1px solid rgba(244,63,94,0.12);border-radius:8px">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#f43f5e">-50%</div>
+              <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_report_time">وقت التقارير</div>
+            </div>
+            <div style="text-align:center;padding:10px;background:rgba(6,182,212,0.06);border:1px solid rgba(6,182,212,0.12);border-radius:8px">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#06b6d4">100%</div>
+              <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_mgmt">رضا الإدارة</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:12px;display:flex;align-items:center;gap:8px">
+            <span style="width:3px;height:14px;border-radius:3px;background:#f43f5e"></span> <span data-i18n="chart2_title">كفاءة التقارير (قبل / بعد)</span>
+          </div>
+          <div style="background:rgba(0,0,0,0.2);border:1px solid var(--border);border-radius:10px;padding:16px">
+            <canvas id="expChart2" style="width:100%;height:200px"></canvas>
+          </div>
+          <div style="display:flex;gap:16px;margin-top:12px;justify-content:center">
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-muted)"><span style="width:10px;height:10px;border-radius:3px;background:#f43f5e"></span> <span data-i18n="leg_before">قبل التحسين</span></div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-muted)"><span style="width:10px;height:10px;border-radius:3px;background:#10b981"></span> <span data-i18n="leg_after">بعد التحسين</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Job 3: Sales Consultant -->
+  <div class="card animate-in delay-3" style="margin-bottom:20px">
+    <div class="card-header" style="background:linear-gradient(135deg,rgba(16,185,129,0.08),rgba(139,92,246,0.05))">
+      <div style="display:flex;align-items:center;gap:14px">
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#10b981,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">🎯</div>
+        <div>
+          <div style="font-size:16px;font-weight:800;color:var(--text-primary)">Sales Consultant</div>
+          <div style="font-size:13px;color:var(--accent-amber);font-weight:600">AlAhliNCB</div>
+        </div>
+      </div>
+      <div style="text-align:left">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent-cyan);font-weight:600">2019 — 2020</div>
+        <div style="font-size:11px;color:var(--text-muted);margin-top:2px" data-i18n="dur_1yr2">1 سنة</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="exp-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div>
+          <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:12px;display:flex;align-items:center;gap:8px">
+            <span style="width:3px;height:14px;border-radius:3px;background:#10b981"></span> <span data-i18n="tasks_title">المهام والإنجازات</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(16,185,129,0.04);border:1px solid rgba(16,185,129,0.1);border-radius:8px">
+              <span style="color:#10b981;font-size:14px;margin-top:2px">🏆</span>
+              <div style="font-size:12px;color:var(--text-secondary);line-height:1.7"><strong style="color:var(--text-primary);display:block;margin-bottom:2px" data-i18n="job3_task1">تجاوز المستهدفات</strong><span data-i18n="job3_d1">تحقيق وتجاوز أهداف المبيعات الشهرية والسنوية باستمرار</span></div>
+            </div>
+            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(139,92,246,0.04);border:1px solid rgba(139,92,246,0.1);border-radius:8px">
+              <span style="color:#8b5cf6;font-size:14px;margin-top:2px">🤝</span>
+              <div style="font-size:12px;color:var(--text-secondary);line-height:1.7"><strong style="color:var(--text-primary);display:block;margin-bottom:2px" data-i18n="job3_task2">علاقات العملاء</strong><span data-i18n="job3_d2">بناء علاقات قوية ومستدامة مع العملاء وتحسين معدلات التحويل</span></div>
+            </div>
+            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(59,130,246,0.04);border:1px solid rgba(59,130,246,0.1);border-radius:8px">
+              <span style="color:#3b82f6;font-size:14px;margin-top:2px">📈</span>
+              <div style="font-size:12px;color:var(--text-secondary);line-height:1.7"><strong style="color:var(--text-primary);display:block;margin-bottom:2px" data-i18n="job3_task3">نمو الإيرادات</strong><span data-i18n="job3_d3">المساهمة في نمو الإيرادات من خلال أداء مبيعات متميز ومستمر</span></div>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px">
+            <div style="text-align:center;padding:10px;background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.12);border-radius:8px">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#10b981">120%</div>
+              <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_target">تحقيق الهدف</div>
+            </div>
+            <div style="text-align:center;padding:10px;background:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.12);border-radius:8px">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#8b5cf6">200+</div>
+              <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_clients">عميل</div>
+            </div>
+            <div style="text-align:center;padding:10px;background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.12);border-radius:8px">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#3b82f6">95%</div>
+              <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_csat">رضا العملاء</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:12px;display:flex;align-items:center;gap:8px">
+            <span style="width:3px;height:14px;border-radius:3px;background:#8b5cf6"></span> <span data-i18n="chart3_title">أداء المبيعات الربع سنوي</span>
+          </div>
+          <div style="background:rgba(0,0,0,0.2);border:1px solid var(--border);border-radius:10px;padding:16px">
+            <canvas id="expChart3" style="width:100%;height:200px"></canvas>
+          </div>
+          <div style="display:flex;gap:16px;margin-top:12px;justify-content:center">
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-muted)"><span style="width:10px;height:10px;border-radius:3px;background:#10b981"></span> <span data-i18n="leg_achieved">المحقق</span></div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-muted)"><span style="width:10px;height:3px;background:#f59e0b;border-radius:2px"></span> <span data-i18n="leg_target">المستهدف</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Career Growth Chart -->
+  <div class="grid-2 animate-in delay-4">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><span class="card-title-dot" style="background:var(--accent-rose)"></span> <span data-i18n="growth_title">النمو المهني</span></div>
+        <div class="card-badge">GROWTH</div>
+      </div>
+      <div class="card-body">
+        <canvas id="growthChart" style="width:100%;height:180px"></canvas>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><span class="card-title-dot" style="background:var(--accent-emerald)"></span> <span data-i18n="achievements_title">الإنجازات الرئيسية</span></div>
+        <div class="card-badge">HIGHLIGHTS</div>
+      </div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;align-items:center;gap:10px;padding:12px;border-radius:8px;background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.1)">
+            <span style="font-size:22px">🏆</span>
+            <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)" data-i18n="ach1">تحسين الكفاءة التشغيلية</div><div style="font-size:11px;color:var(--text-muted)" data-i18n="ach1_desc">+40% في إنتاجية الفريق عبر حلول الأتمتة</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:12px;border-radius:8px;background:rgba(59,130,246,0.05);border:1px solid rgba(59,130,246,0.1)">
+            <span style="font-size:22px">📊</span>
+            <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)" data-i18n="ach2">داشبوردات استراتيجية</div><div style="font-size:11px;color:var(--text-muted)" data-i18n="ach2_desc">20+ داشبورد لدعم القرارات الإدارية</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:12px;border-radius:8px;background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.1)">
+            <span style="font-size:22px">🎯</span>
+            <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)" data-i18n="ach3">تجاوز أهداف المبيعات</div><div style="font-size:11px;color:var(--text-muted)" data-i18n="ach3_desc">120% تحقيق المستهدف في القطاع البنكي</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:12px;border-radius:8px;background:rgba(139,92,246,0.05);border:1px solid rgba(139,92,246,0.1)">
+            <span style="font-size:22px">⚡</span>
+            <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)" data-i18n="ach4">خفض زمن التقارير</div><div style="font-size:11px;color:var(--text-muted)" data-i18n="ach4_desc">-50% في وقت إعداد التقارير الدورية</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===== PAGE: CONTACT ===== -->
+<div class="page" id="page-contact">
+  <div class="grid-2 animate-in">
+    <!-- Contact Form -->
+    <div class="card">
+      <div class="card-header" style="background:linear-gradient(135deg,rgba(59,130,246,0.06),rgba(6,182,212,0.04))">
+        <div class="card-title">
+          <span class="card-title-dot" style="background:var(--accent-blue)"></span>
+          <span data-i18n="send_msg_title">أرسل رسالة</span>
+        </div>
+        <div class="card-badge">CONTACT FORM</div>
+      </div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div>
+            <label style="font-size:12px;font-weight:600;color:var(--text-secondary);display:block;margin-bottom:6px" data-i18n="form_name">الاسم الكامل</label>
+            <input type="text" id="contactName" placeholder="أدخل اسمك" style="width:100%;padding:12px 16px;background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;color:var(--text-primary);font-family:'Cairo',sans-serif;font-size:13px;outline:none;transition:border 0.3s" onfocus="this.style.borderColor='#3b82f6'" onblur="this.style.borderColor='var(--border)'">
+          </div>
+          <div>
+            <label style="font-size:12px;font-weight:600;color:var(--text-secondary);display:block;margin-bottom:6px" data-i18n="form_email">البريد الإلكتروني</label>
+            <input type="email" id="contactEmail" placeholder="example@email.com" dir="ltr" style="width:100%;padding:12px 16px;background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;color:var(--text-primary);font-family:'JetBrains Mono',monospace;font-size:13px;outline:none;transition:border 0.3s;text-align:left" onfocus="this.style.borderColor='#3b82f6'" onblur="this.style.borderColor='var(--border)'">
+          </div>
+          <div>
+            <label style="font-size:12px;font-weight:600;color:var(--text-secondary);display:block;margin-bottom:6px" data-i18n="form_subject">الموضوع</label>
+            <input type="text" id="contactSubject" placeholder="موضوع الرسالة" style="width:100%;padding:12px 16px;background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;color:var(--text-primary);font-family:'Cairo',sans-serif;font-size:13px;outline:none;transition:border 0.3s" onfocus="this.style.borderColor='#3b82f6'" onblur="this.style.borderColor='var(--border)'">
+          </div>
+          <div>
+            <label style="font-size:12px;font-weight:600;color:var(--text-secondary);display:block;margin-bottom:6px" data-i18n="form_message">الرسالة</label>
+            <textarea id="contactMsg" rows="5" placeholder="اكتب رسالتك هنا..." style="width:100%;padding:12px 16px;background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;color:var(--text-primary);font-family:'Cairo',sans-serif;font-size:13px;outline:none;resize:vertical;transition:border 0.3s" onfocus="this.style.borderColor='#3b82f6'" onblur="this.style.borderColor='var(--border)'"></textarea>
+          </div>
+          <button onclick="sendMessage()" id="sendBtn" style="width:100%;padding:14px;background:linear-gradient(135deg,#3b82f6,#1d4ed8);border:none;border-radius:8px;color:white;font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all 0.3s;position:relative;overflow:hidden" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 25px rgba(59,130,246,0.35)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+            إرسال الرسالة
+          </button>
+          <div id="sendSuccess" style="display:none;padding:14px;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:8px;text-align:center;color:#10b981;font-size:13px;font-weight:600;animation:fadeInUp 0.5s ease">
+            ✓ تم إرسال رسالتك بنجاح! سأتواصل معك قريباً
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Info -->
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div class="card animate-in delay-1">
+        <div class="card-header">
+          <div class="card-title">
+            <span class="card-title-dot" style="background:var(--accent-emerald)"></span>
+            <span data-i18n="contact_info_title">معلومات التواصل</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <a href="mailto:fahad.mf@outlook.com" class="contact-item" style="text-decoration:none">
+              <div class="contact-icon" style="background:rgba(59,130,246,0.1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+              </div>
+              <div style="flex:1">
+                <div class="contact-label" data-i18n="contact_email_label">البريد الإلكتروني</div>
+                <div class="contact-value">fahad.mf@outlook.com</div>
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <a href="tel:0556949590" class="contact-item" style="text-decoration:none">
+              <div class="contact-icon" style="background:rgba(16,185,129,0.1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div style="flex:1">
+                <div class="contact-label" data-i18n="lbl_phone">الهاتف</div>
+                <div class="contact-value">0556949590</div>
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/fahad-m-al-mutairi-34474371" target="_blank" class="contact-item" style="text-decoration:none">
+              <div class="contact-icon" style="background:rgba(139,92,246,0.1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              <div style="flex:1">
+                <div class="contact-label">LinkedIn</div>
+                <div class="contact-value" style="font-size:11px">fahad-m-al-mutairi</div>
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <div class="contact-item">
+              <div class="contact-icon" style="background:rgba(245,158,11,0.1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div style="flex:1">
+                <div class="contact-label" data-i18n="lbl_location">الموقع</div>
+                <div class="contact-value" data-i18n="val_location2">المملكة العربية السعودية</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Availability Card -->
+      <div class="card animate-in delay-2">
+        <div class="card-body" style="text-align:center;padding:24px">
+          <div style="width:60px;height:60px;border-radius:50%;background:rgba(16,185,129,0.1);border:2px solid rgba(16,185,129,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 14px">
+            <div class="status-dot" style="width:14px;height:14px"></div>
+          </div>
+          <div style="font-size:16px;font-weight:800;color:var(--text-primary);margin-bottom:6px" data-i18n="available_title" data-i18n="available_title">متاح للعمل</div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.8" data-i18n="available_desc" data-i18n="available_desc">أبحث حالياً عن فرص في مجال تحليل البيانات والأتمتة. مستعد للعمل عن بعد أو في الموقع.</div>
+          <div style="display:flex;gap:8px;justify-content:center;margin-top:16px;flex-wrap:wrap">
+            <span style="padding:5px 14px;border-radius:20px;font-size:11px;background:rgba(59,130,246,0.08);color:var(--accent-blue);border:1px solid rgba(59,130,246,0.15)">Full-time</span>
+            <span style="padding:5px 14px;border-radius:20px;font-size:11px;background:rgba(16,185,129,0.08);color:var(--accent-emerald);border:1px solid rgba(16,185,129,0.15)">Remote</span>
+            <span style="padding:5px 14px;border-radius:20px;font-size:11px;background:rgba(139,92,246,0.08);color:var(--accent-purple);border:1px solid rgba(139,92,246,0.15)">Freelance</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- Project Modal - Full Dashboard -->
+<div class="modal-overlay" id="projectModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal" style="max-width:1100px">
+    <!-- Modal Top Bar -->
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 20px;border-bottom:1px solid var(--border);background:rgba(0,0,0,0.3);border-radius:16px 16px 0 0;position:sticky;top:0;z-index:10;backdrop-filter:blur(20px)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div id="modalIcon" style="width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px"></div>
+        <div>
+          <div id="modalTitle2" style="font-size:14px;font-weight:700;color:var(--text-primary)"></div>
+          <div id="modalTag2" style="font-size:11px;font-weight:600"></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted)" id="modalDate"></div>
+        <button class="modal-close" onclick="closeModal()" style="position:static;width:30px;height:30px;font-size:14px">✕</button>
+      </div>
+    </div>
+    <!-- Dashboard Content -->
+    <div class="modal-body" id="modalDashboard" style="padding:20px"></div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  FAHAD AL-MUTAIRI © 2026 &nbsp;|&nbsp; Built with passion for data
+</div>
+
+<script>
+// ============================================
+// REAL DASHBOARD PROJECT MODALS
+// ============================================
+function openProject(index) {
+  var modal = document.getElementById('projectModal');
+  var dash = document.getElementById('modalDashboard');
+  var builders = [buildSalesDashboard, buildExcelDashboard, buildAutomationDashboard];
+  var meta = [
+    { title:'Sales Performance Dashboard', tag:'Power BI', tagColor:'#3b82f6', icon:'📊', iconBg:'linear-gradient(135deg,#3b82f6,#1d4ed8)' },
+    { title:'Data Analysis Report', tag:'Excel Analytics', tagColor:'#10b981', icon:'📈', iconBg:'linear-gradient(135deg,#10b981,#059669)' },
+    { title:'Automation Monitoring', tag:'Process Automation', tagColor:'#8b5cf6', icon:'⚙️', iconBg:'linear-gradient(135deg,#8b5cf6,#7c3aed)' },
+  ];
+  var m = meta[index];
+  document.getElementById('modalIcon').style.background = m.iconBg;
+  document.getElementById('modalIcon').textContent = m.icon;
+  document.getElementById('modalTitle2').textContent = m.title;
+  document.getElementById('modalTag2').textContent = m.tag;
+  document.getElementById('modalTag2').style.color = m.tagColor;
+  document.getElementById('modalDate').textContent = new Date().toLocaleDateString('ar-SA');
+  dash.innerHTML = builders[index]();
+  modal.classList.add('show');
+  document.body.style.overflow = 'hidden';
+  setTimeout(function(){ drawDashboardCharts(index); }, 150);
+}
+function closeModal() {
+  document.getElementById('projectModal').classList.remove('show');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
+
+function kpi(value, label, change, color, up) {
+  if(up===undefined) up=true;
+  return '<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px;position:relative;overflow:hidden"><div style="position:absolute;top:0;left:0;width:100%;height:3px;background:'+color+'"></div><div style="font-size:11px;color:var(--text-muted);margin-bottom:8px">'+label+'</div><div style="font-family:JetBrains Mono,monospace;font-size:24px;font-weight:700;color:var(--text-primary);margin-bottom:6px">'+value+'</div><div style="font-family:JetBrains Mono,monospace;font-size:11px;color:'+(up?'#10b981':'#f43f5e')+'">'+(up?'▲':'▼')+' '+change+'</div></div>';
+}
+
+function buildSalesDashboard() {
+  return '<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px">'+kpi('SAR 2.4M',t('إجمالي الإيرادات','Total Revenue'),'+18.2%','#3b82f6')+kpi('SAR 890K',t('صافي الربح','Net Profit'),'+12.5%','#10b981')+kpi('1,247',t('عدد الطلبات','Orders'),'+23.1%','#f59e0b')+kpi('37.1%',t('هامش الربح','Profit Margin'),'+2.4%','#8b5cf6')+'</div><div style="display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-bottom:16px"><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('الإيرادات الشهرية','Monthly Revenue')+'</div><canvas id="dc_revenue" style="width:100%;height:220px"></canvas></div><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('المبيعات حسب المنطقة','Sales by Region')+'</div><canvas id="dc_region" style="width:100%;height:220px"></canvas></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('أفضل المنتجات','Top Products')+'</div><canvas id="dc_products" style="width:100%;height:180px"></canvas></div><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('أداء الفريق','Team Performance')+'</div><div id="dc_team" style="display:flex;flex-direction:column;gap:10px"></div></div></div>';
+}
+
+function buildExcelDashboard() {
+  return '<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px">'+kpi('52,847',t('إجمالي السجلات','Total Records'),t(t('تم تحليلها','Fully Analyzed'),'Analyzed'),'#10b981')+kpi('98.3%',t('جودة البيانات','Data Quality'),'+5.2%','#3b82f6')+kpi('24',t('تقرير محوري','Pivot Reports'),'Pivot Tables','#f59e0b')+kpi('12','Insights',t(t('مستخرجة','Extracted'),'Extracted'),'#8b5cf6')+'</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px"><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('توزيع البيانات','Data Distribution')+'</div><canvas id="dc_dist" style="width:100%;height:220px"></canvas></div><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('اتجاه الأداء','Performance Trend')+'</div><canvas id="dc_trend" style="width:100%;height:220px"></canvas></div></div><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;overflow:hidden"><div style="padding:14px 16px;border-bottom:1px solid var(--border)"><div style="font-size:13px;font-weight:700;color:var(--text-primary)">'+t('ملخص التحليل','Analysis Summary')+'</div></div><table style="width:100%;border-collapse:collapse;font-size:12px"><thead><tr style="background:rgba(255,255,255,0.02)"><th style="padding:10px 16px;text-align:right;color:var(--text-muted);border-bottom:1px solid var(--border)">'+t('المؤشر','Metric')+'</th><th style="padding:10px;text-align:center;color:var(--text-muted);border-bottom:1px solid var(--border)">'+t('القيمة','Value')+'</th><th style="padding:10px;text-align:center;color:var(--text-muted);border-bottom:1px solid var(--border)">'+t('التغيّر','Change')+'</th><th style="padding:10px;text-align:center;color:var(--text-muted);border-bottom:1px solid var(--border)">'+t('الحالة','Status')+'</th></tr></thead><tbody><tr style="border-bottom:1px solid var(--border)"><td style="padding:10px 16px;color:var(--text-primary)">'+t('معدل التحويل','Conversion Rate')+'</td><td style="padding:10px;text-align:center;font-family:monospace;color:var(--text-primary)">34.2%</td><td style="padding:10px;text-align:center;color:#10b981;font-family:monospace">+8.1%</td><td style="text-align:center"><span style="padding:3px 10px;border-radius:20px;font-size:10px;background:rgba(16,185,129,0.1);color:#10b981">'+t('ممتاز','Excellent')+'</span></td></tr><tr style="border-bottom:1px solid var(--border)"><td style="padding:10px 16px;color:var(--text-primary)">'+t('متوسط قيمة الطلب','Avg Order Value')+'</td><td style="padding:10px;text-align:center;font-family:monospace;color:var(--text-primary)">SAR 1,920</td><td style="padding:10px;text-align:center;color:#10b981;font-family:monospace">+12.3%</td><td style="text-align:center"><span style="padding:3px 10px;border-radius:20px;font-size:10px;background:rgba(16,185,129,0.1);color:#10b981">'+t('ممتاز','Excellent')+'</span></td></tr><tr style="border-bottom:1px solid var(--border)"><td style="padding:10px 16px;color:var(--text-primary)">'+t('رضا العملاء NPS','Customer NPS')+'</td><td style="padding:10px;text-align:center;font-family:monospace;color:var(--text-primary)">72</td><td style="padding:10px;text-align:center;color:#10b981;font-family:monospace">+15</td><td style="text-align:center"><span style="padding:3px 10px;border-radius:20px;font-size:10px;background:rgba(16,185,129,0.1);color:#10b981">'+t('ممتاز','Excellent')+'</span></td></tr><tr><td style="padding:10px 16px;color:var(--text-primary)">'+t('وقت الاستجابة','Response Time')+'</td><td style="padding:10px;text-align:center;font-family:monospace;color:var(--text-primary)">2.4h</td><td style="padding:10px;text-align:center;color:#10b981;font-family:monospace">-45%</td><td style="text-align:center"><span style="padding:3px 10px;border-radius:20px;font-size:10px;background:rgba(16,185,129,0.1);color:#10b981">'+t('ممتاز','Excellent')+'</span></td></tr></tbody></table></div>';
+}
+
+function buildAutomationDashboard() {
+  return '<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px">'+kpi('156',t('عملية مؤتمتة','Automated Processes'),t('+34 هذا الشهر','+34 this month'),'#8b5cf6')+kpi('99.2%',t('معدل النجاح','Success Rate'),'+0.8%','#10b981')+kpi('847h',t('ساعات موفّرة','Hours Saved'),t('هذا الربع','This Quarter'),'#f59e0b')+kpi('SAR 125K',t('توفير التكلفة','Cost Savings'),t('سنوياً','Annually'),'#06b6d4')+'</div><div style="display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-bottom:16px"><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('العمليات المؤتمتة يومياً','Daily Automated Processes')+'</div><canvas id="dc_auto_daily" style="width:100%;height:200px"></canvas></div><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('نوع العمليات','Process Types')+'</div><canvas id="dc_auto_types" style="width:100%;height:200px"></canvas></div></div><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('حالة العمليات','Process Status')+'</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(16,185,129,0.04);border:1px solid rgba(16,185,129,0.1);border-radius:8px"><div style="width:10px;height:10px;border-radius:50%;background:#10b981;box-shadow:0 0 8px rgba(16,185,129,0.5)"></div><div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text-primary)">'+t('تحديث التقارير','Report Updates')+'</div><div style="font-size:10px;color:var(--text-muted)">'+t('منذ 12 دقيقة','12 min ago')+'</div></div><div style="font-family:monospace;font-size:11px;color:#10b981">RUNNING</div></div><div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(16,185,129,0.04);border:1px solid rgba(16,185,129,0.1);border-radius:8px"><div style="width:10px;height:10px;border-radius:50%;background:#10b981;box-shadow:0 0 8px rgba(16,185,129,0.5)"></div><div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text-primary)">'+t('مزامنة البيانات','Data Sync')+'</div><div style="font-size:10px;color:var(--text-muted)">'+t('منذ 5 دقائق','5 min ago')+'</div></div><div style="font-family:monospace;font-size:11px;color:#10b981">RUNNING</div></div><div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(59,130,246,0.04);border:1px solid rgba(59,130,246,0.1);border-radius:8px"><div style="width:10px;height:10px;border-radius:50%;background:#3b82f6"></div><div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text-primary)">'+t('تقارير KPI','KPI Reports')+'</div><div style="font-size:10px;color:var(--text-muted)">'+t('كل أحد 8:00 ص','Every Sun 8:00 AM')+'</div></div><div style="font-family:monospace;font-size:11px;color:#3b82f6">SCHEDULED</div></div><div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(59,130,246,0.04);border:1px solid rgba(59,130,246,0.1);border-radius:8px"><div style="width:10px;height:10px;border-radius:50%;background:#3b82f6"></div><div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text-primary)">'+t('نسخ احتياطي','Backup')+'</div><div style="font-size:10px;color:var(--text-muted)">'+t('يومياً 11:00 م','Daily 11:00 PM')+'</div></div><div style="font-family:monospace;font-size:11px;color:#3b82f6">SCHEDULED</div></div></div></div>';
+}
+
+function drawDashboardCharts(index) {
+  if (index === 0) drawSalesCharts();
+  else if (index === 1) drawExcelCharts();
+  else drawAutoCharts();
+}
+function initCanvas(id, h) {
+  var c = document.getElementById(id);
+  if (!c || !c.getContext) return null;
+  var ctx = c.getContext('2d'); c.width = c.offsetWidth * 2; c.height = h * 2; ctx.scale(2, 2);
+  return { ctx:ctx, w:c.offsetWidth, h:h };
+}
+function drawGrid(ctx, w, h) {
+  ctx.strokeStyle='#1e293b'; ctx.lineWidth=0.5;
+  for(var i=0;i<=4;i++){var y=10+i*((h-35)/4);ctx.beginPath();ctx.moveTo(35,y);ctx.lineTo(w-10,y);ctx.stroke();}
+}
+function drawSalesCharts() {
+  var r=initCanvas('dc_revenue',220);if(r){var ctx=r.ctx,w=r.w,h=r.h;drawGrid(ctx,w,h);var d=[180,210,195,240,260,230,280,310,290,320,350,340];var bw=(w-60)/12-4;d.forEach(function(v,i){var bh=(v/400)*(h-45);var x=40+i*(bw+4);var g=ctx.createLinearGradient(x,h-25-bh,x,h-25);g.addColorStop(0,'#3b82f6');g.addColorStop(1,'#3b82f644');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(x,h-25-bh,bw,bh,3);ctx.fill();});ctx.strokeStyle='#f59e0b';ctx.lineWidth=2;ctx.beginPath();d.forEach(function(v,i){var x=40+i*(bw+4)+bw/2;var y=h-25-(v/400)*(h-45);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});ctx.stroke();}
+  var rg=initCanvas('dc_region',220);if(rg){var ctx=rg.ctx,w=rg.w,h=rg.h;var data=[{v:35,c:'#3b82f6',l:t('الرياض','Riyadh')},{v:25,c:'#10b981',l:t('جدة','Jeddah')},{v:20,c:'#f59e0b',l:t('الدمام','Dammam')},{v:12,c:'#8b5cf6',l:t('مكة','Makkah')},{v:8,c:'#06b6d4',l:t('أخرى','Others')}];var cx=w/2,cy=h/2-10,rad=65,sa=-Math.PI/2;data.forEach(function(d){var sw=(d.v/100)*Math.PI*2;ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,rad,sa,sa+sw);ctx.closePath();ctx.fillStyle=d.c;ctx.fill();sa+=sw;});ctx.beginPath();ctx.arc(cx,cy,38,0,Math.PI*2);ctx.fillStyle='#1a2035';ctx.fill();ctx.fillStyle='#f1f5f9';ctx.font='700 18px monospace';ctx.textAlign='center';ctx.fillText('5',cx,cy+4);ctx.fillStyle='#64748b';ctx.font='10px Cairo';ctx.fillText(t('مناطق','Regions'),cx,cy+18);data.forEach(function(d,i){var ly=h-8-(data.length-1-i)*16;ctx.fillStyle=d.c;ctx.beginPath();ctx.roundRect(10,ly-8,8,8,2);ctx.fill();ctx.fillStyle='#94a3b8';ctx.font='10px Cairo';ctx.textAlign='left';ctx.fillText(d.l+' '+d.v+'%',22,ly);});}
+  var pr=initCanvas('dc_products',180);if(pr){var ctx=pr.ctx,w=pr.w,h=pr.h;var ps=[{n:t('المنتج A','Product A'),v:92},{n:t('المنتج B','Product B'),v:78},{n:t('المنتج C','Product C'),v:65},{n:t('المنتج D','Product D'),v:52},{n:t('المنتج E','Product E'),v:40}];var bh=22,gap=12,mx=w-130;var cols=['#3b82f6','#06b6d4','#10b981','#f59e0b','#8b5cf6'];ps.forEach(function(p,i){var y=8+i*(bh+gap);ctx.fillStyle='#e2e8f0';ctx.font='600 11px Cairo';ctx.textAlign='right';ctx.fillText(p.n,75,y+bh/2+4);ctx.fillStyle='#1e293b';ctx.beginPath();ctx.roundRect(85,y,mx,bh,4);ctx.fill();var fl=(p.v/100)*mx;var g=ctx.createLinearGradient(85,0,85+fl,0);g.addColorStop(0,cols[i]);g.addColorStop(1,cols[i]+'66');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(85,y,fl,bh,4);ctx.fill();ctx.fillStyle='#f1f5f9';ctx.font='600 10px monospace';ctx.textAlign='left';ctx.fillText(p.v+'%',90+fl+6,y+bh/2+4);});}
+  var team=document.getElementById('dc_team');if(team){var ms=[{n:t('أحمد','Ahmed'),v:95,c:'#10b981'},{n:t('محمد','Mohammed'),v:88,c:'#3b82f6'},{n:t('خالد','Khalid'),v:82,c:'#f59e0b'},{n:t('عبدالله','Abdullah'),v:76,c:'#8b5cf6'}];team.innerHTML=ms.map(function(m){return '<div style="display:flex;align-items:center;gap:10px"><div style="width:28px;height:28px;border-radius:50%;background:'+m.c+'22;color:'+m.c+';display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">'+m.n[0]+'</div><div style="flex:1"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:12px;color:var(--text-primary);font-weight:600">'+m.n+'</span><span style="font-size:11px;color:'+m.c+';font-family:monospace">'+m.v+'%</span></div><div style="height:5px;background:var(--border);border-radius:5px;overflow:hidden"><div style="height:100%;width:'+m.v+'%;background:'+m.c+';border-radius:5px"></div></div></div></div>';}).join('');}
+}
+function drawExcelCharts() {
+  var d=initCanvas('dc_dist',220);if(d){var ctx=d.ctx,w=d.w,h=d.h;drawGrid(ctx,w,h);var cats=[t('إلكترونيات','Electronics'),t('ملابس','Apparel'),t('أغذية','Food'),t('أثاث','Furniture'),t('خدمات','Services'),'أخرى'];var vals=[8500,6200,5100,3800,2900,1800];var bw=(w-70)/6-8;var cols=['#3b82f6','#10b981','#f59e0b','#8b5cf6','#06b6d4','#f43f5e'];cats.forEach(function(c,i){var x=42+i*(bw+8);var bh=(vals[i]/10000)*(h-50);var y=h-25-bh;var g=ctx.createLinearGradient(x,y,x,h-25);g.addColorStop(0,cols[i]);g.addColorStop(1,cols[i]+'33');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(x,y,bw,bh,4);ctx.fill();ctx.fillStyle='#f1f5f9';ctx.font='9px monospace';ctx.textAlign='center';ctx.fillText((vals[i]/1000).toFixed(1)+'K',x+bw/2,y-6);ctx.fillStyle='#64748b';ctx.font='9px Cairo';ctx.fillText(c,x+bw/2,h-8);});}
+  var t=initCanvas('dc_trend',220);if(t){var ctx=t.ctx,w=t.w,h=t.h;drawGrid(ctx,w,h);var vals=[42,48,45,55,52,60,58,68,72,65,78,82];ctx.beginPath();vals.forEach(function(v,i){var x=40+i*((w-55)/11);var y=h-25-(v/100)*(h-45);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});ctx.lineTo(40+11*((w-55)/11),h-25);ctx.lineTo(40,h-25);ctx.closePath();var grad=ctx.createLinearGradient(0,0,0,h);grad.addColorStop(0,'rgba(16,185,129,0.15)');grad.addColorStop(1,'rgba(16,185,129,0)');ctx.fillStyle=grad;ctx.fill();ctx.strokeStyle='#10b981';ctx.lineWidth=2.5;ctx.beginPath();vals.forEach(function(v,i){var x=40+i*((w-55)/11);var y=h-25-(v/100)*(h-45);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});ctx.stroke();vals.forEach(function(v,i){var x=40+i*((w-55)/11);var y=h-25-(v/100)*(h-45);ctx.beginPath();ctx.arc(x,y,3,0,Math.PI*2);ctx.fillStyle='#10b981';ctx.fill();});}
+}
+function drawAutoCharts() {
+  var a=initCanvas('dc_auto_daily',200);if(a){var ctx=a.ctx,w=a.w,h=a.h;drawGrid(ctx,w,h);var days=[t('سبت','Sat'),t('أحد','Sun'),t('إثنين','Mon'),t('ثلاثاء','Tue'),t('أربعاء','Wed'),t('خميس','Thu'),t('جمعة','Fri')];var vals=[45,52,48,55,60,58,42];var bw=(w-60)/7-6;days.forEach(function(d,i){var x=40+i*(bw+6);var bh=(vals[i]/70)*(h-45);var g=ctx.createLinearGradient(x,h-25-bh,x,h-25);g.addColorStop(0,'#10b981');g.addColorStop(1,'#10b98133');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(x,h-25-bh,bw,bh,3);ctx.fill();ctx.fillStyle='#94a3b8';ctx.font='9px monospace';ctx.textAlign='center';ctx.fillText(vals[i],x+bw/2,h-28-bh);ctx.fillStyle='#64748b';ctx.font='10px Cairo';ctx.fillText(d,x+bw/2,h-8);});}
+  var tp=initCanvas('dc_auto_types',200);if(tp){var ctx=tp.ctx,w=tp.w,h=tp.h;var data=[{v:40,c:'#8b5cf6',l:t('تقارير','Reports')},{v:25,c:'#3b82f6',l:t('مزامنة','Sync')},{v:20,c:'#10b981',l:t('تنبيهات','Alerts')},{v:15,c:'#f59e0b',l:t('نسخ احتياطي','Backup')}];var cx=w/2,cy=h/2-10,rad=60,sa=-Math.PI/2;data.forEach(function(d){var sw=(d.v/100)*Math.PI*2;ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,rad,sa,sa+sw);ctx.closePath();ctx.fillStyle=d.c;ctx.fill();sa+=sw;});ctx.beginPath();ctx.arc(cx,cy,35,0,Math.PI*2);ctx.fillStyle='#1a2035';ctx.fill();ctx.fillStyle='#f1f5f9';ctx.font='700 16px monospace';ctx.textAlign='center';ctx.fillText('156',cx,cy+4);ctx.fillStyle='#64748b';ctx.font='9px Cairo';ctx.fillText(t('عملية','processes'),cx,cy+18);data.forEach(function(d,i){var ly=h-6-(data.length-1-i)*16;ctx.fillStyle=d.c;ctx.beginPath();ctx.roundRect(8,ly-8,8,8,2);ctx.fill();ctx.fillStyle='#94a3b8';ctx.font='10px Cairo';ctx.textAlign='left';ctx.fillText(d.l+' '+d.v+'%',20,ly);});}
+}
+
+// ======== NAVIGATION ========
+function showPage(page, el) {
+  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.nav-tab').forEach(function(t){t.classList.remove('active');});
+  document.getElementById('page-' + page).classList.add('active');
+  el.classList.add('active');
+  setTimeout(function(){animateSkillBars();drawProjectCharts();}, 150);
+}
+
+// ======== CLOCK ========
+function updateTime() {
+  var now=new Date();var h=now.getHours().toString().padStart(2,'0');var m=now.getMinutes().toString().padStart(2,'0');var s=now.getSeconds().toString().padStart(2,'0');
+  document.getElementById('liveTime').textContent=h+':'+m+':'+s;
+}
+setInterval(updateTime,1000);updateTime();
+
+// ======== SKILL BARS ========
+function animateSkillBars() {
+  document.querySelectorAll('[data-width]').forEach(function(bar){setTimeout(function(){bar.style.width=bar.getAttribute('data-width');},300);});
+}
+
+// ======== PROJECT PREVIEW CHARTS ========
+function drawProjectCharts() {
+  var c1=document.getElementById('chart1');if(c1&&c1.getContext){var ctx=c1.getContext('2d');c1.width=c1.offsetWidth*2;c1.height=c1.offsetHeight*2;ctx.scale(2,2);var w=c1.offsetWidth,h=c1.offsetHeight;var d=[65,85,45,92,70,88,55,78,95,60,82,73];var bw=(w-40)/12-4;d.forEach(function(v,i){var bh=(v/100)*(h-40);var x=20+i*(bw+4);var g=ctx.createLinearGradient(x,h-20-bh,x,h-20);g.addColorStop(0,'#3b82f6');g.addColorStop(1,'#1e40af');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(x,h-20-bh,bw,bh,2);ctx.fill();});}
+  var c2=document.getElementById('chart2');if(c2&&c2.getContext){var ctx=c2.getContext('2d');c2.width=c2.offsetWidth*2;c2.height=c2.offsetHeight*2;ctx.scale(2,2);var w=c2.offsetWidth,h=c2.offsetHeight;var d=[40,55,35,70,60,80,65,90,75,95];ctx.strokeStyle='#10b981';ctx.lineWidth=2;ctx.beginPath();d.forEach(function(v,i){var x=20+i*((w-40)/9);var y=h-20-(v/100)*(h-40);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});ctx.stroke();var lx=20+9*((w-40)/9);ctx.lineTo(lx,h-20);ctx.lineTo(20,h-20);ctx.closePath();var g=ctx.createLinearGradient(0,0,0,h);g.addColorStop(0,'rgba(16,185,129,0.15)');g.addColorStop(1,'rgba(16,185,129,0)');ctx.fillStyle=g;ctx.fill();}
+  var c3=document.getElementById('chart3');if(c3&&c3.getContext){var ctx=c3.getContext('2d');c3.width=c3.offsetWidth*2;c3.height=c3.offsetHeight*2;ctx.scale(2,2);var w=c3.offsetWidth,h=c3.offsetHeight;var nodes=[];for(var i=0;i<12;i++)nodes.push({x:30+Math.random()*(w-60),y:20+Math.random()*(h-40),r:4+Math.random()*6});ctx.strokeStyle='rgba(139,92,246,0.2)';ctx.lineWidth=1;nodes.forEach(function(a,i){nodes.forEach(function(b,j){if(j>i&&Math.random()>0.5){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}});});nodes.forEach(function(n){ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,Math.PI*2);ctx.fillStyle='rgba(139,92,246,'+(0.3+Math.random()*0.5)+')';ctx.fill();});}
+  drawImpactChart();drawGrowthChart();drawExpCharts();
+}
+
+function drawImpactChart(){var c=document.getElementById('impactChart');if(!c||!c.getContext)return;var ctx=c.getContext('2d');c.width=c.offsetWidth*2;c.height=400;ctx.scale(2,2);var w=c.offsetWidth,h=200;var cats=[t('تقليل الأخطاء','Error Reduction'),t('توفير الوقت','Time Saved'),t('رضا العملاء','Customer Satisfaction'),t('كفاءة العمليات','Operations Efficiency'),t('جودة التقارير','Report Quality')];var vals=[85,92,88,95,90];var cols=['#3b82f6','#10b981','#f59e0b','#8b5cf6','#06b6d4'];cats.forEach(function(cat,i){var y=10+i*40;ctx.fillStyle='#94a3b8';ctx.font='600 12px Cairo';ctx.textAlign='right';ctx.fillText(cat,120,y+16);ctx.fillStyle='#1e293b';ctx.beginPath();ctx.roundRect(130,y,w-180,24,4);ctx.fill();var fl=(vals[i]/100)*(w-180);var g=ctx.createLinearGradient(130,0,130+fl,0);g.addColorStop(0,cols[i]);g.addColorStop(1,cols[i]+'88');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(130,y,fl,24,4);ctx.fill();ctx.fillStyle='#f1f5f9';ctx.font='600 11px monospace';ctx.textAlign='left';ctx.fillText(vals[i]+'%',135+fl+8,y+16);});}
+
+function drawGrowthChart(){var c=document.getElementById('growthChart');if(!c||!c.getContext)return;var ctx=c.getContext('2d');c.width=c.offsetWidth*2;c.height=360;ctx.scale(2,2);var w=c.offsetWidth,h=180;var d=[20,35,45,60,75,90,95];var labels=['2019','2020','2021','2022','2023','2024','2025'];ctx.strokeStyle='#1e293b';ctx.lineWidth=0.5;for(var i=0;i<=4;i++){var y=10+i*((h-30)/4);ctx.beginPath();ctx.moveTo(30,y);ctx.lineTo(w-10,y);ctx.stroke();}ctx.strokeStyle='#f43f5e';ctx.lineWidth=2.5;ctx.beginPath();d.forEach(function(v,i){var x=30+i*((w-40)/6);var y=h-20-(v/100)*(h-30);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});ctx.stroke();d.forEach(function(v,i){var x=30+i*((w-40)/6);var y=h-20-(v/100)*(h-30);ctx.beginPath();ctx.arc(x,y,4,0,Math.PI*2);ctx.fillStyle='#f43f5e';ctx.fill();ctx.fillStyle='#64748b';ctx.font='10px monospace';ctx.textAlign='center';ctx.fillText(labels[i],x,h-4);});ctx.beginPath();d.forEach(function(v,i){var x=30+i*((w-40)/6);var y=h-20-(v/100)*(h-30);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});ctx.lineTo(30+6*((w-40)/6),h-20);ctx.lineTo(30,h-20);ctx.closePath();var g=ctx.createLinearGradient(0,0,0,h);g.addColorStop(0,'rgba(244,63,94,0.12)');g.addColorStop(1,'rgba(244,63,94,0)');ctx.fillStyle=g;ctx.fill();}
+
+function drawExpCharts(){
+  var c1=document.getElementById('expChart1');if(c1&&c1.getContext){var ctx=c1.getContext('2d');c1.width=c1.offsetWidth*2;c1.height=400;ctx.scale(2,2);var w=c1.offsetWidth,h=200;var months=[t('يناير','Jan'),t('فبراير','Feb'),t('مارس','Mar'),t('أبريل','Apr'),t('مايو','May'),t('يونيو','Jun')];var tasks=[8,14,20,28,35,42];var hours=[5,10,16,22,30,38];var bw=16;var gw=(w-50)/6;drawGrid(ctx,w,h);months.forEach(function(m,i){var cx=40+i*gw+gw/2;var th=(tasks[i]/50)*(h-50);var g1=ctx.createLinearGradient(0,h-25-th,0,h-25);g1.addColorStop(0,'#3b82f6');g1.addColorStop(1,'#3b82f622');ctx.fillStyle=g1;ctx.beginPath();ctx.roundRect(cx-bw-2,h-25-th,bw,th,3);ctx.fill();var hh=(hours[i]/50)*(h-50);var g2=ctx.createLinearGradient(0,h-25-hh,0,h-25);g2.addColorStop(0,'#06b6d4');g2.addColorStop(1,'#06b6d422');ctx.fillStyle=g2;ctx.beginPath();ctx.roundRect(cx+2,h-25-hh,bw,hh,3);ctx.fill();ctx.fillStyle='#64748b';ctx.font='10px Cairo';ctx.textAlign='center';ctx.fillText(m,cx,h-8);});}
+  var c2=document.getElementById('expChart2');if(c2&&c2.getContext){var ctx=c2.getContext('2d');c2.width=c2.offsetWidth*2;c2.height=400;ctx.scale(2,2);var w=c2.offsetWidth,h=200;var items=[t('التقارير الشهرية','Monthly Reports'),t('تقارير KPI','KPI Reports'),t('تحليل الأداء','Performance'),t('تقارير المشاريع','Projects')];var before=[48,24,36,40];var after=[12,6,10,15];items.forEach(function(item,i){var y=15+i*44;ctx.fillStyle='#e2e8f0';ctx.font='600 11px Cairo';ctx.textAlign='right';ctx.fillText(item,105,y+6);var bw=(before[i]/50)*(w-120);var g1=ctx.createLinearGradient(110,0,110+bw,0);g1.addColorStop(0,'#f43f5e');g1.addColorStop(1,'#f43f5e55');ctx.fillStyle=g1;ctx.beginPath();ctx.roundRect(110,y-2,bw,18,3);ctx.fill();var aw=(after[i]/50)*(w-120);var g2=ctx.createLinearGradient(110,0,110+aw,0);g2.addColorStop(0,'#10b981');g2.addColorStop(1,'#10b98155');ctx.fillStyle=g2;ctx.beginPath();ctx.roundRect(110,y+20,aw,18,3);ctx.fill();});}
+  var c3=document.getElementById('expChart3');if(c3&&c3.getContext){var ctx=c3.getContext('2d');c3.width=c3.offsetWidth*2;c3.height=400;ctx.scale(2,2);var w=c3.offsetWidth,h=200;var qs=['Q1','Q2','Q3','Q4'];var ach=[95,110,125,130];var bw=36;var gw=(w-60)/4;drawGrid(ctx,w,h);var ty=h-25-(100/150)*(h-50);ctx.setLineDash([6,4]);ctx.strokeStyle='#f59e0b';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(35,ty);ctx.lineTo(w-10,ty);ctx.stroke();ctx.setLineDash([]);qs.forEach(function(q,i){var cx=40+i*gw+gw/2;var bh=(ach[i]/150)*(h-50);var y=h-25-bh;var col=ach[i]>=100?'#10b981':'#f43f5e';var g=ctx.createLinearGradient(0,y,0,h-25);g.addColorStop(0,col);g.addColorStop(1,col+'22');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(cx-bw/2,y,bw,bh,4);ctx.fill();ctx.fillStyle='#f1f5f9';ctx.font='700 12px monospace';ctx.textAlign='center';ctx.fillText(ach[i]+'%',cx,y-8);ctx.fillStyle='#64748b';ctx.font='12px Cairo';ctx.fillText(q,cx,h-8);});}
+}
+
+// ======== FILTER CHIPS ========
+document.querySelectorAll('.filter-chip').forEach(function(chip){chip.addEventListener('click',function(){document.querySelectorAll('.filter-chip').forEach(function(c){c.classList.remove('active');});this.classList.add('active');});});
+
+// ======== THEME TOGGLE ========
+function toggleTheme(){var html=document.documentElement;var btn=document.getElementById('themeBtn');if(html.getAttribute('data-theme')==='light'){html.removeAttribute('data-theme');btn.textContent='🌙';}else{html.setAttribute('data-theme','light');btn.textContent='☀️';}setTimeout(function(){drawProjectCharts();},100);}
+
+// ======== LANGUAGE TOGGLE ========
+var currentLang='ar';
+function t(ar,en){return currentLang==='en'?en:ar;}
+var translations={en:{nav_overview:'Overview',nav_projects:'Projects',nav_experience:'Experience',nav_contact:'Contact Me',hero_name:'Fahad M. Al-Mutairi',hero_desc:'Data Analyst & Automation Specialist with a strong background in building dashboards and improving operational efficiency. Skilled in Microsoft Excel and Power BI for data analysis, workflow automation, and decision support.',stat_years:'Years Experience',stat_projects:'Key Projects',stat_gpa:'GPA',kpi_dashboards:'Data Records Analyzed',kpi_efficiency:'Operational Efficiency',kpi_automation:'Hours Saved by Automation',kpi_certs:'Reports & Dashboards Delivered',skills_title:'Technical Skills',expertise_title:'Expertise Distribution',languages_title:'Languages',edu_title:'Education & Certifications',edu_degree:"Bachelor's in Software Engineering",contact_info_title:'Contact Information',proj1_desc:'Interactive dashboard to track KPIs and sales performance with dynamic filters and comparative analysis',proj2_desc:'Advanced data analysis to discover patterns and trends using Pivot Tables and Advanced Formulas',proj3_desc:'Built automation solutions to reduce repetitive tasks, improving productivity by over 40%',send_msg_title:'Send a Message',form_name:'Full Name',form_email:'Email Address',form_subject:'Subject',form_message:'Message',available_title:'Available for Work',available_desc:'Currently seeking opportunities in data analysis and automation. Open to remote and on-site.',growth_title:'Career Growth',achievements_title:'Key Achievements',tasks_title:'Tasks & Achievements',donut_years:'Years',legend_data:'Data Analysis 35%',legend_dash:'Dashboards 24%',legend_auto:'Automation 19%',legend_eng:'Software Engineering 22%',lbl_phone:'Phone',lbl_email:'Email',lbl_location:'Location',val_location:'Saudi Arabia',val_location2:'Saudi Arabia',impact_title:'Project Impact',job1_task1:'Workflow Automation',job1_task2:'System Optimization',job1_task3:'Scalable Solutions',job2_task1:'Reports & Dashboards',job2_task2:'Process Simplification',job2_task3:'Operations Coordination',job3_task1:'Exceeding Targets',job3_task2:'Client Relations',job3_task3:'Revenue Growth',mini_perf:'Performance',mini_built:'Solutions Built',mini_team:'Team Satisfaction',mini_dash:'Dashboards',mini_report_time:'Report Time',mini_mgmt:'Mgmt Satisfaction',mini_target:'Target Achievement',mini_clients:'Clients',mini_csat:'Customer Satisfaction',chart1_title:'Monthly Automation',chart2_title:'Report Efficiency (Before/After)',chart3_title:'Quarterly Sales',leg_tasks:'Automated Tasks',leg_before:'Before',leg_after:'After',leg_achieved:'Achieved',leg_target:'Target',ach1:'Operational Efficiency',ach2:'Strategic Dashboards',ach3:'Sales Target Exceeded',ach4:'Report Time Reduction',contact_email_label:'Email Address',leg_hours:'Hours Saved',lang_arabic:'Arabic',download_cv:'Download CV',dur_1yr:'+1 Year',dur_4yr:'4 Years',dur_1yr2:'1 Year',present:'Present',send_success:'✓ Message sent successfully! Will contact you soon',job1_d1:'Automated internal workflows to reduce manual effort and improve team productivity',job1_d2:'Improved system processing efficiency and response time',job1_d3:'Developed scalable solutions aligned with business requirements',job2_d1:'Created interactive reports and dashboards for management decisions',job2_d2:'Streamlined reporting processes and reduced turnaround time',job2_d3:'Coordinated operations and improved communication efficiency',job3_d1:'Consistently achieved and exceeded sales targets',job3_d2:'Built strong client relationships and improved conversion rates',job3_d3:'Contributed to revenue growth through consistent performance',ach1_desc:'+40% team productivity via automation',ach2_desc:'20+ dashboards for strategic decisions',ach3_desc:'120% target achievement in banking sector',ach4_desc:'-50% in periodic report preparation time'},ar:{nav_overview:'نظرة عامة',nav_projects:'المشاريع',nav_experience:'الخبرات',nav_contact:'تواصل معي',hero_name:'فهد محمد المطيري',hero_desc:'محلل بيانات ومتخصص أتمتة بخلفية قوية في بناء الداشبوردات وتحسين كفاءة العمليات. خبرة في Microsoft Excel و Power BI لتحليل البيانات وأتمتة سير العمل ودعم اتخاذ القرارات.',stat_years:'سنوات خبرة',stat_projects:'مشاريع رئيسية',stat_gpa:'GPA',kpi_dashboards:'سجلات بيانات محللّة',kpi_efficiency:'تحسين كفاءة العمليات',kpi_automation:'ساعات عمل موفّرة بالأتمتة',kpi_certs:'تقارير وداشبوردات مُنجزة',skills_title:'المهارات التقنية',expertise_title:'توزيع الخبرات',languages_title:'اللغات',edu_title:'التعليم والشهادات',edu_degree:'بكالوريوس هندسة البرمجيات',contact_info_title:'معلومات التواصل',proj1_desc:'داشبورد تفاعلي لتتبع مؤشرات الأداء الرئيسية وأداء المبيعات مع فلاتر ديناميكية وتحليل مقارن للفترات الزمنية',proj2_desc:'تحليل بيانات متقدم لاكتشاف الأنماط والاتجاهات واستخراج رؤى قابلة للتنفيذ باستخدام Pivot Tables و Advanced Formulas',proj3_desc:'بناء حلول أتمتة لتقليل المهام المتكررة والأخطاء البشرية وتحسين الإنتاجية بنسبة تزيد عن 40%',send_msg_title:'أرسل رسالة',form_name:'الاسم الكامل',form_email:'البريد الإلكتروني',form_subject:'الموضوع',form_message:'الرسالة',available_title:'متاح للعمل',available_desc:'أبحث حالياً عن فرص في مجال تحليل البيانات والأتمتة. مستعد للعمل عن بعد أو في الموقع.',growth_title:'النمو المهني',achievements_title:'الإنجازات الرئيسية',tasks_title:'المهام والإنجازات',donut_years:'سنوات',legend_data:'تحليل البيانات 35%',legend_dash:'الداشبوردات 24%',legend_auto:'الأتمتة 19%',legend_eng:'هندسة البرمجيات 22%',lbl_phone:'الهاتف',lbl_email:'الإيميل',lbl_location:'الموقع',val_location:'السعودية',val_location2:'المملكة العربية السعودية',impact_title:'تأثير المشاريع',job1_task1:'أتمتة سير العمل',job1_task2:'تحسين أداء الأنظمة',job1_task3:'حلول قابلة للتوسع',job2_task1:'تقارير وداشبوردات',job2_task2:'تبسيط العمليات',job2_task3:'تنسيق العمليات',job3_task1:'تجاوز المستهدفات',job3_task2:'علاقات العملاء',job3_task3:'نمو الإيرادات',mini_perf:'تحسين الأداء',mini_built:'حلول مبنية',mini_team:'رضا الفريق',mini_dash:'داشبورد',mini_report_time:'وقت التقارير',mini_mgmt:'رضا الإدارة',mini_target:'تحقيق الهدف',mini_clients:'عميل',mini_csat:'رضا العملاء',chart1_title:'أداء الأتمتة الشهري',chart2_title:'كفاءة التقارير (قبل / بعد)',chart3_title:'أداء المبيعات الربع سنوي',leg_tasks:'مهام مؤتمتة',leg_before:'قبل التحسين',leg_after:'بعد التحسين',leg_achieved:'المحقق',leg_target:'المستهدف',ach1:'تحسين الكفاءة التشغيلية',ach2:'داشبوردات استراتيجية',ach3:'تجاوز أهداف المبيعات',ach4:'خفض زمن التقارير',contact_email_label:'البريد الإلكتروني',leg_hours:'وقت موفّر (ساعات)',lang_arabic:'العربية',download_cv:'تحميل السيرة الذاتية',dur_1yr:'+1 سنة',dur_4yr:'4 سنوات',dur_1yr2:'1 سنة',present:'الحالي',send_success:'✓ تم إرسال رسالتك بنجاح! سأتواصل معك قريباً',job1_d1:'أتمتة العمليات الداخلية لتقليل الجهد اليدوي وتحسين إنتاجية الفريق بشكل ملحوظ',job1_d2:'تحسين كفاءة المعالجة وسرعة الاستجابة للأنظمة القائمة',job1_d3:'تطوير وصيانة حلول برمجية متوافقة مع متطلبات العمل المتغيرة',job2_d1:'إنشاء تقارير وداشبوردات تفاعلية لدعم اتخاذ القرارات الإدارية',job2_d2:'تبسيط عمليات إعداد التقارير وتقليل وقت الإنجاز بنسبة كبيرة',job2_d3:'تنسيق العمليات بين الأقسام وتحسين كفاءة التواصل الداخلي',job3_d1:'تحقيق وتجاوز أهداف المبيعات الشهرية والسنوية باستمرار',job3_d2:'بناء علاقات قوية ومستدامة مع العملاء وتحسين معدلات التحويل',job3_d3:'المساهمة في نمو الإيرادات من خلال أداء مبيعات متميز ومستمر',ach1_desc:'+40% في إنتاجية الفريق عبر حلول الأتمتة',ach2_desc:'20+ داشبورد لدعم القرارات الإدارية',ach3_desc:'120% تحقيق المستهدف في القطاع البنكي',ach4_desc:'-50% في وقت إعداد التقارير الدورية'}};
+function toggleLang(){currentLang=currentLang==='ar'?'en':'ar';document.getElementById('langBtn').textContent=currentLang==='ar'?'EN':'عربي';document.documentElement.dir=currentLang==='ar'?'rtl':'ltr';document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(translations[currentLang][k])el.textContent=translations[currentLang][k];});var ni=document.getElementById('contactName');if(ni){ni.placeholder=currentLang==='ar'?'أدخل اسمك':'Enter your name';document.getElementById('contactEmail').placeholder='example@email.com';document.getElementById('contactSubject').placeholder=currentLang==='ar'?'موضوع الرسالة':'Message subject';document.getElementById('contactMsg').placeholder=currentLang==='ar'?'اكتب رسالتك هنا...':'Write your message here...';}var sb=document.getElementById('sendBtn');if(sb)sb.textContent=currentLang==='ar'?'إرسال الرسالة':'Send Message';drawProjectCharts();}
+
+// ======== CONTACT FORM (Formspree) ========
+function sendMessage(){var name=document.getElementById('contactName').value.trim();var email=document.getElementById('contactEmail').value.trim();var subject=document.getElementById('contactSubject').value.trim();var msg=document.getElementById('contactMsg').value.trim();var btn=document.getElementById('sendBtn');var success=document.getElementById('sendSuccess');if(!name||!email||!msg){btn.style.background='linear-gradient(135deg,#f43f5e,#e11d48)';btn.textContent=currentLang==='ar'?'يرجى تعبئة جميع الحقول':'Please fill all fields';setTimeout(function(){btn.style.background='linear-gradient(135deg,#3b82f6,#1d4ed8)';btn.textContent=currentLang==='ar'?'إرسال الرسالة':'Send Message';},2000);return;}btn.textContent=currentLang==='ar'?'جاري الإرسال...':'Sending...';btn.style.opacity='0.7';btn.disabled=true;fetch('https://formspree.io/f/xykbwzra',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:name,email:email,subject:subject,message:msg})}).then(function(r){if(r.ok){btn.style.display='none';success.style.display='block';document.getElementById('contactName').value='';document.getElementById('contactEmail').value='';document.getElementById('contactSubject').value='';document.getElementById('contactMsg').value='';setTimeout(function(){btn.style.display='block';btn.style.opacity='1';btn.disabled=false;btn.textContent=currentLang==='ar'?'إرسال الرسالة':'Send Message';btn.style.background='linear-gradient(135deg,#3b82f6,#1d4ed8)';success.style.display='none';},5000);}else{btn.textContent=currentLang==='ar'?'حدث خطأ':'Error occurred';btn.style.opacity='1';btn.disabled=false;setTimeout(function(){btn.style.background='linear-gradient(135deg,#3b82f6,#1d4ed8)';btn.textContent=currentLang==='ar'?'إرسال الرسالة':'Send Message';},3000);}}).catch(function(){btn.textContent=currentLang==='ar'?'خطأ في الاتصال':'Connection error';btn.style.opacity='1';btn.disabled=false;setTimeout(function(){btn.style.background='linear-gradient(135deg,#3b82f6,#1d4ed8)';btn.textContent=currentLang==='ar'?'إرسال الرسالة':'Send Message';},3000);});}
+
+// ======== INIT ========
+window.addEventListener('load',function(){animateSkillBars();drawProjectCharts();});
+var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting)entry.target.style.animationPlayState='running';});},{threshold:0.1});
+document.querySelectorAll('.animate-in,.animate-right,.animate-scale').forEach(function(el){observer.observe(el);});
+
+</script>
+</body>
+</html>
