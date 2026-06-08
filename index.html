@@ -1326,14 +1326,21 @@ body::after {
   .topbar-brand { width: 100%; justify-content: center; }
   .topbar-nav {
     width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 4px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 2px;
   }
+  .topbar-nav::-webkit-scrollbar { display: none; }
   .nav-tab {
-    padding: 0 10px;
-    font-size: 12px;
-    height: 36px;
+    padding: 0 14px;
+    font-size: 13px;
+    height: 38px;
+    flex: 0 0 auto;
+    white-space: nowrap;
   }
   .topbar-actions {
     position: absolute;
@@ -1367,11 +1374,32 @@ body::after {
   .hero-name { font-size: 20px; }
   .card-body { padding: 14px; }
   .grid-2, .grid-3-1 { gap: 12px; }
-  .nav-tab { padding: 0 8px; font-size: 11px; height: 32px; }
+  .nav-tab { padding: 0 12px; font-size: 12px; height: 36px; flex: 0 0 auto; white-space: nowrap; }
   /* Experience cards: stack chart below tasks */
   .card-body > div[style*="grid-template-columns: 1fr 1fr"] {
     grid-template-columns: 1fr !important;
   }
+}
+
+/* Very small phones: prevent top bar crowding */
+@media (max-width: 400px) {
+  .topbar { padding: 8px 12px; }
+  .topbar-actions {
+    position: static;
+    order: -1;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .topbar-brand { justify-content: flex-start; width: auto; flex: 1; }
+  .topbar-title { font-size: 12px; }
+  .topbar-nav { gap: 2px; }
+  .nav-tab { padding: 0 11px; font-size: 12px; height: 36px; flex: 0 0 auto; white-space: nowrap; }
+  .hero-card { padding: 16px; }
+  .hero-name { font-size: 19px; }
+  .dashboard { padding: 10px; }
+  .modal-metrics { grid-template-columns: 1fr 1fr !important; }
+  /* let project modal scroll comfortably */
+  .modal { max-width: 96vw !important; }
 }
 
 /* Projects Grid */
@@ -1694,9 +1722,9 @@ body::after {
     <!-- Project 1 -->
     <div class="project-card animate-in delay-1" onclick="openProject(0)">
       <div class="project-preview" style="background:linear-gradient(135deg,#0f172a,#1e3a5f)">
-        <img class="project-shot" src="projects/sales-dashboard.png" alt="Sales Dashboard"
+        <img class="project-shot" src="sales-dashboard.png" alt="Sales Dashboard"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <div class="shot-placeholder" style="display:none"><div class="ic">📊</div><div class="tx">أضف لقطة:<br>projects/sales-dashboard.png</div></div>
+        <div class="shot-placeholder" style="display:none"><div class="ic">📊</div><div class="tx">أضف لقطة:<br>sales-dashboard.png</div></div>
         <div class="project-tag" style="background:rgba(59,130,246,0.2);color:#60a5fa;border:1px solid rgba(59,130,246,0.3)">Power BI</div>
       </div>
       <div class="project-content">
@@ -1714,9 +1742,9 @@ body::after {
     <!-- Project 2 -->
     <div class="project-card animate-in delay-2" onclick="openProject(1)">
       <div class="project-preview" style="background:linear-gradient(135deg,#0f172a,#1a3a2a)">
-        <img class="project-shot" src="projects/excel-dashboard.png" alt="Excel Dashboard"
+        <img class="project-shot" src="excel-dashboard.png" alt="Excel Dashboard"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <div class="shot-placeholder" style="display:none"><div class="ic">📈</div><div class="tx">أضف لقطة:<br>projects/excel-dashboard.png</div></div>
+        <div class="shot-placeholder" style="display:none"><div class="ic">📈</div><div class="tx">أضف لقطة:<br>excel-dashboard.png</div></div>
         <div class="project-tag" style="background:rgba(16,185,129,0.2);color:#34d399;border:1px solid rgba(16,185,129,0.3)">Excel</div>
       </div>
       <div class="project-content">
@@ -1734,9 +1762,9 @@ body::after {
     <!-- Project 3 -->
     <div class="project-card animate-in delay-3" onclick="openProject(2)">
       <div class="project-preview" style="background:linear-gradient(135deg,#0f172a,#2d1a3a)">
-        <img class="project-shot" src="projects/automation-dashboard.png" alt="Automation Dashboard"
+        <img class="project-shot" src="automation-dashboard.png" alt="Automation Dashboard"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <div class="shot-placeholder" style="display:none"><div class="ic">⚙️</div><div class="tx">أضف لقطة:<br>projects/automation-dashboard.png</div></div>
+        <div class="shot-placeholder" style="display:none"><div class="ic">⚙️</div><div class="tx">أضف لقطة:<br>automation-dashboard.png</div></div>
         <div class="project-tag" style="background:rgba(139,92,246,0.2);color:#a78bfa;border:1px solid rgba(139,92,246,0.3)">Automation</div>
       </div>
       <div class="project-content">
@@ -2180,7 +2208,7 @@ function openProject(index) {
   document.getElementById('modalTag2').textContent = m.tag;
   document.getElementById('modalTag2').style.color = m.tagColor;
   document.getElementById('modalDate').textContent = new Date().toLocaleDateString('ar-SA');
-  var shots = ['projects/sales-dashboard.png','projects/excel-dashboard.png','projects/automation-dashboard.png'];
+  var shots = ['sales-dashboard.png','excel-dashboard.png','automation-dashboard.png'];
   var shotHtml = '<div class="modal-shot-wrap"><img src="'+shots[index]+'" alt="'+m.title+'" '+
     'onclick="openLightbox(this.src)" '+
     'onerror="this.parentElement.style.display=\'none\'"></div>';
