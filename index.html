@@ -1366,6 +1366,9 @@ body::after {
   .mkpi { padding: 13px !important; }
   .mkpi-val { font-size: 18px !important; }
   .mkpi-lbl { font-size: 10px !important; }
+  /* Fix: chart panels inside the modal stack into one column so charts aren't squished */
+  #modalDashboard > div[style*="grid-template-columns"]:not(.modal-kpis) { grid-template-columns: 1fr !important; }
+  #modalDashboard canvas { height: 240px !important; }
 }
 
 @media (max-width: 480px) {
