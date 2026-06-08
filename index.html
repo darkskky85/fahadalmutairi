@@ -10,19 +10,27 @@
 <meta name="google-site-verification" content="O0l5Fd0SoMNQKLC6nLsDy_BRkiIUjRqyu9pQHLVdqN0">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://fahadalmutairi.vercel.app/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
 
 <!-- Open Graph (Facebook, LinkedIn) -->
 <meta property="og:title" content="Fahad Al-Mutairi | Data Analyst & Automation Specialist">
 <meta property="og:description" content="محلل بيانات ومتخصص أتمتة بخلفية قوية في بناء الداشبوردات وتحسين كفاءة العمليات. Portfolio showcasing Power BI dashboards, data analysis, and automation solutions.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://fahadalmutairi.vercel.app/">
+<meta property="og:image" content="https://fahadalmutairi.vercel.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Fahad Al-Mutairi - Data Analyst & BI Developer">
 <meta property="og:locale" content="ar_SA">
 <meta property="og:locale:alternate" content="en_US">
 
 <!-- Twitter Card -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Fahad Al-Mutairi | Data Analyst Portfolio">
 <meta name="twitter:description" content="Data Analyst & Automation Specialist - Power BI, Excel, Process Automation">
+<meta name="twitter:image" content="https://fahadalmutairi.vercel.app/og-image.png">
 
 <!-- Structured Data (JSON-LD) -->
 <script type="application/ld+json">
@@ -681,6 +689,46 @@ body::after {
 .project-preview canvas {
   width: 100%;
   height: 100%;
+}
+
+.project-preview .project-shot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform .5s ease;
+}
+.project-card:hover .project-shot { transform: scale(1.06); }
+
+/* placeholder shown until a real screenshot is added */
+.shot-placeholder {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 8px; color: rgba(255,255,255,.55); text-align: center; padding: 0 16px;
+}
+.shot-placeholder .ic { font-size: 30px; opacity: .8; }
+.shot-placeholder .tx { font-size: 11px; line-height: 1.5; }
+
+/* modal screenshot */
+.modal-shot-wrap {
+  border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
+  margin-bottom: 18px; background: rgba(0,0,0,.25);
+}
+.modal-shot-wrap img { width: 100%; display: block; cursor: zoom-in; }
+
+/* lightbox */
+.lightbox {
+  position: fixed; inset: 0; background: rgba(2,6,18,.92);
+  display: none; align-items: center; justify-content: center; z-index: 999;
+  padding: 30px; cursor: zoom-out; backdrop-filter: blur(6px);
+}
+.lightbox.show { display: flex; }
+.lightbox img { max-width: 95%; max-height: 92%; border-radius: 10px; box-shadow: 0 30px 80px rgba(0,0,0,.6); }
+.lightbox .lb-close {
+  position: absolute; top: 22px; right: 28px; color: #fff; font-size: 26px;
+  background: rgba(255,255,255,.1); border: none; width: 44px; height: 44px;
+  border-radius: 50%; cursor: pointer;
 }
 
 .project-tag {
@@ -1646,7 +1694,9 @@ body::after {
     <!-- Project 1 -->
     <div class="project-card animate-in delay-1" onclick="openProject(0)">
       <div class="project-preview" style="background:linear-gradient(135deg,#0f172a,#1e3a5f)">
-        <canvas id="chart1"></canvas>
+        <img class="project-shot" src="projects/sales-dashboard.png" alt="Sales Dashboard"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="shot-placeholder" style="display:none"><div class="ic">📊</div><div class="tx">أضف لقطة:<br>projects/sales-dashboard.png</div></div>
         <div class="project-tag" style="background:rgba(59,130,246,0.2);color:#60a5fa;border:1px solid rgba(59,130,246,0.3)">Power BI</div>
       </div>
       <div class="project-content">
@@ -1664,7 +1714,9 @@ body::after {
     <!-- Project 2 -->
     <div class="project-card animate-in delay-2" onclick="openProject(1)">
       <div class="project-preview" style="background:linear-gradient(135deg,#0f172a,#1a3a2a)">
-        <canvas id="chart2"></canvas>
+        <img class="project-shot" src="projects/excel-dashboard.png" alt="Excel Dashboard"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="shot-placeholder" style="display:none"><div class="ic">📈</div><div class="tx">أضف لقطة:<br>projects/excel-dashboard.png</div></div>
         <div class="project-tag" style="background:rgba(16,185,129,0.2);color:#34d399;border:1px solid rgba(16,185,129,0.3)">Excel</div>
       </div>
       <div class="project-content">
@@ -1682,7 +1734,9 @@ body::after {
     <!-- Project 3 -->
     <div class="project-card animate-in delay-3" onclick="openProject(2)">
       <div class="project-preview" style="background:linear-gradient(135deg,#0f172a,#2d1a3a)">
-        <canvas id="chart3"></canvas>
+        <img class="project-shot" src="projects/automation-dashboard.png" alt="Automation Dashboard"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="shot-placeholder" style="display:none"><div class="ic">⚙️</div><div class="tx">أضف لقطة:<br>projects/automation-dashboard.png</div></div>
         <div class="project-tag" style="background:rgba(139,92,246,0.2);color:#a78bfa;border:1px solid rgba(139,92,246,0.3)">Automation</div>
       </div>
       <div class="project-content">
@@ -2095,6 +2149,12 @@ body::after {
   </div>
 </div>
 
+<!-- Lightbox for project screenshots -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lb-close" onclick="closeLightbox()">✕</button>
+  <img id="lightboxImg" src="" alt="Project screenshot">
+</div>
+
 <!-- Footer -->
 <div class="footer">
   FAHAD AL-MUTAIRI © 2026 &nbsp;|&nbsp; Built with passion for data
@@ -2120,7 +2180,11 @@ function openProject(index) {
   document.getElementById('modalTag2').textContent = m.tag;
   document.getElementById('modalTag2').style.color = m.tagColor;
   document.getElementById('modalDate').textContent = new Date().toLocaleDateString('ar-SA');
-  dash.innerHTML = builders[index]();
+  var shots = ['projects/sales-dashboard.png','projects/excel-dashboard.png','projects/automation-dashboard.png'];
+  var shotHtml = '<div class="modal-shot-wrap"><img src="'+shots[index]+'" alt="'+m.title+'" '+
+    'onclick="openLightbox(this.src)" '+
+    'onerror="this.parentElement.style.display=\'none\'"></div>';
+  dash.innerHTML = shotHtml + builders[index]();
   modal.classList.add('show');
   document.body.style.overflow = 'hidden';
   setTimeout(function(){ drawDashboardCharts(index); }, 150);
@@ -2129,7 +2193,13 @@ function closeModal() {
   document.getElementById('projectModal').classList.remove('show');
   document.body.style.overflow = '';
 }
-document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
+function openLightbox(src){
+  var lb=document.getElementById('lightbox');
+  document.getElementById('lightboxImg').src=src;
+  lb.classList.add('show');
+}
+function closeLightbox(){ document.getElementById('lightbox').classList.remove('show'); }
+document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ closeModal(); closeLightbox(); } });
 
 function kpi(value, label, change, color, up) {
   if(up===undefined) up=true;
