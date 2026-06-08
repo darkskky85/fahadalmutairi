@@ -1479,7 +1479,7 @@ body::after {
         <div class="hero-stat-label" data-i18n="stat_years">سنوات خبرة</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-value">3</div>
+        <div class="hero-stat-value">5</div>
         <div class="hero-stat-label" data-i18n="stat_projects">مشاريع رئيسية</div>
       </div>
       <div class="hero-stat">
@@ -1785,6 +1785,46 @@ body::after {
           <span class="tech-tag">Scripts</span>
           <span class="tech-tag">Workflow</span>
           <span class="tech-tag">APIs</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 4: HR Analytics -->
+    <div class="project-card animate-in delay-1" onclick="openProject(3)">
+      <div class="project-preview" style="background:linear-gradient(135deg,#0f172a,#16264f)">
+        <img class="project-shot" src="hr-dashboard.png" alt="HR Analytics Dashboard"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="shot-placeholder" style="display:none"><div class="ic">👥</div><div class="tx">أضف لقطة:<br>hr-dashboard.png</div></div>
+        <div class="project-tag" style="background:rgba(34,211,238,0.2);color:#22d3ee;border:1px solid rgba(34,211,238,0.3)">HR Analytics</div>
+      </div>
+      <div class="project-content">
+        <div class="project-title" data-i18n="proj4_title">HR Analytics Dashboard</div>
+        <div class="project-desc" data-i18n="proj4_desc">تحليل بيانات 320 موظف: معدل دوران الموظفين، التوزيع حسب الأقسام والأعمار والتعليم، ومؤشرات الأداء والرضا الوظيفي</div>
+        <div class="project-tech">
+          <span class="tech-tag">Excel</span>
+          <span class="tech-tag">Pivot Tables</span>
+          <span class="tech-tag">KPI</span>
+          <span class="tech-tag">HR</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 5: Data Cleaning -->
+    <div class="project-card animate-in delay-2" onclick="openProject(4)">
+      <div class="project-preview" style="background:linear-gradient(135deg,#0f172a,#1a2e2a)">
+        <img class="project-shot" src="cleaning-project.png" alt="Data Cleaning Project"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="shot-placeholder" style="display:none"><div class="ic">🧹</div><div class="tx">أضف لقطة:<br>cleaning-project.png</div></div>
+        <div class="project-tag" style="background:rgba(16,185,129,0.2);color:#34d399;border:1px solid rgba(16,185,129,0.3)">Data Cleaning</div>
+      </div>
+      <div class="project-content">
+        <div class="project-title" data-i18n="proj5_title">Data Cleaning Project</div>
+        <div class="project-desc" data-i18n="proj5_desc">تحويل بيانات فوضوية إلى بيانات نظيفة جاهزة للتحليل: إزالة التكرارات، توحيد التنسيقات، معالجة القيم المفقودة، والتحقق من صحة البيانات</div>
+        <div class="project-tech">
+          <span class="tech-tag">Excel</span>
+          <span class="tech-tag">Power Query</span>
+          <span class="tech-tag">Data Cleaning</span>
+          <span class="tech-tag">ETL</span>
         </div>
       </div>
     </div>
@@ -2205,11 +2245,13 @@ body::after {
 function openProject(index) {
   var modal = document.getElementById('projectModal');
   var dash = document.getElementById('modalDashboard');
-  var builders = [buildSalesDashboard, buildExcelDashboard, buildAutomationDashboard];
+  var builders = [buildSalesDashboard, buildExcelDashboard, buildAutomationDashboard, buildShotOnly, buildShotOnly];
   var meta = [
     { title:'Sales Performance Dashboard', tag:'Power BI', tagColor:'#3b82f6', icon:'📊', iconBg:'linear-gradient(135deg,#3b82f6,#1d4ed8)' },
     { title:'Data Analysis Report', tag:'Excel Analytics', tagColor:'#10b981', icon:'📈', iconBg:'linear-gradient(135deg,#10b981,#059669)' },
     { title:'Automation Monitoring', tag:'Process Automation', tagColor:'#8b5cf6', icon:'⚙️', iconBg:'linear-gradient(135deg,#8b5cf6,#7c3aed)' },
+    { title:'HR Analytics Dashboard', tag:'HR Analytics', tagColor:'#22d3ee', icon:'👥', iconBg:'linear-gradient(135deg,#22d3ee,#0891b2)' },
+    { title:'Data Cleaning Project', tag:'Data Cleaning', tagColor:'#34d399', icon:'🧹', iconBg:'linear-gradient(135deg,#34d399,#059669)' },
   ];
   var m = meta[index];
   document.getElementById('modalIcon').style.background = m.iconBg;
@@ -2218,15 +2260,16 @@ function openProject(index) {
   document.getElementById('modalTag2').textContent = m.tag;
   document.getElementById('modalTag2').style.color = m.tagColor;
   document.getElementById('modalDate').textContent = new Date().toLocaleDateString('ar-SA');
-  var shots = ['sales-dashboard.png','excel-dashboard.png','automation-dashboard.png'];
+  var shots = ['sales-dashboard.png','excel-dashboard.png','automation-dashboard.png','hr-dashboard.png','cleaning-project.png'];
   var shotHtml = '<div class="modal-shot-wrap"><img src="'+shots[index]+'" alt="'+m.title+'" '+
     'onclick="openLightbox(this.src)" '+
     'onerror="this.parentElement.style.display=\'none\'"></div>';
   dash.innerHTML = shotHtml + builders[index]();
   modal.classList.add('show');
   document.body.style.overflow = 'hidden';
-  setTimeout(function(){ drawDashboardCharts(index); }, 150);
+  if (index < 3) setTimeout(function(){ drawDashboardCharts(index); }, 150);
 }
+function buildShotOnly(){ return ''; }
 function closeModal() {
   document.getElementById('projectModal').classList.remove('show');
   document.body.style.overflow = '';
