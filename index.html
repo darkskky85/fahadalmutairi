@@ -78,7 +78,21 @@
   --grid-color: rgba(168,129,60,0.05);
 }
 
+/* Visibility hard-lock for project cards & buttons */
+.project-card,.project-content,.project-actions,.demo-tile{opacity:1 !important;visibility:visible !important}
+.pa-btn{opacity:1 !important;visibility:visible !important}
+
+/* Card action buttons */
+.project-actions{display:flex;gap:8px;margin-top:14px}
+.pa-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:11px 8px;border-radius:9px;font-family:'Cairo',sans-serif;font-size:12.5px;font-weight:700;text-decoration:none;transition:.25s}
+.pa-demo{background:linear-gradient(135deg,#d4af6a,#a8853e);color:#16120a;box-shadow:0 3px 12px rgba(212,175,106,.25)}
+.pa-demo:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(212,175,106,.4)}
+.pa-xlsx{background:transparent;border:1.5px solid var(--accent-rose);color:var(--accent-amber)}
+.pa-xlsx:hover{background:rgba(212,175,106,.1);transform:translateY(-2px)}
+
 /* Live demo tiles */
+.file-chip{position:absolute;top:10px;right:12px;z-index:2;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;color:#16120a;background:linear-gradient(135deg,#e6c98c,#d4af6a);padding:4px 10px;border-radius:6px;text-decoration:none;box-shadow:0 2px 8px rgba(212,175,106,.35)}
+.file-chip:hover{transform:translateY(-1px)}
 .demo-tile{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-decoration:none;transition:.3s}
 .demo-tile:hover{background:rgba(212,175,106,.07)}
 .demo-ic{font-size:34px;filter:grayscale(.2)}
@@ -1306,18 +1320,15 @@ body::after {
 }
 
 .animate-in {
-  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  opacity: 0;
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .animate-right {
-  animation: fadeInRight 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  opacity: 0;
+  animation: fadeInRight 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .animate-scale {
-  animation: scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  opacity: 0;
+  animation: scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .delay-1 { animation-delay: 0.1s; }
@@ -1533,7 +1544,7 @@ body::after {
         </div>
         <div class="kpi-trend up">↑ 40%</div>
       </div>
-      <div class="kpi-value">+40%</div>
+      <div class="kpi-value">+30%</div>
       <div class="kpi-label" data-i18n="kpi_efficiency">تحسين كفاءة العمليات</div>
       <div class="kpi-bar"><div class="kpi-bar-fill" style="width:95%;background:linear-gradient(90deg,#10b981,#34d399)"></div></div>
     </div>
@@ -1555,7 +1566,7 @@ body::after {
         <div class="kpi-icon" style="background:rgba(176,141,87,0.1)">
           <svg viewBox="0 0 24 24" fill="none" stroke="#b08d57" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
         </div>
-        <div class="kpi-trend up">↑ 120%</div>
+        <div class="kpi-trend up">↑ 5 أقسام</div>
       </div>
       <div class="kpi-value">20+</div>
       <div class="kpi-label" data-i18n="kpi_certs">تقارير وداشبوردات مُنجزة</div>
@@ -1753,7 +1764,7 @@ body::after {
 <div class="page" id="page-projects">
   <div class="projects-grid">
     <!-- Project 1 -->
-    <div class="project-card animate-in delay-1" onclick="openProject(0)">
+    <div class="project-card" onclick="openProject(0)">
       <div class="project-preview" style="background:linear-gradient(135deg,#0f172a,#1e3a5f)">
         <a class="demo-tile" href="demo-sales.html" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="فتح المشروع التفاعلي"><span class="demo-ic">📊</span><span class="demo-cta">▶ تشغيل المشروع التفاعلي</span><span class="demo-live"><span class="status-dot"></span>LIVE</span></a>
         <div class="project-tag" style="background:rgba(212,175,106,0.2);color:#e6c98c;border:1px solid rgba(212,175,106,0.3)">Power BI</div>
@@ -1767,11 +1778,12 @@ body::after {
           <span class="tech-tag">Power Query</span>
           <span class="tech-tag">KPI</span>
         </div>
+        <div class="project-actions"><a class="pa-btn pa-demo" href="demo-sales.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">▶ عرض حي</a></div>
       </div>
     </div>
 
     <!-- Project 2 -->
-    <div class="project-card animate-in delay-2" onclick="openProject(1)">
+    <div class="project-card" onclick="openProject(1)">
       <div class="project-preview" style="background:linear-gradient(135deg,#0f172a,#1a3a2a)">
         <a class="demo-tile" href="demo-excel.html" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="فتح المشروع التفاعلي"><span class="demo-ic">📈</span><span class="demo-cta">▶ تشغيل المشروع التفاعلي</span><span class="demo-live"><span class="status-dot"></span>LIVE</span></a>
         <div class="project-tag" style="background:rgba(16,185,129,0.2);color:#34d399;border:1px solid rgba(16,185,129,0.3)">Excel</div>
@@ -1785,11 +1797,12 @@ body::after {
           <span class="tech-tag">VLOOKUP</span>
           <span class="tech-tag">Charts</span>
         </div>
+        <div class="project-actions"><a class="pa-btn pa-demo" href="demo-excel.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">▶ عرض حي</a><a class="pa-btn pa-xlsx" href="Fahad_Excel_Analysis.xlsx" download onclick="event.stopPropagation()">⬇ تحميل Excel</a></div>
       </div>
     </div>
 
     <!-- Project 3 -->
-    <div class="project-card animate-in delay-3" onclick="openProject(2)">
+    <div class="project-card" onclick="openProject(2)">
       <div class="project-preview" style="background:linear-gradient(135deg,#0f172a,#2d1a3a)">
         <a class="demo-tile" href="demo-automation.html" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="فتح المشروع التفاعلي"><span class="demo-ic">⚙️</span><span class="demo-cta">▶ تشغيل المشروع التفاعلي</span><span class="demo-live"><span class="status-dot"></span>LIVE</span></a>
         <div class="project-tag" style="background:rgba(176,141,87,0.2);color:#cbab78;border:1px solid rgba(176,141,87,0.3)">Automation</div>
@@ -1803,11 +1816,12 @@ body::after {
           <span class="tech-tag">Workflow</span>
           <span class="tech-tag">APIs</span>
         </div>
+        <div class="project-actions"><a class="pa-btn pa-demo" href="demo-automation.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">▶ عرض حي</a></div>
       </div>
     </div>
 
     <!-- Project 4: HR Analytics -->
-    <div class="project-card animate-in delay-1" onclick="openProject(3)">
+    <div class="project-card" onclick="openProject(3)">
       <div class="project-preview" style="background:linear-gradient(135deg,#0f172a,#16264f)">
         <a class="demo-tile" href="demo-hr.html" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="فتح المشروع التفاعلي"><span class="demo-ic">👥</span><span class="demo-cta">▶ تشغيل المشروع التفاعلي</span><span class="demo-live"><span class="status-dot"></span>LIVE</span></a>
         <div class="project-tag" style="background:rgba(34,211,238,0.2);color:#22d3ee;border:1px solid rgba(34,211,238,0.3)">HR Analytics</div>
@@ -1821,11 +1835,12 @@ body::after {
           <span class="tech-tag">KPI</span>
           <span class="tech-tag">HR</span>
         </div>
+        <div class="project-actions"><a class="pa-btn pa-demo" href="demo-hr.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">▶ عرض حي</a></div>
       </div>
     </div>
 
     <!-- Project 5: Data Cleaning -->
-    <div class="project-card animate-in delay-2" onclick="openProject(4)">
+    <div class="project-card" onclick="openProject(4)">
       <div class="project-preview" style="background:linear-gradient(135deg,#0f172a,#1a2e2a)">
         <a class="demo-tile" href="demo-cleaning.html" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="فتح المشروع التفاعلي"><span class="demo-ic">🧹</span><span class="demo-cta">▶ تشغيل المشروع التفاعلي</span><span class="demo-live"><span class="status-dot"></span>LIVE</span></a>
         <div class="project-tag" style="background:rgba(16,185,129,0.2);color:#34d399;border:1px solid rgba(16,185,129,0.3)">Data Cleaning</div>
@@ -1839,6 +1854,7 @@ body::after {
           <span class="tech-tag">Data Cleaning</span>
           <span class="tech-tag">ETL</span>
         </div>
+        <div class="project-actions"><a class="pa-btn pa-demo" href="demo-cleaning.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">▶ عرض حي</a><a class="pa-btn pa-xlsx" href="Fahad_Excel_Analysis.xlsx" download onclick="event.stopPropagation()">⬇ تحميل Excel</a></div>
       </div>
     </div>
   </div>
@@ -1908,8 +1924,8 @@ body::after {
               <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_built">حلول مبنية</div>
             </div>
             <div style="text-align:center;padding:10px;background:rgba(212,175,106,0.06);border:1px solid rgba(212,175,106,0.12);border-radius:8px">
-              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#d4af6a">90%</div>
-              <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_team">رضا الفريق</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#d4af6a">15+</div>
+              <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_team">عمليات مؤتمتة</div>
             </div>
           </div>
         </div>
@@ -1975,8 +1991,8 @@ body::after {
               <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_report_time">وقت التقارير</div>
             </div>
             <div style="text-align:center;padding:10px;background:rgba(217,189,128,0.06);border:1px solid rgba(217,189,128,0.12);border-radius:8px">
-              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#d9bd80">100%</div>
-              <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_mgmt">رضا الإدارة</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#d9bd80">5</div>
+              <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_mgmt">أقسام مخدومة</div>
             </div>
           </div>
         </div>
@@ -2274,7 +2290,17 @@ function openProject(index) {
   document.getElementById('modalTag2').style.color = m.tagColor;
   document.getElementById('modalDate').textContent = new Date().toLocaleDateString('ar-SA');
   var demos = ['demo-sales.html','demo-excel.html','demo-automation.html','demo-hr.html','demo-cleaning.html'];
-  var shotHtml = '<a href="'+demos[index]+'" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;padding:16px;background:linear-gradient(135deg,#d4af6a,#a8853e);border-radius:12px;color:#16120a;text-decoration:none;font-family:Cairo,sans-serif;font-size:14px;font-weight:700;box-shadow:0 4px 18px rgba(212,175,106,0.3)">▶ تشغيل المشروع التفاعلي — يفتح في تبويب جديد</a>';
+  // ملفات حقيقية قابلة للتحميل لكل مشروع (null = لا يوجد ملف)
+  var files = [null, 'Fahad_Excel_Analysis.xlsx', null, null, 'Fahad_Excel_Analysis.xlsx'];
+  // ▼ الصق هنا رابط "Publish to Web" من Power BI Service ليظهر الداشبورد الحقيقي مضمّناً
+  var powerBIEmbed = '';
+  var shotHtml = '<a href="'+demos[index]+'" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px;padding:16px;background:linear-gradient(135deg,#d4af6a,#a8853e);border-radius:12px;color:#16120a;text-decoration:none;font-family:Cairo,sans-serif;font-size:14px;font-weight:700;box-shadow:0 4px 18px rgba(212,175,106,0.3)">▶ تشغيل المشروع التفاعلي — يفتح في تبويب جديد</a>';
+  if (index === 0 && powerBIEmbed) {
+    shotHtml = '<div style="position:relative;padding-top:62%;margin-bottom:18px;border-radius:12px;overflow:hidden;border:1px solid var(--border)"><iframe src="'+powerBIEmbed+'" style="position:absolute;inset:0;width:100%;height:100%;border:0" allowfullscreen loading="lazy" title="Power BI Dashboard"></iframe></div>';
+  }
+  if (files[index]) {
+    shotHtml += '<a href="'+files[index]+'" download style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;padding:13px;background:transparent;border:1px solid #a8853e;border-radius:12px;color:#e6c98c;text-decoration:none;font-family:Cairo,sans-serif;font-size:13px;font-weight:700">⬇ تحميل ملف Excel الحقيقي — VLOOKUP · XLOOKUP · SUMIFS · Charts</a>';
+  }
   dash.innerHTML = shotHtml + builders[index]();
   modal.classList.add('show');
   document.body.style.overflow = 'hidden';
@@ -2378,14 +2404,14 @@ function drawProjectCharts() {
   drawImpactChart();drawGrowthChart();drawExpCharts();
 }
 
-function drawImpactChart(){var c=document.getElementById('impactChart');if(!c||!c.getContext)return;var ctx=c.getContext('2d');c.width=c.offsetWidth*2;c.height=400;ctx.scale(2,2);var w=c.offsetWidth,h=200;var cats=[t('تقليل الأخطاء','Error Reduction'),t('توفير الوقت','Time Saved'),t('رضا العملاء','Customer Satisfaction'),t('كفاءة العمليات','Operations Efficiency'),t('جودة التقارير','Report Quality')];var vals=[85,92,88,95,90];var cols=['#c8a45f','#10b981','#d4af6a','#b08d57','#d9bd80'];cats.forEach(function(cat,i){var y=10+i*40;ctx.fillStyle='#94a3b8';ctx.font='600 12px Cairo';ctx.textAlign='right';ctx.fillText(cat,120,y+16);ctx.fillStyle='#1e293b';ctx.beginPath();ctx.roundRect(130,y,w-180,24,4);ctx.fill();var fl=(vals[i]/100)*(w-180);var g=ctx.createLinearGradient(130,0,130+fl,0);g.addColorStop(0,cols[i]);g.addColorStop(1,cols[i]+'88');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(130,y,fl,24,4);ctx.fill();ctx.fillStyle='#f1f5f9';ctx.font='600 11px monospace';ctx.textAlign='left';ctx.fillText(vals[i]+'%',135+fl+8,y+16);});}
+function drawImpactChart(){var c=document.getElementById('impactChart');if(!c||!c.getContext)return;var ctx=c.getContext('2d');c.width=c.offsetWidth*2;c.height=400;ctx.scale(2,2);var w=c.offsetWidth,h=200;var cats=[t('تقليل أخطاء المعالجة','Error Reduction'),t('خفض وقت التقارير','Report Time Saved'),t('رضا العملاء (SNB)','Customer Satisfaction'),t('كفاءة العمليات','Operations Efficiency'),t('خفض الجهد اليدوي','Manual Effort Reduced')];var vals=[95,50,95,30,40];var cols=['#c8a45f','#10b981','#d4af6a','#b08d57','#d9bd80'];cats.forEach(function(cat,i){var y=10+i*40;ctx.fillStyle='#94a3b8';ctx.font='600 12px Cairo';ctx.textAlign='right';ctx.fillText(cat,120,y+16);ctx.fillStyle='#1e293b';ctx.beginPath();ctx.roundRect(130,y,w-180,24,4);ctx.fill();var fl=(vals[i]/100)*(w-180);var g=ctx.createLinearGradient(130,0,130+fl,0);g.addColorStop(0,cols[i]);g.addColorStop(1,cols[i]+'88');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(130,y,fl,24,4);ctx.fill();ctx.fillStyle='#f1f5f9';ctx.font='600 11px monospace';ctx.textAlign='left';ctx.fillText(vals[i]+'%',135+fl+8,y+16);});}
 
 function drawGrowthChart(){var c=document.getElementById('growthChart');if(!c||!c.getContext)return;var ctx=c.getContext('2d');c.width=c.offsetWidth*2;c.height=360;ctx.scale(2,2);var w=c.offsetWidth,h=180;var d=[20,35,45,60,75,90,95];var labels=['2019','2020','2021','2022','2023','2024','2025'];ctx.strokeStyle='#1e293b';ctx.lineWidth=0.5;for(var i=0;i<=4;i++){var y=10+i*((h-30)/4);ctx.beginPath();ctx.moveTo(30,y);ctx.lineTo(w-10,y);ctx.stroke();}ctx.strokeStyle='#c0654a';ctx.lineWidth=2.5;ctx.beginPath();d.forEach(function(v,i){var x=30+i*((w-40)/6);var y=h-20-(v/100)*(h-30);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});ctx.stroke();d.forEach(function(v,i){var x=30+i*((w-40)/6);var y=h-20-(v/100)*(h-30);ctx.beginPath();ctx.arc(x,y,4,0,Math.PI*2);ctx.fillStyle='#c0654a';ctx.fill();ctx.fillStyle='#64748b';ctx.font='10px monospace';ctx.textAlign='center';ctx.fillText(labels[i],x,h-4);});ctx.beginPath();d.forEach(function(v,i){var x=30+i*((w-40)/6);var y=h-20-(v/100)*(h-30);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});ctx.lineTo(30+6*((w-40)/6),h-20);ctx.lineTo(30,h-20);ctx.closePath();var g=ctx.createLinearGradient(0,0,0,h);g.addColorStop(0,'rgba(192,101,74,0.12)');g.addColorStop(1,'rgba(192,101,74,0)');ctx.fillStyle=g;ctx.fill();}
 
 function drawExpCharts(){
   var c1=document.getElementById('expChart1');if(c1&&c1.getContext){var ctx=c1.getContext('2d');c1.width=c1.offsetWidth*2;c1.height=400;ctx.scale(2,2);var w=c1.offsetWidth,h=200;var months=[t('يناير','Jan'),t('فبراير','Feb'),t('مارس','Mar'),t('أبريل','Apr'),t('مايو','May'),t('يونيو','Jun')];var tasks=[8,14,20,28,35,42];var hours=[5,10,16,22,30,38];var bw=16;var gw=(w-50)/6;drawGrid(ctx,w,h);months.forEach(function(m,i){var cx=40+i*gw+gw/2;var th=(tasks[i]/50)*(h-50);var g1=ctx.createLinearGradient(0,h-25-th,0,h-25);g1.addColorStop(0,'#c8a45f');g1.addColorStop(1,'#c8a45f22');ctx.fillStyle=g1;ctx.beginPath();ctx.roundRect(cx-bw-2,h-25-th,bw,th,3);ctx.fill();var hh=(hours[i]/50)*(h-50);var g2=ctx.createLinearGradient(0,h-25-hh,0,h-25);g2.addColorStop(0,'#d9bd80');g2.addColorStop(1,'#d9bd8022');ctx.fillStyle=g2;ctx.beginPath();ctx.roundRect(cx+2,h-25-hh,bw,hh,3);ctx.fill();ctx.fillStyle='#64748b';ctx.font='10px Cairo';ctx.textAlign='center';ctx.fillText(m,cx,h-8);});}
   var c2=document.getElementById('expChart2');if(c2&&c2.getContext){var ctx=c2.getContext('2d');c2.width=c2.offsetWidth*2;c2.height=400;ctx.scale(2,2);var w=c2.offsetWidth,h=200;var items=[t('التقارير الشهرية','Monthly Reports'),t('تقارير KPI','KPI Reports'),t('تحليل الأداء','Performance'),t('تقارير المشاريع','Projects')];var before=[48,24,36,40];var after=[12,6,10,15];items.forEach(function(item,i){var y=15+i*44;ctx.fillStyle='#e2e8f0';ctx.font='600 11px Cairo';ctx.textAlign='right';ctx.fillText(item,105,y+6);var bw=(before[i]/50)*(w-120);var g1=ctx.createLinearGradient(110,0,110+bw,0);g1.addColorStop(0,'#c0654a');g1.addColorStop(1,'#c0654a55');ctx.fillStyle=g1;ctx.beginPath();ctx.roundRect(110,y-2,bw,18,3);ctx.fill();var aw=(after[i]/50)*(w-120);var g2=ctx.createLinearGradient(110,0,110+aw,0);g2.addColorStop(0,'#10b981');g2.addColorStop(1,'#10b98155');ctx.fillStyle=g2;ctx.beginPath();ctx.roundRect(110,y+20,aw,18,3);ctx.fill();});}
-  var c3=document.getElementById('expChart3');if(c3&&c3.getContext){var ctx=c3.getContext('2d');c3.width=c3.offsetWidth*2;c3.height=400;ctx.scale(2,2);var w=c3.offsetWidth,h=200;var qs=['Q1','Q2','Q3','Q4'];var ach=[95,110,125,130];var bw=36;var gw=(w-60)/4;drawGrid(ctx,w,h);var ty=h-25-(100/150)*(h-50);ctx.setLineDash([6,4]);ctx.strokeStyle='#d4af6a';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(35,ty);ctx.lineTo(w-10,ty);ctx.stroke();ctx.setLineDash([]);qs.forEach(function(q,i){var cx=40+i*gw+gw/2;var bh=(ach[i]/150)*(h-50);var y=h-25-bh;var col=ach[i]>=100?'#10b981':'#c0654a';var g=ctx.createLinearGradient(0,y,0,h-25);g.addColorStop(0,col);g.addColorStop(1,col+'22');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(cx-bw/2,y,bw,bh,4);ctx.fill();ctx.fillStyle='#f1f5f9';ctx.font='700 12px monospace';ctx.textAlign='center';ctx.fillText(ach[i]+'%',cx,y-8);ctx.fillStyle='#64748b';ctx.font='12px Cairo';ctx.fillText(q,cx,h-8);});}
+  var c3=document.getElementById('expChart3');if(c3&&c3.getContext){var ctx=c3.getContext('2d');c3.width=c3.offsetWidth*2;c3.height=400;ctx.scale(2,2);var w=c3.offsetWidth,h=200;var qs=['Q1','Q2','Q3','Q4'];var ach=[98,112,118,124];var bw=36;var gw=(w-60)/4;drawGrid(ctx,w,h);var ty=h-25-(100/150)*(h-50);ctx.setLineDash([6,4]);ctx.strokeStyle='#d4af6a';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(35,ty);ctx.lineTo(w-10,ty);ctx.stroke();ctx.setLineDash([]);qs.forEach(function(q,i){var cx=40+i*gw+gw/2;var bh=(ach[i]/150)*(h-50);var y=h-25-bh;var col=ach[i]>=100?'#10b981':'#c0654a';var g=ctx.createLinearGradient(0,y,0,h-25);g.addColorStop(0,col);g.addColorStop(1,col+'22');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(cx-bw/2,y,bw,bh,4);ctx.fill();ctx.fillStyle='#f1f5f9';ctx.font='700 12px monospace';ctx.textAlign='center';ctx.fillText(ach[i]+'%',cx,y-8);ctx.fillStyle='#64748b';ctx.font='12px Cairo';ctx.fillText(q,cx,h-8);});}
 }
 
 // ======== FILTER CHIPS ========
@@ -2397,7 +2423,7 @@ function toggleTheme(){var html=document.documentElement;var btn=document.getEle
 // ======== LANGUAGE TOGGLE ========
 var currentLang='ar';
 function t(ar,en){return currentLang==='en'?en:ar;}
-var translations={en:{nav_overview:'Overview',nav_projects:'Projects',nav_experience:'Experience',nav_contact:'Contact Me',hero_name:'Fahad M. Al-Mutairi',hero_desc:'Data Analyst & Automation Specialist with a strong background in building dashboards and improving operational efficiency. Skilled in Microsoft Excel and Power BI for data analysis, workflow automation, and decision support.',stat_years:'Years Experience',stat_projects:'Key Projects',stat_gpa:'GPA',kpi_dashboards:'Data Records Analyzed',kpi_efficiency:'Operational Efficiency',kpi_automation:'Hours Saved by Automation',kpi_certs:'Reports & Dashboards Delivered',skills_title:'Technical Skills',expertise_title:'Expertise Distribution',languages_title:'Languages',edu_title:'Education & Certifications',edu_degree:"Bachelor's in Software Engineering",contact_info_title:'Contact Information',proj1_desc:'Interactive dashboard to track KPIs and sales performance with dynamic filters and comparative analysis',proj2_desc:'Advanced data analysis to discover patterns and trends using Pivot Tables and Advanced Formulas',proj3_desc:'Built automation solutions to reduce repetitive tasks, improving productivity by over 40%',send_msg_title:'Send a Message',form_name:'Full Name',form_email:'Email Address',form_subject:'Subject',form_message:'Message',available_title:'Available for Work',available_desc:'Currently seeking opportunities in data analysis and automation. Open to remote and on-site.',growth_title:'Career Growth',achievements_title:'Key Achievements',tasks_title:'Tasks & Achievements',donut_years:'Years',legend_data:'Data Analysis 35%',legend_dash:'Dashboards 24%',legend_auto:'Automation 19%',legend_eng:'Software Engineering 22%',lbl_phone:'Phone',lbl_email:'Email',lbl_location:'Location',val_location:'Saudi Arabia',val_location2:'Saudi Arabia',impact_title:'Project Impact',job1_task1:'Workflow Automation',job1_task2:'System Optimization',job1_task3:'Scalable Solutions',job2_task1:'Reports & Dashboards',job2_task2:'Process Simplification',job2_task3:'Operations Coordination',job3_task1:'Exceeding Targets',job3_task2:'Client Relations',job3_task3:'Revenue Growth',mini_perf:'Performance',mini_built:'Solutions Built',mini_team:'Team Satisfaction',mini_dash:'Dashboards',mini_report_time:'Report Time',mini_mgmt:'Mgmt Satisfaction',mini_target:'Target Achievement',mini_clients:'Clients',mini_csat:'Customer Satisfaction',chart1_title:'Monthly Automation',chart2_title:'Report Efficiency (Before/After)',chart3_title:'Quarterly Sales',leg_tasks:'Automated Tasks',leg_before:'Before',leg_after:'After',leg_achieved:'Achieved',leg_target:'Target',ach1:'Operational Efficiency',ach2:'Strategic Dashboards',ach3:'Sales Target Exceeded',ach4:'Report Time Reduction',contact_email_label:'Email Address',leg_hours:'Hours Saved',lang_arabic:'Arabic',download_cv:'Download CV',dur_1yr:'+1 Year',dur_4yr:'4 Years',dur_1yr2:'1 Year',present:'Present',send_success:'✓ Message sent successfully! Will contact you soon',job1_d1:'Automated internal workflows to reduce manual effort and improve team productivity',job1_d2:'Improved system processing efficiency and response time',job1_d3:'Developed scalable solutions aligned with business requirements',job2_d1:'Created interactive reports and dashboards for management decisions',job2_d2:'Streamlined reporting processes and reduced turnaround time',job2_d3:'Coordinated operations and improved communication efficiency',job3_d1:'Consistently achieved and exceeded sales targets',job3_d2:'Built strong client relationships and improved conversion rates',job3_d3:'Contributed to revenue growth through consistent performance',ach1_desc:'+40% team productivity via automation',ach2_desc:'20+ dashboards for strategic decisions',ach3_desc:'120% target achievement in banking sector',ach4_desc:'-50% in periodic report preparation time'},ar:{nav_overview:'نظرة عامة',nav_projects:'المشاريع',nav_experience:'الخبرات',nav_contact:'تواصل معي',hero_name:'فهد محمد المطيري',hero_desc:'محلل بيانات ومتخصص أتمتة بخلفية قوية في بناء الداشبوردات وتحسين كفاءة العمليات. خبرة في Microsoft Excel و Power BI لتحليل البيانات وأتمتة سير العمل ودعم اتخاذ القرارات.',stat_years:'سنوات خبرة',stat_projects:'مشاريع رئيسية',stat_gpa:'GPA',kpi_dashboards:'سجلات بيانات محللّة',kpi_efficiency:'تحسين كفاءة العمليات',kpi_automation:'ساعات عمل موفّرة بالأتمتة',kpi_certs:'تقارير وداشبوردات مُنجزة',skills_title:'المهارات التقنية',expertise_title:'توزيع الخبرات',languages_title:'اللغات',edu_title:'التعليم والشهادات',edu_degree:'بكالوريوس هندسة البرمجيات',contact_info_title:'معلومات التواصل',proj1_desc:'داشبورد تفاعلي لتتبع مؤشرات الأداء الرئيسية وأداء المبيعات مع فلاتر ديناميكية وتحليل مقارن للفترات الزمنية',proj2_desc:'تحليل بيانات متقدم لاكتشاف الأنماط والاتجاهات واستخراج رؤى قابلة للتنفيذ باستخدام Pivot Tables و Advanced Formulas',proj3_desc:'بناء حلول أتمتة لتقليل المهام المتكررة والأخطاء البشرية وتحسين الإنتاجية بنسبة تزيد عن 40%',send_msg_title:'أرسل رسالة',form_name:'الاسم الكامل',form_email:'البريد الإلكتروني',form_subject:'الموضوع',form_message:'الرسالة',available_title:'متاح للعمل',available_desc:'أبحث حالياً عن فرص في مجال تحليل البيانات والأتمتة. مستعد للعمل عن بعد أو في الموقع.',growth_title:'النمو المهني',achievements_title:'الإنجازات الرئيسية',tasks_title:'المهام والإنجازات',donut_years:'سنوات',legend_data:'تحليل البيانات 35%',legend_dash:'الداشبوردات 24%',legend_auto:'الأتمتة 19%',legend_eng:'هندسة البرمجيات 22%',lbl_phone:'الهاتف',lbl_email:'الإيميل',lbl_location:'الموقع',val_location:'السعودية',val_location2:'المملكة العربية السعودية',impact_title:'تأثير المشاريع',job1_task1:'أتمتة سير العمل',job1_task2:'تحسين أداء الأنظمة',job1_task3:'حلول قابلة للتوسع',job2_task1:'تقارير وداشبوردات',job2_task2:'تبسيط العمليات',job2_task3:'تنسيق العمليات',job3_task1:'تجاوز المستهدفات',job3_task2:'علاقات العملاء',job3_task3:'نمو الإيرادات',mini_perf:'تحسين الأداء',mini_built:'حلول مبنية',mini_team:'رضا الفريق',mini_dash:'داشبورد',mini_report_time:'وقت التقارير',mini_mgmt:'رضا الإدارة',mini_target:'تحقيق الهدف',mini_clients:'عميل',mini_csat:'رضا العملاء',chart1_title:'أداء الأتمتة الشهري',chart2_title:'كفاءة التقارير (قبل / بعد)',chart3_title:'أداء المبيعات الربع سنوي',leg_tasks:'مهام مؤتمتة',leg_before:'قبل التحسين',leg_after:'بعد التحسين',leg_achieved:'المحقق',leg_target:'المستهدف',ach1:'تحسين الكفاءة التشغيلية',ach2:'داشبوردات استراتيجية',ach3:'تجاوز أهداف المبيعات',ach4:'خفض زمن التقارير',contact_email_label:'البريد الإلكتروني',leg_hours:'وقت موفّر (ساعات)',lang_arabic:'العربية',download_cv:'تحميل السيرة الذاتية',dur_1yr:'+1 سنة',dur_4yr:'4 سنوات',dur_1yr2:'1 سنة',present:'الحالي',send_success:'✓ تم إرسال رسالتك بنجاح! سأتواصل معك قريباً',job1_d1:'أتمتة العمليات الداخلية لتقليل الجهد اليدوي وتحسين إنتاجية الفريق بشكل ملحوظ',job1_d2:'تحسين كفاءة المعالجة وسرعة الاستجابة للأنظمة القائمة',job1_d3:'تطوير وصيانة حلول برمجية متوافقة مع متطلبات العمل المتغيرة',job2_d1:'إنشاء تقارير وداشبوردات تفاعلية لدعم اتخاذ القرارات الإدارية',job2_d2:'تبسيط عمليات إعداد التقارير وتقليل وقت الإنجاز بنسبة كبيرة',job2_d3:'تنسيق العمليات بين الأقسام وتحسين كفاءة التواصل الداخلي',job3_d1:'تحقيق وتجاوز أهداف المبيعات الشهرية والسنوية باستمرار',job3_d2:'بناء علاقات قوية ومستدامة مع العملاء وتحسين معدلات التحويل',job3_d3:'المساهمة في نمو الإيرادات من خلال أداء مبيعات متميز ومستمر',ach1_desc:'+40% في إنتاجية الفريق عبر حلول الأتمتة',ach2_desc:'20+ داشبورد لدعم القرارات الإدارية',ach3_desc:'120% تحقيق المستهدف في القطاع البنكي',ach4_desc:'-50% في وقت إعداد التقارير الدورية'}};
+var translations={en:{nav_overview:'Overview',nav_projects:'Projects',nav_experience:'Experience',nav_contact:'Contact Me',hero_name:'Fahad M. Al-Mutairi',hero_desc:'Data Analyst & Automation Specialist with a strong background in building dashboards and improving operational efficiency. Skilled in Microsoft Excel and Power BI for data analysis, workflow automation, and decision support.',stat_years:'Years Experience',stat_projects:'Key Projects',stat_gpa:'GPA',kpi_dashboards:'Data Records Analyzed',kpi_efficiency:'Operational Efficiency',kpi_automation:'Hours Saved by Automation',kpi_certs:'Reports & Dashboards Delivered',skills_title:'Technical Skills',expertise_title:'Expertise Distribution',languages_title:'Languages',edu_title:'Education & Certifications',edu_degree:"Bachelor's in Software Engineering",contact_info_title:'Contact Information',proj1_desc:'Interactive dashboard to track KPIs and sales performance with dynamic filters and comparative analysis',proj2_desc:'Advanced data analysis to discover patterns and trends using Pivot Tables and Advanced Formulas',proj3_desc:'Built automation solutions to reduce repetitive tasks, improving productivity by over 40%',send_msg_title:'Send a Message',form_name:'Full Name',form_email:'Email Address',form_subject:'Subject',form_message:'Message',available_title:'Available for Work',available_desc:'Currently seeking opportunities in data analysis and automation. Open to remote and on-site.',growth_title:'Career Growth',achievements_title:'Key Achievements',tasks_title:'Tasks & Achievements',donut_years:'Years',legend_data:'Data Analysis 35%',legend_dash:'Dashboards 24%',legend_auto:'Automation 19%',legend_eng:'Software Engineering 22%',lbl_phone:'Phone',lbl_email:'Email',lbl_location:'Location',val_location:'Saudi Arabia',val_location2:'Saudi Arabia',impact_title:'Project Impact',job1_task1:'Workflow Automation',job1_task2:'System Optimization',job1_task3:'Scalable Solutions',job2_task1:'Reports & Dashboards',job2_task2:'Process Simplification',job2_task3:'Operations Coordination',job3_task1:'Exceeding Targets',job3_task2:'Client Relations',job3_task3:'Revenue Growth',mini_perf:'Performance',mini_built:'Solutions Built',mini_team:'Automated Workflows',mini_dash:'Dashboards',mini_report_time:'Report Time',mini_mgmt:'Departments Served',mini_target:'Target Achievement',mini_clients:'Clients',mini_csat:'Customer Satisfaction',chart1_title:'Monthly Automation',chart2_title:'Report Efficiency (Before/After)',chart3_title:'Quarterly Sales',leg_tasks:'Automated Tasks',leg_before:'Before',leg_after:'After',leg_achieved:'Achieved',leg_target:'Target',ach1:'Operational Efficiency',ach2:'Strategic Dashboards',ach3:'Sales Target Exceeded',ach4:'Report Time Reduction',contact_email_label:'Email Address',leg_hours:'Hours Saved',lang_arabic:'Arabic',download_cv:'Download CV',dur_1yr:'+1 Year',dur_4yr:'4 Years',dur_1yr2:'1 Year',present:'Present',send_success:'✓ Message sent successfully! Will contact you soon',job1_d1:'Automated internal workflows to reduce manual effort and improve team productivity',job1_d2:'Improved system processing efficiency and response time',job1_d3:'Developed scalable solutions aligned with business requirements',job2_d1:'Created interactive reports and dashboards for management decisions',job2_d2:'Streamlined reporting processes and reduced turnaround time',job2_d3:'Coordinated operations and improved communication efficiency',job3_d1:'Consistently achieved and exceeded sales targets',job3_d2:'Built strong client relationships and improved conversion rates',job3_d3:'Contributed to revenue growth through consistent performance',ach1_desc:'-40% manual effort via automation solutions',ach2_desc:'20+ dashboards for strategic decisions',ach3_desc:'120% target achievement in banking sector',ach4_desc:'-50% in periodic report preparation time'},ar:{nav_overview:'نظرة عامة',nav_projects:'المشاريع',nav_experience:'الخبرات',nav_contact:'تواصل معي',hero_name:'فهد محمد المطيري',hero_desc:'محلل بيانات ومتخصص أتمتة بخلفية قوية في بناء الداشبوردات وتحسين كفاءة العمليات. خبرة في Microsoft Excel و Power BI لتحليل البيانات وأتمتة سير العمل ودعم اتخاذ القرارات.',stat_years:'سنوات خبرة',stat_projects:'مشاريع رئيسية',stat_gpa:'GPA',kpi_dashboards:'سجلات بيانات محللّة',kpi_efficiency:'تحسين كفاءة العمليات',kpi_automation:'ساعات عمل موفّرة بالأتمتة',kpi_certs:'تقارير وداشبوردات مُنجزة',skills_title:'المهارات التقنية',expertise_title:'توزيع الخبرات',languages_title:'اللغات',edu_title:'التعليم والشهادات',edu_degree:'بكالوريوس هندسة البرمجيات',contact_info_title:'معلومات التواصل',proj1_desc:'داشبورد تفاعلي لتتبع مؤشرات الأداء الرئيسية وأداء المبيعات مع فلاتر ديناميكية وتحليل مقارن للفترات الزمنية',proj2_desc:'تحليل بيانات متقدم لاكتشاف الأنماط والاتجاهات واستخراج رؤى قابلة للتنفيذ باستخدام Pivot Tables و Advanced Formulas',proj3_desc:'بناء حلول أتمتة لتقليل المهام المتكررة والأخطاء البشرية وتحسين الإنتاجية بنسبة تزيد عن 40%',send_msg_title:'أرسل رسالة',form_name:'الاسم الكامل',form_email:'البريد الإلكتروني',form_subject:'الموضوع',form_message:'الرسالة',available_title:'متاح للعمل',available_desc:'أبحث حالياً عن فرص في مجال تحليل البيانات والأتمتة. مستعد للعمل عن بعد أو في الموقع.',growth_title:'النمو المهني',achievements_title:'الإنجازات الرئيسية',tasks_title:'المهام والإنجازات',donut_years:'سنوات',legend_data:'تحليل البيانات 35%',legend_dash:'الداشبوردات 24%',legend_auto:'الأتمتة 19%',legend_eng:'هندسة البرمجيات 22%',lbl_phone:'الهاتف',lbl_email:'الإيميل',lbl_location:'الموقع',val_location:'السعودية',val_location2:'المملكة العربية السعودية',impact_title:'تأثير المشاريع',job1_task1:'أتمتة سير العمل',job1_task2:'تحسين أداء الأنظمة',job1_task3:'حلول قابلة للتوسع',job2_task1:'تقارير وداشبوردات',job2_task2:'تبسيط العمليات',job2_task3:'تنسيق العمليات',job3_task1:'تجاوز المستهدفات',job3_task2:'علاقات العملاء',job3_task3:'نمو الإيرادات',mini_perf:'تحسين الأداء',mini_built:'حلول مبنية',mini_team:'عمليات مؤتمتة',mini_dash:'داشبورد',mini_report_time:'وقت التقارير',mini_mgmt:'أقسام مخدومة',mini_target:'تحقيق الهدف',mini_clients:'عميل',mini_csat:'رضا العملاء',chart1_title:'أداء الأتمتة الشهري',chart2_title:'كفاءة التقارير (قبل / بعد)',chart3_title:'أداء المبيعات الربع سنوي',leg_tasks:'مهام مؤتمتة',leg_before:'قبل التحسين',leg_after:'بعد التحسين',leg_achieved:'المحقق',leg_target:'المستهدف',ach1:'تحسين الكفاءة التشغيلية',ach2:'داشبوردات استراتيجية',ach3:'تجاوز أهداف المبيعات',ach4:'خفض زمن التقارير',contact_email_label:'البريد الإلكتروني',leg_hours:'وقت موفّر (ساعات)',lang_arabic:'العربية',download_cv:'تحميل السيرة الذاتية',dur_1yr:'+1 سنة',dur_4yr:'4 سنوات',dur_1yr2:'1 سنة',present:'الحالي',send_success:'✓ تم إرسال رسالتك بنجاح! سأتواصل معك قريباً',job1_d1:'أتمتة العمليات الداخلية لتقليل الجهد اليدوي وتحسين إنتاجية الفريق بشكل ملحوظ',job1_d2:'تحسين كفاءة المعالجة وسرعة الاستجابة للأنظمة القائمة',job1_d3:'تطوير وصيانة حلول برمجية متوافقة مع متطلبات العمل المتغيرة',job2_d1:'إنشاء تقارير وداشبوردات تفاعلية لدعم اتخاذ القرارات الإدارية',job2_d2:'تبسيط عمليات إعداد التقارير وتقليل وقت الإنجاز بنسبة كبيرة',job2_d3:'تنسيق العمليات بين الأقسام وتحسين كفاءة التواصل الداخلي',job3_d1:'تحقيق وتجاوز أهداف المبيعات الشهرية والسنوية باستمرار',job3_d2:'بناء علاقات قوية ومستدامة مع العملاء وتحسين معدلات التحويل',job3_d3:'المساهمة في نمو الإيرادات من خلال أداء مبيعات متميز ومستمر',ach1_desc:'-40% في الجهد اليدوي عبر حلول الأتمتة',ach2_desc:'20+ داشبورد لدعم القرارات الإدارية',ach3_desc:'120% تحقيق المستهدف في القطاع البنكي',ach4_desc:'-50% في وقت إعداد التقارير الدورية'}};
 function toggleLang(){currentLang=currentLang==='ar'?'en':'ar';document.getElementById('langBtn').textContent=currentLang==='ar'?'EN':'عربي';document.documentElement.dir=currentLang==='ar'?'rtl':'ltr';document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(translations[currentLang][k])el.textContent=translations[currentLang][k];});var ni=document.getElementById('contactName');if(ni){ni.placeholder=currentLang==='ar'?'أدخل اسمك':'Enter your name';document.getElementById('contactEmail').placeholder='example@email.com';document.getElementById('contactSubject').placeholder=currentLang==='ar'?'موضوع الرسالة':'Message subject';document.getElementById('contactMsg').placeholder=currentLang==='ar'?'اكتب رسالتك هنا...':'Write your message here...';}var sb=document.getElementById('sendBtn');if(sb)sb.textContent=currentLang==='ar'?'إرسال الرسالة':'Send Message';drawProjectCharts();}
 
 // ======== CONTACT FORM (Formspree) ========
@@ -2409,5 +2435,6 @@ var observer=new IntersectionObserver(function(entries){entries.forEach(function
 document.querySelectorAll('.animate-in,.animate-right,.animate-scale').forEach(function(el){observer.observe(el);});
 
 </script>
+<div id="buildTag" style="position:fixed;bottom:8px;left:10px;z-index:50;font-family:monospace;font-size:10px;color:rgba(212,175,106,.45);pointer-events:none">v2.6</div>
 </body>
 </html>
