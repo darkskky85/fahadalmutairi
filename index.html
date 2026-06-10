@@ -1854,7 +1854,7 @@ body::after {
           <span class="tech-tag">Data Cleaning</span>
           <span class="tech-tag">ETL</span>
         </div>
-        <div class="project-actions"><a class="pa-btn pa-demo" href="demo-cleaning.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">▶ عرض حي</a><a class="pa-btn pa-xlsx" href="Fahad_Excel_Analysis.xlsx" download onclick="event.stopPropagation()">⬇ تحميل Excel</a></div>
+        <div class="project-actions"><a class="pa-btn pa-demo" href="demo-cleaning.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">▶ عرض حي</a><a class="pa-btn pa-xlsx" href="Fahad_Data_Cleaning.xlsx" download onclick="event.stopPropagation()">⬇ تحميل Excel</a></div>
       </div>
     </div>
   </div>
@@ -2291,7 +2291,7 @@ function openProject(index) {
   document.getElementById('modalDate').textContent = new Date().toLocaleDateString('ar-SA');
   var demos = ['demo-sales.html','demo-excel.html','demo-automation.html','demo-hr.html','demo-cleaning.html'];
   // ملفات حقيقية قابلة للتحميل لكل مشروع (null = لا يوجد ملف)
-  var files = [null, 'Fahad_Excel_Analysis.xlsx', null, null, 'Fahad_Excel_Analysis.xlsx'];
+  var files = [null, 'Fahad_Excel_Analysis.xlsx', null, null, 'Fahad_Data_Cleaning.xlsx'];
   // ▼ الصق هنا رابط "Publish to Web" من Power BI Service ليظهر الداشبورد الحقيقي مضمّناً
   var powerBIEmbed = '';
   var shotHtml = '<a href="'+demos[index]+'" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px;padding:16px;background:linear-gradient(135deg,#d4af6a,#a8853e);border-radius:12px;color:#16120a;text-decoration:none;font-family:Cairo,sans-serif;font-size:14px;font-weight:700;box-shadow:0 4px 18px rgba(212,175,106,0.3)">▶ تشغيل المشروع التفاعلي — يفتح في تبويب جديد</a>';
