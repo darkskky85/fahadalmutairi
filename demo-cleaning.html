@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Data Cleaning Project | Fahad Al-Mutairi</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=El+Messiri:wght@500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0c0a09;--card:#171310;--card2:#1d1813;--border:#2a2118;--gold:#d4af6a;--gold2:#a8853e;--champ:#e6c98c;--bronze:#b08d57;--ink:#f5efe3;--sub:#b3a78f;--mut:#7d7259;--pos:#2f9e6e;--neg:#c0654a}
+body{background:var(--bg);color:var(--ink);font-family:'Cairo',sans-serif;min-height:100vh;padding:28px 4vw 60px}
+body::before{content:'';position:fixed;inset:0;background:linear-gradient(rgba(212,175,106,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,106,.025) 1px,transparent 1px);background-size:56px 56px;pointer-events:none}
+.wrap{max-width:1180px;margin:0 auto;position:relative}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:26px;border-bottom:1px solid var(--border);padding-bottom:18px}
+h1{font-family:'El Messiri','Cairo',sans-serif;font-size:clamp(24px,4vw,34px);background:linear-gradient(120deg,#faf4e4,#e9cf96 55%,#c8a45f);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.sub{color:var(--sub);font-size:13px;margin-top:4px}
+.live{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--pos);font-family:'JetBrains Mono',monospace}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--pos);animation:p 2s infinite}
+@keyframes p{0%,100%{box-shadow:0 0 0 0 rgba(47,158,110,.4)}50%{box-shadow:0 0 0 6px rgba(47,158,110,0)}}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-bottom:22px}
+.kpi{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 18px;border-top:2px solid var(--gold)}
+.kpi .l{font-size:11px;color:var(--mut);letter-spacing:1px;text-transform:uppercase}
+.kpi .v{font-family:'El Messiri',sans-serif;font-size:27px;color:var(--gold);margin:4px 0 2px}
+.kpi .d{font-size:11px;color:var(--pos)}
+.kpi .d.neg{color:var(--neg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px}
+.ct{font-family:'El Messiri',sans-serif;font-size:15px;color:var(--ink);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.ct::before{content:'';width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+.ctrl{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.btn{background:var(--card);border:1px solid var(--border);color:var(--sub);padding:7px 16px;border-radius:8px;font-family:'Cairo',sans-serif;font-size:12.5px;cursor:pointer;transition:.25s}
+.btn:hover{border-color:var(--gold2);color:var(--champ)}
+.btn.on{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#16120a;font-weight:700;border-color:transparent}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{text-align:right;color:var(--mut);font-size:11px;letter-spacing:.5px;padding:8px 10px;border-bottom:1px solid var(--border);cursor:pointer;user-select:none}
+td{padding:8px 10px;border-bottom:1px solid var(--border);color:var(--sub)}
+tr:hover td{background:var(--card2)}
+.bar{height:8px;border-radius:4px;background:linear-gradient(90deg,var(--gold),var(--champ));transition:width .6s ease}
+.barbg{background:var(--border);border-radius:4px;overflow:hidden}
+footer{margin-top:34px;text-align:center;font-size:11.5px;color:var(--mut)}
+footer a{color:var(--gold);text-decoration:none}
+svg text{font-family:'Cairo',sans-serif}
+@media(max-width:640px){body{padding:18px 14px 40px}}
+</style></head><body><div class="wrap">
+<header><div><h1>Data Cleaning Project</h1><div class="sub">122 صف · قارن قبل وبعد بضغطة زر</div></div>
+<div class="live"><span class="dot"></span>LIVE DEMO</div></header>
+<div class="kpis">
+<div class="kpi"><div class="l">Rows Processed</div><div class="v">122</div><div class="d">customer orders</div></div>
+<div class="kpi"><div class="l">Issues Fixed</div><div class="v">214</div><div class="d">across 6 issue types</div></div>
+<div class="kpi"><div class="l">Duplicates Removed</div><div class="v">9</div><div class="d">kept first occurrence</div></div>
+<div class="kpi"><div class="l">Data Quality</div><div class="v">100%</div><div class="d">analysis-ready</div></div>
+</div>
+<div class="ctrl">
+<button class="btn on" id="bBefore">⚠ BEFORE — البيانات الفوضوية</button>
+<button class="btn" id="bAfter">✔ AFTER — بعد التنظيف</button>
+</div>
+<div class="card" style="margin-bottom:14px"><div class="ct" id="tt">Messy Source Data</div>
+<div style="overflow-x:auto"><table id="t"><thead><tr><th>Customer</th><th>City</th><th>Qty</th><th>Price</th><th>Date</th></tr></thead><tbody></tbody></table></div></div>
+<div class="card"><div class="ct">Cleaning Pipeline — Power Query / Excel</div>
+<div style="font-size:13px;color:var(--sub);line-height:2.2">
+<div><span style="color:var(--gold);font-family:'JetBrains Mono',monospace">1</span> · إزالة التكرارات حسب Order ID</div>
+<div><span style="color:var(--gold);font-family:'JetBrains Mono',monospace">2</span> · توحيد النصوص: Title Case + إزالة المسافات الزائدة</div>
+<div><span style="color:var(--gold);font-family:'JetBrains Mono',monospace">3</span> · تحويل الكميات النصية ("two") لأرقام + تعبئة الفراغات بالوسيط</div>
+<div><span style="color:var(--gold);font-family:'JetBrains Mono',monospace">4</span> · تنظيف الأسعار: إزالة "SAR" والفواصل وتحويلها لأرقام</div>
+<div><span style="color:var(--gold);font-family:'JetBrains Mono',monospace">5</span> · توحيد 5 صيغ تواريخ مختلفة إلى YYYY-MM-DD ووسم غير الصالح</div>
+<div><span style="color:var(--gold);font-family:'JetBrains Mono',monospace">6</span> · التحقق من الإيميلات + إضافة عمود Total = Qty × Price</div>
+</div></div>
+<script>
+var before=[["ahmed Al-Otaibi","riyadh",'"two"',"2500 SAR","15/01/2025"],
+["KHALID al-mutairi","JEDDAH","(blank)","1,200","Jan 15 2025"],
+["noura Al-Harbi","Dammam","3","(blank)","2025/02/20"],
+["Faisal AL-QAHTANI","khobar",'"3"',"SAR 900","2025-13-01"],
+["Sara Al-Dossari","RIYADH","5","3,400","(blank)"]];
+var after=[["Ahmed Al-Otaibi","Riyadh","2","2500.00","2025-01-15"],
+["Khalid Al-Mutairi","Jeddah","3","1200.00","2025-01-15"],
+["Noura Al-Harbi","Dammam","3","1850.00","2025-02-20"],
+["Faisal Al-Qahtani","Khobar","3","900.00","(flagged)"],
+["Sara Al-Dossari","Riyadh","5","3400.00","(flagged)"]];
+function show(rows,color){var h="";
+ rows.forEach(function(r){h+="<tr>"+r.map(function(c){return "<td style='font-family:JetBrains Mono,monospace;color:"+color+"'>"+c+"</td>"}).join("")+"</tr>";});
+ document.querySelector("#t tbody").innerHTML=h;}
+var bB=document.getElementById("bBefore"),bA=document.getElementById("bAfter"),tt=document.getElementById("tt");
+bB.onclick=function(){bB.classList.add("on");bA.classList.remove("on");tt.textContent="Messy Source Data";show(before,"#d98a6e");};
+bA.onclick=function(){bA.classList.add("on");bB.classList.remove("on");tt.textContent="Clean, Analysis-Ready Data";show(after,"#5fbf92");};
+show(before,"#d98a6e");
+</script><footer>مشروع تفاعلي توضيحي ببيانات تجريبية · Built by <a href="https://fahadalmutairi.vercel.app">Fahad Al-Mutairi</a> · <a href="https://fahadalmutairi.vercel.app/#projects">← العودة للموقع</a></footer>
+</div></body></html>

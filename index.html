@@ -34,47 +34,68 @@
 
 <!-- Structured Data (JSON-LD) -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Fahad M. Al-Mutairi","jobTitle":"Data Analyst & Automation Specialist","url":"https://fahadalmutairi.vercel.app/","email":"fahad.mf@outlook.com","telephone":"+966556949590","address":{"@type":"PostalAddress","addressCountry":"SA"},"knowsAbout":["Data Analysis","Power BI","Excel","Process Automation","Dashboard Development"],"sameAs":["https://linkedin.com/in/fahad-m-al-mutairi-34474371"]}
+{"@context":"https://schema.org","@type":"Person","name":"Fahad M. Al-Mutairi","jobTitle":"Data Analyst & Automation Specialist","url":"https://fahadalmutairi.vercel.app/","email":"fahad.mf@outlook.com","address":{"@type":"PostalAddress","addressCountry":"SA"},"knowsAbout":["Data Analysis","Power BI","Excel","Process Automation","Dashboard Development"],"sameAs":["https://linkedin.com/in/fahad-m-al-mutairi-34474371"]}
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --bg-primary: #0a0e1a;
-  --bg-secondary: #111827;
-  --bg-card: #1a2035;
-  --bg-card-hover: #1e2744;
-  --accent-blue: #3b82f6;
-  --accent-cyan: #06b6d4;
-  --accent-emerald: #10b981;
-  --accent-amber: #f59e0b;
-  --accent-purple: #8b5cf6;
-  --accent-rose: #f43f5e;
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --border: #1e293b;
-  --border-light: #334155;
-  --glow-blue: rgba(59, 130, 246, 0.15);
-  --glow-cyan: rgba(6, 182, 212, 0.15);
-  --donut-hole: #1a2035;
-  --grid-color: rgba(59,130,246,0.03);
+  --bg-primary: #0c0a09;
+  --bg-secondary: #131008;
+  --bg-card: #171310;
+  --bg-card-hover: #1d1813;
+  --accent-blue: #c8a45f;
+  --accent-cyan: #b8985a;
+  --accent-emerald: #2f9e6e;
+  --accent-amber: #d4af6a;
+  --accent-purple: #b08d57;
+  --accent-rose: #a8853e;
+  --text-primary: #f5efe3;
+  --text-secondary: #b3a78f;
+  --text-muted: #7d7259;
+  --border: #2a2118;
+  --border-light: #3d3122;
+  --glow-blue: rgba(212, 175, 106, 0.12);
+  --glow-cyan: rgba(212, 175, 106, 0.10);
+  --donut-hole: #171310;
+  --grid-color: rgba(212,175,106,0.025);
 }
 
 [data-theme="light"] {
-  --bg-primary: #f0f4f8;
-  --bg-secondary: #ffffff;
-  --bg-card: #ffffff;
-  --bg-card-hover: #f8fafc;
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #94a3b8;
-  --border: #e2e8f0;
-  --border-light: #cbd5e1;
-  --donut-hole: #ffffff;
-  --grid-color: rgba(59,130,246,0.06);
+  --bg-primary: #f4eee2;
+  --bg-secondary: #fdfaf3;
+  --bg-card: #fffdf8;
+  --bg-card-hover: #faf5ea;
+  --accent-amber: #a8813c;
+  --accent-blue: #9c7a35;
+  --text-primary: #2a2118;
+  --text-secondary: #6b5d45;
+  --text-muted: #9c8d70;
+  --border: #e6dcc8;
+  --border-light: #d4c7ab;
+  --donut-hole: #fffdf8;
+  --grid-color: rgba(168,129,60,0.05);
 }
+
+/* Live demo tiles */
+.demo-tile{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-decoration:none;transition:.3s}
+.demo-tile:hover{background:rgba(212,175,106,.07)}
+.demo-ic{font-size:34px;filter:grayscale(.2)}
+.demo-cta{font-family:'Cairo',sans-serif;font-size:12.5px;font-weight:700;color:#16120a;background:linear-gradient(135deg,#d4af6a,#a8853e);padding:8px 18px;border-radius:8px;box-shadow:0 4px 15px rgba(212,175,106,0.3);transition:.3s}
+.demo-tile:hover .demo-cta{transform:translateY(-2px);box-shadow:0 8px 25px rgba(212,175,106,0.4)}
+.demo-live{position:absolute;top:10px;left:12px;display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--accent-emerald)}
+
+/* Premium display typography */
+.hero-name, .card-title, .modal-title, .topbar-title {
+  font-family: 'El Messiri', 'Cairo', sans-serif;
+}
+.hero-name { letter-spacing: 0; }
+.hero-stat-value, .kpi-value {
+  font-family: 'El Messiri', 'JetBrains Mono', sans-serif;
+  color: var(--accent-amber);
+}
+.card-title-dot { border-radius: 1px; transform: rotate(45deg); }
 
 /* Theme Toggle Button */
 .theme-toggle {
@@ -99,7 +120,7 @@
 body {
   background: var(--bg-primary);
   color: var(--text-primary);
-  font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Cairo', 'El Messiri', sans-serif;
   min-height: 100vh;
   overflow-x: hidden;
   transition: background 0.4s ease, color 0.4s ease;
@@ -124,7 +145,7 @@ body::after {
   position: fixed;
   top: -50%; right: -30%;
   width: 800px; height: 800px;
-  background: radial-gradient(circle, rgba(59,130,246,0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(212,175,106,0.06) 0%, transparent 70%);
   z-index: 0;
   pointer-events: none;
   animation: floatOrb 20s ease-in-out infinite;
@@ -140,7 +161,7 @@ body::after {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+  background: linear-gradient(135deg, #110e0b 0%, #1a1510 100%);
   border-bottom: 1px solid var(--border);
   padding: 0 32px;
   height: 52px;
@@ -152,7 +173,7 @@ body::after {
 }
 
 [data-theme="light"] .topbar {
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  background: linear-gradient(135deg, #fffdf8 0%, #f7f1e4 100%);
   box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
@@ -161,11 +182,11 @@ body::after {
 }
 
 [data-theme="light"] .hero-card {
-  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #f8fafc 100%);
+  background: linear-gradient(135deg, #fffdf8 0%, #faf3e3 50%, #f7f1e4 100%);
 }
 
 [data-theme="light"] body::after {
-  background: radial-gradient(circle, rgba(59,130,246,0.04) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(212,175,106,0.04) 0%, transparent 70%);
 }
 
 .topbar-brand {
@@ -210,6 +231,8 @@ body::after {
 }
 
 .nav-tab {
+  background: transparent;
+  border: none;
   padding: 0 16px;
   height: 100%;
   display: flex;
@@ -285,7 +308,7 @@ body::after {
 }
 
 .filter-chip.active {
-  background: rgba(59,130,246,0.1);
+  background: rgba(212,175,106,0.1);
   border-color: var(--accent-blue);
   color: var(--accent-blue);
 }
@@ -331,8 +354,8 @@ body::after {
   top: 0; left: 0;
   width: 100%; height: 100%;
   background: 
-    radial-gradient(ellipse at 10% 50%, rgba(59,130,246,0.08), transparent 50%),
-    radial-gradient(ellipse at 90% 20%, rgba(245,158,11,0.06), transparent 40%);
+    radial-gradient(ellipse at 10% 50%, rgba(212,175,106,0.08), transparent 50%),
+    radial-gradient(ellipse at 90% 20%, rgba(212,175,106,0.06), transparent 40%);
   pointer-events: none;
 }
 
@@ -345,7 +368,7 @@ body::after {
   font-size: 32px;
   font-weight: 900;
   letter-spacing: -0.5px;
-  background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+  background: linear-gradient(120deg, #faf4e4 0%, #e9cf96 55%, #c8a45f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 6px;
@@ -548,7 +571,7 @@ body::after {
   font-size: 10px;
   padding: 3px 10px;
   border-radius: 20px;
-  background: rgba(59,130,246,0.1);
+  background: rgba(212,175,106,0.1);
   color: var(--accent-blue);
 }
 
@@ -635,7 +658,7 @@ body::after {
 
 .timeline-item:first-child .timeline-dot {
   background: var(--accent-blue);
-  box-shadow: 0 0 0 4px rgba(59,130,246,0.2);
+  box-shadow: 0 0 0 4px rgba(212,175,106,0.2);
 }
 
 .timeline-date {
@@ -677,7 +700,7 @@ body::after {
 .project-card:hover {
   border-color: var(--accent-blue);
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(59,130,246,0.1);
+  box-shadow: 0 12px 40px rgba(212,175,106,0.1);
 }
 
 .project-preview {
@@ -771,9 +794,9 @@ body::after {
   border-radius: 4px;
   font-size: 10px;
   font-family: 'JetBrains Mono', monospace;
-  background: rgba(59,130,246,0.08);
+  background: rgba(212,175,106,0.08);
   color: var(--accent-blue);
-  border: 1px solid rgba(59,130,246,0.15);
+  border: 1px solid rgba(212,175,106,0.15);
 }
 
 /* Certifications */
@@ -839,7 +862,7 @@ body::after {
 }
 
 .contact-item:hover {
-  background: rgba(59,130,246,0.05);
+  background: rgba(212,175,106,0.05);
   border-color: var(--accent-blue);
 }
 
@@ -970,8 +993,8 @@ body::after {
 /* Education */
 .edu-card {
   padding: 20px;
-  background: linear-gradient(135deg, rgba(139,92,246,0.05), rgba(59,130,246,0.05));
-  border: 1px solid rgba(139,92,246,0.15);
+  background: linear-gradient(135deg, rgba(176,141,87,0.05), rgba(212,175,106,0.05));
+  border: 1px solid rgba(176,141,87,0.15);
   border-radius: 10px;
 }
 
@@ -1216,9 +1239,9 @@ body::after {
   font-size: 12px;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 500;
-  background: rgba(59,130,246,0.08);
+  background: rgba(212,175,106,0.08);
   color: var(--accent-blue);
-  border: 1px solid rgba(59,130,246,0.15);
+  border: 1px solid rgba(212,175,106,0.15);
 }
 
 .modal-chart-container {
@@ -1444,14 +1467,14 @@ body::after {
     <span class="topbar-title">Fahad Al-Mutairi</span>
   </div>
   <div class="topbar-nav">
-    <div class="nav-tab active" onclick="showPage('overview', this)" data-i18n="nav_overview">نظرة عامة</div>
-    <div class="nav-tab" onclick="showPage('projects', this)" data-i18n="nav_projects">المشاريع</div>
-    <div class="nav-tab" onclick="showPage('experience', this)" data-i18n="nav_experience">الخبرات</div>
-    <div class="nav-tab" onclick="showPage('contact', this)" data-i18n="nav_contact">تواصل معي</div>
+    <button type="button" class="nav-tab active" data-page="overview" onclick="showPage('overview', this)" data-i18n="nav_overview">نظرة عامة</button>
+    <button type="button" class="nav-tab" data-page="projects" onclick="showPage('projects', this)" data-i18n="nav_projects">المشاريع</button>
+    <button type="button" class="nav-tab" data-page="experience" onclick="showPage('experience', this)" data-i18n="nav_experience">الخبرات</button>
+    <button type="button" class="nav-tab" data-page="contact" onclick="showPage('contact', this)" data-i18n="nav_contact">تواصل معي</button>
   </div>
   <div class="topbar-actions">
-    <button class="theme-toggle" onclick="toggleLang()" id="langBtn" title="تبديل اللغة" style="font-size:12px;font-weight:700;font-family:'JetBrains Mono',monospace">EN</button>
-    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="تبديل الثيم">🌙</button>
+    <button class="theme-toggle" onclick="toggleLang()" id="langBtn" title="تبديل اللغة" aria-label="تبديل اللغة | Switch language" style="font-size:12px;font-weight:700;font-family:'JetBrains Mono',monospace">EN</button>
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="تبديل الثيم" aria-label="تبديل الوضع الليلي والنهاري">🌙</button>
     <span class="topbar-time" id="liveTime"></span>
   </div>
 </div>
@@ -1463,11 +1486,11 @@ body::after {
   <!-- Hero Card -->
   <div class="hero-card animate-in">
     <div class="hero-info">
-      <div class="hero-name" data-i18n="hero_name">فهد محمد المطيري</div>
+      <h1 class="hero-name" data-i18n="hero_name">فهد محمد المطيري</h1>
       <div class="hero-role">Data Analyst & Automation Specialist</div>
       <div class="hero-desc" data-i18n="hero_desc">
         محلل بيانات ومتخصص أتمتة بخلفية قوية في بناء الداشبوردات وتحسين كفاءة العمليات. خبرة في Microsoft Excel و Power BI لتحليل البيانات وأتمتة سير العمل ودعم اتخاذ القرارات.
-        <a href="Fahad_AlMutairi_CV.pdf" download style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:10px 24px;background:linear-gradient(135deg,#3b82f6,#1d4ed8);border-radius:8px;color:white;text-decoration:none;font-size:13px;font-weight:700;font-family:Cairo,sans-serif;transition:all 0.3s;box-shadow:0 4px 15px rgba(59,130,246,0.3)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 25px rgba(59,130,246,0.4)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 15px rgba(59,130,246,0.3)'">
+        <a href="Fahad_AlMutairi_CV.pdf" download style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:10px 24px;background:linear-gradient(135deg,#d4af6a,#a8853e);border-radius:8px;color:white;text-decoration:none;font-size:13px;font-weight:700;font-family:Cairo,sans-serif;transition:all 0.3s;box-shadow:0 4px 15px rgba(212,175,106,0.3)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 25px rgba(212,175,106,0.4)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 15px rgba(212,175,106,0.3)'">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           <span data-i18n="download_cv">تحميل السيرة الذاتية</span>
         </a>
@@ -1493,14 +1516,14 @@ body::after {
   <div class="kpi-row">
     <div class="kpi-card animate-in delay-1">
       <div class="kpi-header">
-        <div class="kpi-icon" style="background:rgba(59,130,246,0.1)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+        <div class="kpi-icon" style="background:rgba(212,175,106,0.1)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#c8a45f" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
         </div>
         <div class="kpi-trend up">↑ YoY</div>
       </div>
       <div class="kpi-value">50K+</div>
       <div class="kpi-label" data-i18n="kpi_dashboards">سجلات بيانات محللّة</div>
-      <div class="kpi-bar"><div class="kpi-bar-fill" style="width:92%;background:linear-gradient(90deg,#3b82f6,#06b6d4)"></div></div>
+      <div class="kpi-bar"><div class="kpi-bar-fill" style="width:92%;background:linear-gradient(90deg,#c8a45f,#d9bd80)"></div></div>
     </div>
 
     <div class="kpi-card animate-in delay-2">
@@ -1517,26 +1540,26 @@ body::after {
 
     <div class="kpi-card animate-in delay-3">
       <div class="kpi-header">
-        <div class="kpi-icon" style="background:rgba(245,158,11,0.1)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        <div class="kpi-icon" style="background:rgba(212,175,106,0.1)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#d4af6a" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
         </div>
         <div class="kpi-trend up">↑ 850h</div>
       </div>
       <div class="kpi-value">850h</div>
       <div class="kpi-label" data-i18n="kpi_automation">ساعات عمل موفّرة بالأتمتة</div>
-      <div class="kpi-bar"><div class="kpi-bar-fill" style="width:88%;background:linear-gradient(90deg,#f59e0b,#fbbf24)"></div></div>
+      <div class="kpi-bar"><div class="kpi-bar-fill" style="width:88%;background:linear-gradient(90deg,#d4af6a,#e6c98c)"></div></div>
     </div>
 
     <div class="kpi-card animate-in delay-4">
       <div class="kpi-header">
-        <div class="kpi-icon" style="background:rgba(139,92,246,0.1)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        <div class="kpi-icon" style="background:rgba(176,141,87,0.1)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#b08d57" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
         </div>
         <div class="kpi-trend up">↑ 120%</div>
       </div>
       <div class="kpi-value">20+</div>
       <div class="kpi-label" data-i18n="kpi_certs">تقارير وداشبوردات مُنجزة</div>
-      <div class="kpi-bar"><div class="kpi-bar-fill" style="width:85%;background:linear-gradient(90deg,#8b5cf6,#a78bfa)"></div></div>
+      <div class="kpi-bar"><div class="kpi-bar-fill" style="width:85%;background:linear-gradient(90deg,#b08d57,#cbab78)"></div></div>
     </div>
   </div>
 
@@ -1545,10 +1568,10 @@ body::after {
     <!-- Skills -->
     <div class="card">
       <div class="card-header">
-        <div class="card-title">
+        <h2 class="card-title">
           <span class="card-title-dot" style="background:var(--accent-blue)"></span>
           <span data-i18n="skills_title">المهارات التقنية</span>
-        </div>
+        </h2>
         <div class="card-badge">CORE SKILLS</div>
       </div>
       <div class="card-body">
@@ -1557,29 +1580,29 @@ body::after {
             <div style="width:36px;height:36px;border-radius:8px;background:rgba(16,185,129,0.12);display:flex;align-items:center;justify-content:center;font-size:16px">📊</div>
             <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)">Microsoft Excel</div><div style="font-size:10px;color:#10b981;font-weight:600">Advanced</div></div>
           </div>
-          <div style="display:flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.15);border-radius:10px;flex:1;min-width:140px">
-            <div style="width:36px;height:36px;border-radius:8px;background:rgba(245,158,11,0.12);display:flex;align-items:center;justify-content:center;font-size:16px">📈</div>
-            <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)">Power BI</div><div style="font-size:10px;color:#f59e0b;font-weight:600">Advanced</div></div>
+          <div style="display:flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(212,175,106,0.06);border:1px solid rgba(212,175,106,0.15);border-radius:10px;flex:1;min-width:140px">
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(212,175,106,0.12);display:flex;align-items:center;justify-content:center;font-size:16px">📈</div>
+            <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)">Power BI</div><div style="font-size:10px;color:#d4af6a;font-weight:600">Advanced</div></div>
           </div>
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px">
-          <div style="display:flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.15);border-radius:10px;flex:1;min-width:140px">
-            <div style="width:36px;height:36px;border-radius:8px;background:rgba(59,130,246,0.12);display:flex;align-items:center;justify-content:center;font-size:16px">⚙️</div>
-            <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)">Process Automation</div><div style="font-size:10px;color:#3b82f6;font-weight:600">Advanced</div></div>
+          <div style="display:flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(212,175,106,0.06);border:1px solid rgba(212,175,106,0.15);border-radius:10px;flex:1;min-width:140px">
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(212,175,106,0.12);display:flex;align-items:center;justify-content:center;font-size:16px">⚙️</div>
+            <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)">Process Automation</div><div style="font-size:10px;color:#c8a45f;font-weight:600">Advanced</div></div>
           </div>
-          <div style="display:flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.15);border-radius:10px;flex:1;min-width:140px">
-            <div style="width:36px;height:36px;border-radius:8px;background:rgba(139,92,246,0.12);display:flex;align-items:center;justify-content:center;font-size:16px">🔍</div>
-            <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)">Data Analysis</div><div style="font-size:10px;color:#8b5cf6;font-weight:600">Advanced</div></div>
+          <div style="display:flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(176,141,87,0.06);border:1px solid rgba(176,141,87,0.15);border-radius:10px;flex:1;min-width:140px">
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(176,141,87,0.12);display:flex;align-items:center;justify-content:center;font-size:16px">🔍</div>
+            <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)">Data Analysis</div><div style="font-size:10px;color:#b08d57;font-weight:600">Advanced</div></div>
           </div>
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:10px">
-          <div style="display:flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(244,63,94,0.06);border:1px solid rgba(244,63,94,0.15);border-radius:10px;flex:1;min-width:140px">
-            <div style="width:36px;height:36px;border-radius:8px;background:rgba(244,63,94,0.12);display:flex;align-items:center;justify-content:center;font-size:16px">💻</div>
-            <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)">Software Engineering</div><div style="font-size:10px;color:#f43f5e;font-weight:600">Intermediate</div></div>
+          <div style="display:flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(192,101,74,0.06);border:1px solid rgba(192,101,74,0.15);border-radius:10px;flex:1;min-width:140px">
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(192,101,74,0.12);display:flex;align-items:center;justify-content:center;font-size:16px">💻</div>
+            <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)">Software Engineering</div><div style="font-size:10px;color:#c0654a;font-weight:600">Intermediate</div></div>
           </div>
-          <div style="display:flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(6,182,212,0.06);border:1px solid rgba(6,182,212,0.15);border-radius:10px;flex:1;min-width:140px">
-            <div style="width:36px;height:36px;border-radius:8px;background:rgba(6,182,212,0.12);display:flex;align-items:center;justify-content:center;font-size:16px">📋</div>
-            <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)">KPI Tracking</div><div style="font-size:10px;color:#06b6d4;font-weight:600">Advanced</div></div>
+          <div style="display:flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(217,189,128,0.06);border:1px solid rgba(217,189,128,0.15);border-radius:10px;flex:1;min-width:140px">
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(217,189,128,0.12);display:flex;align-items:center;justify-content:center;font-size:16px">📋</div>
+            <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)">KPI Tracking</div><div style="font-size:10px;color:#d9bd80;font-weight:600">Advanced</div></div>
           </div>
         </div>
       </div>
@@ -1588,10 +1611,10 @@ body::after {
     <!-- Expertise Donut + Languages -->
     <div class="card">
       <div class="card-header">
-        <div class="card-title">
+        <h2 class="card-title">
           <span class="card-title-dot" style="background:var(--accent-amber)"></span>
           <span data-i18n="expertise_title">توزيع الخبرات</span>
-        </div>
+        </h2>
         <div class="card-badge">BREAKDOWN</div>
       </div>
       <div class="card-body">
@@ -1599,10 +1622,10 @@ body::after {
           <div class="donut-chart">
             <svg viewBox="0 0 120 120">
               <circle cx="60" cy="60" r="50" fill="none" stroke="#1e293b" stroke-width="12"/>
-              <circle cx="60" cy="60" r="50" fill="none" stroke="#3b82f6" stroke-width="12" stroke-dasharray="110 204" stroke-linecap="round" class="donut-seg"/>
-              <circle cx="60" cy="60" r="50" fill="none" stroke="#f59e0b" stroke-width="12" stroke-dasharray="75 239" stroke-dashoffset="-110" stroke-linecap="round" class="donut-seg"/>
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#c8a45f" stroke-width="12" stroke-dasharray="110 204" stroke-linecap="round" class="donut-seg"/>
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#d4af6a" stroke-width="12" stroke-dasharray="75 239" stroke-dashoffset="-110" stroke-linecap="round" class="donut-seg"/>
               <circle cx="60" cy="60" r="50" fill="none" stroke="#10b981" stroke-width="12" stroke-dasharray="60 254" stroke-dashoffset="-185" stroke-linecap="round" class="donut-seg"/>
-              <circle cx="60" cy="60" r="50" fill="none" stroke="#8b5cf6" stroke-width="12" stroke-dasharray="69 245" stroke-dashoffset="-245" stroke-linecap="round" class="donut-seg"/>
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#b08d57" stroke-width="12" stroke-dasharray="69 245" stroke-dashoffset="-245" stroke-linecap="round" class="donut-seg"/>
             </svg>
             <div class="donut-center">
               <div class="donut-center-value">+5</div>
@@ -1610,10 +1633,10 @@ body::after {
             </div>
           </div>
           <div class="donut-legend">
-            <div class="legend-item"><div class="legend-dot" style="background:#3b82f6"></div><span data-i18n="legend_data">تحليل البيانات 35%</span></div>
-            <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div><span data-i18n="legend_dash">الداشبوردات 24%</span></div>
+            <div class="legend-item"><div class="legend-dot" style="background:#c8a45f"></div><span data-i18n="legend_data">تحليل البيانات 35%</span></div>
+            <div class="legend-item"><div class="legend-dot" style="background:#d4af6a"></div><span data-i18n="legend_dash">الداشبوردات 24%</span></div>
             <div class="legend-item"><div class="legend-dot" style="background:#10b981"></div><span data-i18n="legend_auto">الأتمتة 19%</span></div>
-            <div class="legend-item"><div class="legend-dot" style="background:#8b5cf6"></div><span data-i18n="legend_eng">هندسة البرمجيات 22%</span></div>
+            <div class="legend-item"><div class="legend-dot" style="background:#b08d57"></div><span data-i18n="legend_eng">هندسة البرمجيات 22%</span></div>
           </div>
         </div>
 
@@ -1628,14 +1651,14 @@ body::after {
                 <span class="lang-name" data-i18n="lang_arabic">العربية</span>
                 <span class="lang-level">Native</span>
               </div>
-              <div class="lang-bar"><div class="lang-bar-fill" style="width:0%;background:linear-gradient(90deg,#06b6d4,#22d3ee)" data-width="100%"></div></div>
+              <div class="lang-bar"><div class="lang-bar-fill" style="width:0%;background:linear-gradient(90deg,#d9bd80,#22d3ee)" data-width="100%"></div></div>
             </div>
             <div class="lang-item">
               <div class="lang-header">
                 <span class="lang-name">English</span>
                 <span class="lang-level">Professional</span>
               </div>
-              <div class="lang-bar"><div class="lang-bar-fill" style="width:0%;background:linear-gradient(90deg,#3b82f6,#60a5fa)" data-width="80%"></div></div>
+              <div class="lang-bar"><div class="lang-bar-fill" style="width:0%;background:linear-gradient(90deg,#c8a45f,#e6c98c)" data-width="80%"></div></div>
             </div>
           </div>
         </div>
@@ -1647,10 +1670,10 @@ body::after {
   <div class="grid-2 animate-in delay-4">
     <div class="card">
       <div class="card-header">
-        <div class="card-title">
+        <h2 class="card-title">
           <span class="card-title-dot" style="background:var(--accent-purple)"></span>
           <span data-i18n="edu_title">التعليم والشهادات</span>
-        </div>
+        </h2>
       </div>
       <div class="card-body">
         <div class="edu-card" style="margin-bottom:16px">
@@ -1658,14 +1681,14 @@ body::after {
           <div class="edu-gpa">⭐ GPA: 4.91</div>
         </div>
         <div class="cert-item">
-          <div class="cert-icon" style="background:rgba(59,130,246,0.1)">📜</div>
+          <div class="cert-icon" style="background:rgba(212,175,106,0.1)">📜</div>
           <div>
             <div class="cert-name">Data Analysis</div>
             <div class="cert-org">Misk Foundation</div>
           </div>
         </div>
         <div class="cert-item">
-          <div class="cert-icon" style="background:rgba(244,63,94,0.1)">🛡️</div>
+          <div class="cert-icon" style="background:rgba(192,101,74,0.1)">🛡️</div>
           <div>
             <div class="cert-name">Cybersecurity Camp</div>
             <div class="cert-org">Atta Digital</div>
@@ -1676,16 +1699,16 @@ body::after {
 
     <div class="card">
       <div class="card-header">
-        <div class="card-title">
+        <h2 class="card-title">
           <span class="card-title-dot" style="background:var(--accent-emerald)"></span>
           <span data-i18n="contact_info_title">معلومات التواصل</span>
-        </div>
+        </h2>
       </div>
       <div class="card-body">
         <div class="contact-grid">
           <div class="contact-item">
-            <div class="contact-icon" style="background:rgba(59,130,246,0.1)">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <div class="contact-icon" style="background:rgba(212,175,106,0.1)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c8a45f" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             </div>
             <div>
               <div class="contact-label" data-i18n="lbl_phone">الهاتف</div>
@@ -1702,8 +1725,8 @@ body::after {
             </div>
           </div>
           <div class="contact-item">
-            <div class="contact-icon" style="background:rgba(139,92,246,0.1)">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <div class="contact-icon" style="background:rgba(176,141,87,0.1)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b08d57" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             </div>
             <div>
               <div class="contact-label">LinkedIn</div>
@@ -1711,8 +1734,8 @@ body::after {
             </div>
           </div>
           <div class="contact-item">
-            <div class="contact-icon" style="background:rgba(245,158,11,0.1)">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div class="contact-icon" style="background:rgba(212,175,106,0.1)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d4af6a" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <div>
               <div class="contact-label" data-i18n="lbl_location">الموقع</div>
@@ -1732,10 +1755,8 @@ body::after {
     <!-- Project 1 -->
     <div class="project-card animate-in delay-1" onclick="openProject(0)">
       <div class="project-preview" style="background:linear-gradient(135deg,#0f172a,#1e3a5f)">
-        <img class="project-shot" src="sales-dashboard.png" alt="Sales Dashboard"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <div class="shot-placeholder" style="display:none"><div class="ic">📊</div><div class="tx">أضف لقطة:<br>sales-dashboard.png</div></div>
-        <div class="project-tag" style="background:rgba(59,130,246,0.2);color:#60a5fa;border:1px solid rgba(59,130,246,0.3)">Power BI</div>
+        <a class="demo-tile" href="demo-sales.html" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="فتح المشروع التفاعلي"><span class="demo-ic">📊</span><span class="demo-cta">▶ تشغيل المشروع التفاعلي</span><span class="demo-live"><span class="status-dot"></span>LIVE</span></a>
+        <div class="project-tag" style="background:rgba(212,175,106,0.2);color:#e6c98c;border:1px solid rgba(212,175,106,0.3)">Power BI</div>
       </div>
       <div class="project-content">
         <div class="project-title" data-i18n="proj1_title">Power BI Sales Dashboard</div>
@@ -1752,9 +1773,7 @@ body::after {
     <!-- Project 2 -->
     <div class="project-card animate-in delay-2" onclick="openProject(1)">
       <div class="project-preview" style="background:linear-gradient(135deg,#0f172a,#1a3a2a)">
-        <img class="project-shot" src="excel-dashboard.png" alt="Excel Dashboard"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <div class="shot-placeholder" style="display:none"><div class="ic">📈</div><div class="tx">أضف لقطة:<br>excel-dashboard.png</div></div>
+        <a class="demo-tile" href="demo-excel.html" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="فتح المشروع التفاعلي"><span class="demo-ic">📈</span><span class="demo-cta">▶ تشغيل المشروع التفاعلي</span><span class="demo-live"><span class="status-dot"></span>LIVE</span></a>
         <div class="project-tag" style="background:rgba(16,185,129,0.2);color:#34d399;border:1px solid rgba(16,185,129,0.3)">Excel</div>
       </div>
       <div class="project-content">
@@ -1772,10 +1791,8 @@ body::after {
     <!-- Project 3 -->
     <div class="project-card animate-in delay-3" onclick="openProject(2)">
       <div class="project-preview" style="background:linear-gradient(135deg,#0f172a,#2d1a3a)">
-        <img class="project-shot" src="automation-dashboard.png" alt="Automation Dashboard"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <div class="shot-placeholder" style="display:none"><div class="ic">⚙️</div><div class="tx">أضف لقطة:<br>automation-dashboard.png</div></div>
-        <div class="project-tag" style="background:rgba(139,92,246,0.2);color:#a78bfa;border:1px solid rgba(139,92,246,0.3)">Automation</div>
+        <a class="demo-tile" href="demo-automation.html" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="فتح المشروع التفاعلي"><span class="demo-ic">⚙️</span><span class="demo-cta">▶ تشغيل المشروع التفاعلي</span><span class="demo-live"><span class="status-dot"></span>LIVE</span></a>
+        <div class="project-tag" style="background:rgba(176,141,87,0.2);color:#cbab78;border:1px solid rgba(176,141,87,0.3)">Automation</div>
       </div>
       <div class="project-content">
         <div class="project-title" data-i18n="proj3_title">Automation Solutions</div>
@@ -1792,9 +1809,7 @@ body::after {
     <!-- Project 4: HR Analytics -->
     <div class="project-card animate-in delay-1" onclick="openProject(3)">
       <div class="project-preview" style="background:linear-gradient(135deg,#0f172a,#16264f)">
-        <img class="project-shot" src="hr-dashboard.png" alt="HR Analytics Dashboard"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <div class="shot-placeholder" style="display:none"><div class="ic">👥</div><div class="tx">أضف لقطة:<br>hr-dashboard.png</div></div>
+        <a class="demo-tile" href="demo-hr.html" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="فتح المشروع التفاعلي"><span class="demo-ic">👥</span><span class="demo-cta">▶ تشغيل المشروع التفاعلي</span><span class="demo-live"><span class="status-dot"></span>LIVE</span></a>
         <div class="project-tag" style="background:rgba(34,211,238,0.2);color:#22d3ee;border:1px solid rgba(34,211,238,0.3)">HR Analytics</div>
       </div>
       <div class="project-content">
@@ -1812,9 +1827,7 @@ body::after {
     <!-- Project 5: Data Cleaning -->
     <div class="project-card animate-in delay-2" onclick="openProject(4)">
       <div class="project-preview" style="background:linear-gradient(135deg,#0f172a,#1a2e2a)">
-        <img class="project-shot" src="cleaning-project.png" alt="Data Cleaning Project"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <div class="shot-placeholder" style="display:none"><div class="ic">🧹</div><div class="tx">أضف لقطة:<br>cleaning-project.png</div></div>
+        <a class="demo-tile" href="demo-cleaning.html" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="فتح المشروع التفاعلي"><span class="demo-ic">🧹</span><span class="demo-cta">▶ تشغيل المشروع التفاعلي</span><span class="demo-live"><span class="status-dot"></span>LIVE</span></a>
         <div class="project-tag" style="background:rgba(16,185,129,0.2);color:#34d399;border:1px solid rgba(16,185,129,0.3)">Data Cleaning</div>
       </div>
       <div class="project-content">
@@ -1833,10 +1846,10 @@ body::after {
   <!-- Project Impact -->
   <div class="card animate-in delay-4">
     <div class="card-header">
-      <div class="card-title">
+      <h2 class="card-title">
         <span class="card-title-dot" style="background:var(--accent-cyan)"></span>
         <span data-i18n="impact_title">تأثير المشاريع</span>
-      </div>
+      </h2>
       <div class="card-badge">IMPACT METRICS</div>
     </div>
     <div class="card-body">
@@ -1850,9 +1863,9 @@ body::after {
 
   <!-- Job 1: Software Engineer -->
   <div class="card animate-in delay-1" style="margin-bottom:20px">
-    <div class="card-header" style="background:linear-gradient(135deg,rgba(59,130,246,0.08),rgba(6,182,212,0.05))">
+    <div class="card-header" style="background:linear-gradient(135deg,rgba(212,175,106,0.08),rgba(217,189,128,0.05))">
       <div style="display:flex;align-items:center;gap:14px">
-        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#3b82f6,#06b6d4);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">💻</div>
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#c8a45f,#d9bd80);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">💻</div>
         <div>
           <div style="font-size:16px;font-weight:800;color:var(--text-primary)">Software Engineer</div>
           <div style="font-size:13px;color:var(--accent-amber);font-weight:600">Continental</div>
@@ -1868,34 +1881,34 @@ body::after {
         <!-- Left: Tasks & Achievements -->
         <div>
           <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:12px;display:flex;align-items:center;gap:8px">
-            <span style="width:3px;height:14px;border-radius:3px;background:#3b82f6"></span> <span data-i18n="tasks_title">المهام والإنجازات</span>
+            <span style="width:3px;height:14px;border-radius:3px;background:#c8a45f"></span> <span data-i18n="tasks_title">المهام والإنجازات</span>
           </div>
           <div style="display:flex;flex-direction:column;gap:10px">
-            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(59,130,246,0.04);border:1px solid rgba(59,130,246,0.1);border-radius:8px">
-              <span style="color:#3b82f6;font-size:14px;margin-top:2px">⚡</span>
+            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(212,175,106,0.04);border:1px solid rgba(212,175,106,0.1);border-radius:8px">
+              <span style="color:#c8a45f;font-size:14px;margin-top:2px">⚡</span>
               <div style="font-size:12px;color:var(--text-secondary);line-height:1.7"><strong style="color:var(--text-primary);display:block;margin-bottom:2px" data-i18n="job1_task1">أتمتة سير العمل</strong><span data-i18n="job1_d1">أتمتة العمليات الداخلية لتقليل الجهد اليدوي وتحسين إنتاجية الفريق بشكل ملحوظ</span></div>
             </div>
             <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(16,185,129,0.04);border:1px solid rgba(16,185,129,0.1);border-radius:8px">
               <span style="color:#10b981;font-size:14px;margin-top:2px">🚀</span>
               <div style="font-size:12px;color:var(--text-secondary);line-height:1.7"><strong style="color:var(--text-primary);display:block;margin-bottom:2px" data-i18n="job1_task2">تحسين أداء الأنظمة</strong><span data-i18n="job1_d2">تحسين كفاءة المعالجة وسرعة الاستجابة للأنظمة القائمة</span></div>
             </div>
-            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(139,92,246,0.04);border:1px solid rgba(139,92,246,0.1);border-radius:8px">
-              <span style="color:#8b5cf6;font-size:14px;margin-top:2px">🏗️</span>
+            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(176,141,87,0.04);border:1px solid rgba(176,141,87,0.1);border-radius:8px">
+              <span style="color:#b08d57;font-size:14px;margin-top:2px">🏗️</span>
               <div style="font-size:12px;color:var(--text-secondary);line-height:1.7"><strong style="color:var(--text-primary);display:block;margin-bottom:2px" data-i18n="job1_task3">حلول قابلة للتوسع</strong><span data-i18n="job1_d3">تطوير وصيانة حلول برمجية متوافقة مع متطلبات العمل المتغيرة</span></div>
             </div>
           </div>
           <!-- KPI mini cards -->
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px">
-            <div style="text-align:center;padding:10px;background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.12);border-radius:8px">
-              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#3b82f6">+35%</div>
+            <div style="text-align:center;padding:10px;background:rgba(212,175,106,0.06);border:1px solid rgba(212,175,106,0.12);border-radius:8px">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#c8a45f">+35%</div>
               <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_perf">تحسين الأداء</div>
             </div>
             <div style="text-align:center;padding:10px;background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.12);border-radius:8px">
               <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#10b981">5+</div>
               <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_built">حلول مبنية</div>
             </div>
-            <div style="text-align:center;padding:10px;background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.12);border-radius:8px">
-              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#f59e0b">90%</div>
+            <div style="text-align:center;padding:10px;background:rgba(212,175,106,0.06);border:1px solid rgba(212,175,106,0.12);border-radius:8px">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#d4af6a">90%</div>
               <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_team">رضا الفريق</div>
             </div>
           </div>
@@ -1903,14 +1916,14 @@ body::after {
         <!-- Right: Chart -->
         <div>
           <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:12px;display:flex;align-items:center;gap:8px">
-            <span style="width:3px;height:14px;border-radius:3px;background:#06b6d4"></span> <span data-i18n="chart1_title">أداء الأتمتة الشهري</span>
+            <span style="width:3px;height:14px;border-radius:3px;background:#d9bd80"></span> <span data-i18n="chart1_title">أداء الأتمتة الشهري</span>
           </div>
           <div style="background:rgba(0,0,0,0.2);border:1px solid var(--border);border-radius:10px;padding:16px">
             <canvas id="expChart1" style="width:100%;height:200px"></canvas>
           </div>
           <div style="display:flex;gap:16px;margin-top:12px;justify-content:center">
-            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-muted)"><span style="width:10px;height:10px;border-radius:3px;background:#3b82f6"></span> <span data-i18n="leg_tasks">مهام مؤتمتة</span></div>
-            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-muted)"><span style="width:10px;height:10px;border-radius:3px;background:#06b6d4"></span> <span data-i18n="leg_hours">وقت موفّر (ساعات)</span></div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-muted)"><span style="width:10px;height:10px;border-radius:3px;background:#c8a45f"></span> <span data-i18n="leg_tasks">مهام مؤتمتة</span></div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-muted)"><span style="width:10px;height:10px;border-radius:3px;background:#d9bd80"></span> <span data-i18n="leg_hours">وقت موفّر (ساعات)</span></div>
           </div>
         </div>
       </div>
@@ -1919,9 +1932,9 @@ body::after {
 
   <!-- Job 2: Data & Reporting Analyst -->
   <div class="card animate-in delay-2" style="margin-bottom:20px">
-    <div class="card-header" style="background:linear-gradient(135deg,rgba(245,158,11,0.08),rgba(244,63,94,0.05))">
+    <div class="card-header" style="background:linear-gradient(135deg,rgba(212,175,106,0.08),rgba(192,101,74,0.05))">
       <div style="display:flex;align-items:center;gap:14px">
-        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#f59e0b,#f43f5e);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">📊</div>
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#d4af6a,#c0654a);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">📊</div>
         <div>
           <div style="font-size:16px;font-weight:800;color:var(--text-primary)">Data & Reporting Analyst</div>
           <div style="font-size:13px;color:var(--accent-amber);font-weight:600">ALHATHAL Construction</div>
@@ -1936,46 +1949,46 @@ body::after {
       <div class="exp-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
         <div>
           <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:12px;display:flex;align-items:center;gap:8px">
-            <span style="width:3px;height:14px;border-radius:3px;background:#f59e0b"></span> <span data-i18n="tasks_title">المهام والإنجازات</span>
+            <span style="width:3px;height:14px;border-radius:3px;background:#d4af6a"></span> <span data-i18n="tasks_title">المهام والإنجازات</span>
           </div>
           <div style="display:flex;flex-direction:column;gap:10px">
-            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.1);border-radius:8px">
-              <span style="color:#f59e0b;font-size:14px;margin-top:2px">📈</span>
+            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(212,175,106,0.04);border:1px solid rgba(212,175,106,0.1);border-radius:8px">
+              <span style="color:#d4af6a;font-size:14px;margin-top:2px">📈</span>
               <div style="font-size:12px;color:var(--text-secondary);line-height:1.7"><strong style="color:var(--text-primary);display:block;margin-bottom:2px" data-i18n="job2_task1">تقارير وداشبوردات</strong><span data-i18n="job2_d1">إنشاء تقارير وداشبوردات تفاعلية لدعم اتخاذ القرارات الإدارية</span></div>
             </div>
-            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(244,63,94,0.04);border:1px solid rgba(244,63,94,0.1);border-radius:8px">
-              <span style="color:#f43f5e;font-size:14px;margin-top:2px">⏱️</span>
+            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(192,101,74,0.04);border:1px solid rgba(192,101,74,0.1);border-radius:8px">
+              <span style="color:#c0654a;font-size:14px;margin-top:2px">⏱️</span>
               <div style="font-size:12px;color:var(--text-secondary);line-height:1.7"><strong style="color:var(--text-primary);display:block;margin-bottom:2px" data-i18n="job2_task2">تبسيط العمليات</strong><span data-i18n="job2_d2">تبسيط عمليات إعداد التقارير وتقليل وقت الإنجاز بنسبة كبيرة</span></div>
             </div>
-            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(6,182,212,0.04);border:1px solid rgba(6,182,212,0.1);border-radius:8px">
-              <span style="color:#06b6d4;font-size:14px;margin-top:2px">🤝</span>
+            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(217,189,128,0.04);border:1px solid rgba(217,189,128,0.1);border-radius:8px">
+              <span style="color:#d9bd80;font-size:14px;margin-top:2px">🤝</span>
               <div style="font-size:12px;color:var(--text-secondary);line-height:1.7"><strong style="color:var(--text-primary);display:block;margin-bottom:2px" data-i18n="job2_task3">تنسيق العمليات</strong><span data-i18n="job2_d3">تنسيق العمليات بين الأقسام وتحسين كفاءة التواصل الداخلي</span></div>
             </div>
           </div>
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px">
-            <div style="text-align:center;padding:10px;background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.12);border-radius:8px">
-              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#f59e0b">20+</div>
+            <div style="text-align:center;padding:10px;background:rgba(212,175,106,0.06);border:1px solid rgba(212,175,106,0.12);border-radius:8px">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#d4af6a">20+</div>
               <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_dash">داشبورد</div>
             </div>
-            <div style="text-align:center;padding:10px;background:rgba(244,63,94,0.06);border:1px solid rgba(244,63,94,0.12);border-radius:8px">
-              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#f43f5e">-50%</div>
+            <div style="text-align:center;padding:10px;background:rgba(192,101,74,0.06);border:1px solid rgba(192,101,74,0.12);border-radius:8px">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#c0654a">-50%</div>
               <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_report_time">وقت التقارير</div>
             </div>
-            <div style="text-align:center;padding:10px;background:rgba(6,182,212,0.06);border:1px solid rgba(6,182,212,0.12);border-radius:8px">
-              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#06b6d4">100%</div>
+            <div style="text-align:center;padding:10px;background:rgba(217,189,128,0.06);border:1px solid rgba(217,189,128,0.12);border-radius:8px">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#d9bd80">100%</div>
               <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_mgmt">رضا الإدارة</div>
             </div>
           </div>
         </div>
         <div>
           <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:12px;display:flex;align-items:center;gap:8px">
-            <span style="width:3px;height:14px;border-radius:3px;background:#f43f5e"></span> <span data-i18n="chart2_title">كفاءة التقارير (قبل / بعد)</span>
+            <span style="width:3px;height:14px;border-radius:3px;background:#c0654a"></span> <span data-i18n="chart2_title">كفاءة التقارير (قبل / بعد)</span>
           </div>
           <div style="background:rgba(0,0,0,0.2);border:1px solid var(--border);border-radius:10px;padding:16px">
             <canvas id="expChart2" style="width:100%;height:200px"></canvas>
           </div>
           <div style="display:flex;gap:16px;margin-top:12px;justify-content:center">
-            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-muted)"><span style="width:10px;height:10px;border-radius:3px;background:#f43f5e"></span> <span data-i18n="leg_before">قبل التحسين</span></div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-muted)"><span style="width:10px;height:10px;border-radius:3px;background:#c0654a"></span> <span data-i18n="leg_before">قبل التحسين</span></div>
             <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-muted)"><span style="width:10px;height:10px;border-radius:3px;background:#10b981"></span> <span data-i18n="leg_after">بعد التحسين</span></div>
           </div>
         </div>
@@ -1985,9 +1998,9 @@ body::after {
 
   <!-- Job 3: Sales Consultant -->
   <div class="card animate-in delay-3" style="margin-bottom:20px">
-    <div class="card-header" style="background:linear-gradient(135deg,rgba(16,185,129,0.08),rgba(139,92,246,0.05))">
+    <div class="card-header" style="background:linear-gradient(135deg,rgba(16,185,129,0.08),rgba(176,141,87,0.05))">
       <div style="display:flex;align-items:center;gap:14px">
-        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#10b981,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">🎯</div>
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#10b981,#b08d57);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">🎯</div>
         <div>
           <div style="font-size:16px;font-weight:800;color:var(--text-primary)">Sales Consultant</div>
           <div style="font-size:13px;color:var(--accent-amber);font-weight:600">Saudi National Bank (SNB)</div>
@@ -2009,12 +2022,12 @@ body::after {
               <span style="color:#10b981;font-size:14px;margin-top:2px">🏆</span>
               <div style="font-size:12px;color:var(--text-secondary);line-height:1.7"><strong style="color:var(--text-primary);display:block;margin-bottom:2px" data-i18n="job3_task1">تجاوز المستهدفات</strong><span data-i18n="job3_d1">تحقيق وتجاوز أهداف المبيعات الشهرية والسنوية باستمرار</span></div>
             </div>
-            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(139,92,246,0.04);border:1px solid rgba(139,92,246,0.1);border-radius:8px">
-              <span style="color:#8b5cf6;font-size:14px;margin-top:2px">🤝</span>
+            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(176,141,87,0.04);border:1px solid rgba(176,141,87,0.1);border-radius:8px">
+              <span style="color:#b08d57;font-size:14px;margin-top:2px">🤝</span>
               <div style="font-size:12px;color:var(--text-secondary);line-height:1.7"><strong style="color:var(--text-primary);display:block;margin-bottom:2px" data-i18n="job3_task2">علاقات العملاء</strong><span data-i18n="job3_d2">بناء علاقات قوية ومستدامة مع العملاء وتحسين معدلات التحويل</span></div>
             </div>
-            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(59,130,246,0.04);border:1px solid rgba(59,130,246,0.1);border-radius:8px">
-              <span style="color:#3b82f6;font-size:14px;margin-top:2px">📈</span>
+            <div style="display:flex;gap:10px;padding:10px 12px;background:rgba(212,175,106,0.04);border:1px solid rgba(212,175,106,0.1);border-radius:8px">
+              <span style="color:#c8a45f;font-size:14px;margin-top:2px">📈</span>
               <div style="font-size:12px;color:var(--text-secondary);line-height:1.7"><strong style="color:var(--text-primary);display:block;margin-bottom:2px" data-i18n="job3_task3">نمو الإيرادات</strong><span data-i18n="job3_d3">المساهمة في نمو الإيرادات من خلال أداء مبيعات متميز ومستمر</span></div>
             </div>
           </div>
@@ -2023,26 +2036,26 @@ body::after {
               <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#10b981">120%</div>
               <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_target">تحقيق الهدف</div>
             </div>
-            <div style="text-align:center;padding:10px;background:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.12);border-radius:8px">
-              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#8b5cf6">200+</div>
+            <div style="text-align:center;padding:10px;background:rgba(176,141,87,0.06);border:1px solid rgba(176,141,87,0.12);border-radius:8px">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#b08d57">200+</div>
               <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_clients">عميل</div>
             </div>
-            <div style="text-align:center;padding:10px;background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.12);border-radius:8px">
-              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#3b82f6">95%</div>
+            <div style="text-align:center;padding:10px;background:rgba(212,175,106,0.06);border:1px solid rgba(212,175,106,0.12);border-radius:8px">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#c8a45f">95%</div>
               <div style="font-size:10px;color:var(--text-muted);margin-top:2px" data-i18n="mini_csat">رضا العملاء</div>
             </div>
           </div>
         </div>
         <div>
           <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:12px;display:flex;align-items:center;gap:8px">
-            <span style="width:3px;height:14px;border-radius:3px;background:#8b5cf6"></span> <span data-i18n="chart3_title">أداء المبيعات الربع سنوي</span>
+            <span style="width:3px;height:14px;border-radius:3px;background:#b08d57"></span> <span data-i18n="chart3_title">أداء المبيعات الربع سنوي</span>
           </div>
           <div style="background:rgba(0,0,0,0.2);border:1px solid var(--border);border-radius:10px;padding:16px">
             <canvas id="expChart3" style="width:100%;height:200px"></canvas>
           </div>
           <div style="display:flex;gap:16px;margin-top:12px;justify-content:center">
             <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-muted)"><span style="width:10px;height:10px;border-radius:3px;background:#10b981"></span> <span data-i18n="leg_achieved">المحقق</span></div>
-            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-muted)"><span style="width:10px;height:3px;background:#f59e0b;border-radius:2px"></span> <span data-i18n="leg_target">المستهدف</span></div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-muted)"><span style="width:10px;height:3px;background:#d4af6a;border-radius:2px"></span> <span data-i18n="leg_target">المستهدف</span></div>
           </div>
         </div>
       </div>
@@ -2053,7 +2066,7 @@ body::after {
   <div class="grid-2 animate-in delay-4">
     <div class="card">
       <div class="card-header">
-        <div class="card-title"><span class="card-title-dot" style="background:var(--accent-rose)"></span> <span data-i18n="growth_title">النمو المهني</span></div>
+        <h2 class="card-title"><span class="card-title-dot" style="background:var(--accent-rose)"></span> <span data-i18n="growth_title">النمو المهني</span></h2>
         <div class="card-badge">GROWTH</div>
       </div>
       <div class="card-body">
@@ -2062,7 +2075,7 @@ body::after {
     </div>
     <div class="card">
       <div class="card-header">
-        <div class="card-title"><span class="card-title-dot" style="background:var(--accent-emerald)"></span> <span data-i18n="achievements_title">الإنجازات الرئيسية</span></div>
+        <h2 class="card-title"><span class="card-title-dot" style="background:var(--accent-emerald)"></span> <span data-i18n="achievements_title">الإنجازات الرئيسية</span></h2>
         <div class="card-badge">HIGHLIGHTS</div>
       </div>
       <div class="card-body">
@@ -2071,15 +2084,15 @@ body::after {
             <span style="font-size:22px">🏆</span>
             <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)" data-i18n="ach1">تحسين الكفاءة التشغيلية</div><div style="font-size:11px;color:var(--text-muted)" data-i18n="ach1_desc">+40% في إنتاجية الفريق عبر حلول الأتمتة</div></div>
           </div>
-          <div style="display:flex;align-items:center;gap:10px;padding:12px;border-radius:8px;background:rgba(59,130,246,0.05);border:1px solid rgba(59,130,246,0.1)">
+          <div style="display:flex;align-items:center;gap:10px;padding:12px;border-radius:8px;background:rgba(212,175,106,0.05);border:1px solid rgba(212,175,106,0.1)">
             <span style="font-size:22px">📊</span>
             <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)" data-i18n="ach2">داشبوردات استراتيجية</div><div style="font-size:11px;color:var(--text-muted)" data-i18n="ach2_desc">20+ داشبورد لدعم القرارات الإدارية</div></div>
           </div>
-          <div style="display:flex;align-items:center;gap:10px;padding:12px;border-radius:8px;background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.1)">
+          <div style="display:flex;align-items:center;gap:10px;padding:12px;border-radius:8px;background:rgba(212,175,106,0.05);border:1px solid rgba(212,175,106,0.1)">
             <span style="font-size:22px">🎯</span>
             <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)" data-i18n="ach3">تجاوز أهداف المبيعات</div><div style="font-size:11px;color:var(--text-muted)" data-i18n="ach3_desc">120% تحقيق المستهدف في القطاع البنكي</div></div>
           </div>
-          <div style="display:flex;align-items:center;gap:10px;padding:12px;border-radius:8px;background:rgba(139,92,246,0.05);border:1px solid rgba(139,92,246,0.1)">
+          <div style="display:flex;align-items:center;gap:10px;padding:12px;border-radius:8px;background:rgba(176,141,87,0.05);border:1px solid rgba(176,141,87,0.1)">
             <span style="font-size:22px">⚡</span>
             <div><div style="font-size:13px;font-weight:700;color:var(--text-primary)" data-i18n="ach4">خفض زمن التقارير</div><div style="font-size:11px;color:var(--text-muted)" data-i18n="ach4_desc">-50% في وقت إعداد التقارير الدورية</div></div>
           </div>
@@ -2095,32 +2108,32 @@ body::after {
   <div class="grid-2 animate-in">
     <!-- Contact Form -->
     <div class="card">
-      <div class="card-header" style="background:linear-gradient(135deg,rgba(59,130,246,0.06),rgba(6,182,212,0.04))">
-        <div class="card-title">
+      <div class="card-header" style="background:linear-gradient(135deg,rgba(212,175,106,0.06),rgba(217,189,128,0.04))">
+        <h2 class="card-title">
           <span class="card-title-dot" style="background:var(--accent-blue)"></span>
           <span data-i18n="send_msg_title">أرسل رسالة</span>
-        </div>
+        </h2>
         <div class="card-badge">CONTACT FORM</div>
       </div>
       <div class="card-body">
         <div style="display:flex;flex-direction:column;gap:14px">
           <div>
             <label style="font-size:12px;font-weight:600;color:var(--text-secondary);display:block;margin-bottom:6px" data-i18n="form_name">الاسم الكامل</label>
-            <input type="text" id="contactName" placeholder="أدخل اسمك" style="width:100%;padding:12px 16px;background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;color:var(--text-primary);font-family:'Cairo',sans-serif;font-size:13px;outline:none;transition:border 0.3s" onfocus="this.style.borderColor='#3b82f6'" onblur="this.style.borderColor='var(--border)'">
+            <input type="text" id="contactName" placeholder="أدخل اسمك" style="width:100%;padding:12px 16px;background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;color:var(--text-primary);font-family:'Cairo',sans-serif;font-size:13px;outline:none;transition:border 0.3s" onfocus="this.style.borderColor='#c8a45f'" onblur="this.style.borderColor='var(--border)'">
           </div>
           <div>
             <label style="font-size:12px;font-weight:600;color:var(--text-secondary);display:block;margin-bottom:6px" data-i18n="form_email">البريد الإلكتروني</label>
-            <input type="email" id="contactEmail" placeholder="example@email.com" dir="ltr" style="width:100%;padding:12px 16px;background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;color:var(--text-primary);font-family:'JetBrains Mono',monospace;font-size:13px;outline:none;transition:border 0.3s;text-align:left" onfocus="this.style.borderColor='#3b82f6'" onblur="this.style.borderColor='var(--border)'">
+            <input type="email" id="contactEmail" placeholder="example@email.com" dir="ltr" style="width:100%;padding:12px 16px;background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;color:var(--text-primary);font-family:'JetBrains Mono',monospace;font-size:13px;outline:none;transition:border 0.3s;text-align:left" onfocus="this.style.borderColor='#c8a45f'" onblur="this.style.borderColor='var(--border)'">
           </div>
           <div>
             <label style="font-size:12px;font-weight:600;color:var(--text-secondary);display:block;margin-bottom:6px" data-i18n="form_subject">الموضوع</label>
-            <input type="text" id="contactSubject" placeholder="موضوع الرسالة" style="width:100%;padding:12px 16px;background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;color:var(--text-primary);font-family:'Cairo',sans-serif;font-size:13px;outline:none;transition:border 0.3s" onfocus="this.style.borderColor='#3b82f6'" onblur="this.style.borderColor='var(--border)'">
+            <input type="text" id="contactSubject" placeholder="موضوع الرسالة" style="width:100%;padding:12px 16px;background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;color:var(--text-primary);font-family:'Cairo',sans-serif;font-size:13px;outline:none;transition:border 0.3s" onfocus="this.style.borderColor='#c8a45f'" onblur="this.style.borderColor='var(--border)'">
           </div>
           <div>
             <label style="font-size:12px;font-weight:600;color:var(--text-secondary);display:block;margin-bottom:6px" data-i18n="form_message">الرسالة</label>
-            <textarea id="contactMsg" rows="5" placeholder="اكتب رسالتك هنا..." style="width:100%;padding:12px 16px;background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;color:var(--text-primary);font-family:'Cairo',sans-serif;font-size:13px;outline:none;resize:vertical;transition:border 0.3s" onfocus="this.style.borderColor='#3b82f6'" onblur="this.style.borderColor='var(--border)'"></textarea>
+            <textarea id="contactMsg" rows="5" placeholder="اكتب رسالتك هنا..." style="width:100%;padding:12px 16px;background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;color:var(--text-primary);font-family:'Cairo',sans-serif;font-size:13px;outline:none;resize:vertical;transition:border 0.3s" onfocus="this.style.borderColor='#c8a45f'" onblur="this.style.borderColor='var(--border)'"></textarea>
           </div>
-          <button onclick="sendMessage()" id="sendBtn" style="width:100%;padding:14px;background:linear-gradient(135deg,#3b82f6,#1d4ed8);border:none;border-radius:8px;color:white;font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all 0.3s;position:relative;overflow:hidden" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 25px rgba(59,130,246,0.35)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <button onclick="sendMessage()" id="sendBtn" style="width:100%;padding:14px;background:linear-gradient(135deg,#d4af6a,#a8853e);border:none;border-radius:8px;color:white;font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all 0.3s;position:relative;overflow:hidden" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 25px rgba(212,175,106,0.35)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
             إرسال الرسالة
           </button>
           <div id="sendSuccess" style="display:none;padding:14px;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:8px;text-align:center;color:#10b981;font-size:13px;font-weight:600;animation:fadeInUp 0.5s ease">
@@ -2134,16 +2147,16 @@ body::after {
     <div style="display:flex;flex-direction:column;gap:16px">
       <div class="card animate-in delay-1">
         <div class="card-header">
-          <div class="card-title">
+          <h2 class="card-title">
             <span class="card-title-dot" style="background:var(--accent-emerald)"></span>
             <span data-i18n="contact_info_title">معلومات التواصل</span>
-          </div>
+          </h2>
         </div>
         <div class="card-body">
           <div style="display:flex;flex-direction:column;gap:12px">
             <a href="mailto:fahad.mf@outlook.com" class="contact-item" style="text-decoration:none">
-              <div class="contact-icon" style="background:rgba(59,130,246,0.1)">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+              <div class="contact-icon" style="background:rgba(212,175,106,0.1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c8a45f" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
               </div>
               <div style="flex:1">
                 <div class="contact-label" data-i18n="contact_email_label">البريد الإلكتروني</div>
@@ -2162,8 +2175,8 @@ body::after {
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
             <a href="https://linkedin.com/in/fahad-m-al-mutairi-34474371" target="_blank" class="contact-item" style="text-decoration:none">
-              <div class="contact-icon" style="background:rgba(139,92,246,0.1)">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              <div class="contact-icon" style="background:rgba(176,141,87,0.1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b08d57" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
               </div>
               <div style="flex:1">
                 <div class="contact-label">LinkedIn</div>
@@ -2172,8 +2185,8 @@ body::after {
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
             <div class="contact-item">
-              <div class="contact-icon" style="background:rgba(245,158,11,0.1)">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div class="contact-icon" style="background:rgba(212,175,106,0.1)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d4af6a" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
               </div>
               <div style="flex:1">
                 <div class="contact-label" data-i18n="lbl_location">الموقع</div>
@@ -2193,9 +2206,9 @@ body::after {
           <div style="font-size:16px;font-weight:800;color:var(--text-primary);margin-bottom:6px" data-i18n="available_title" data-i18n="available_title">متاح للعمل</div>
           <div style="font-size:12px;color:var(--text-secondary);line-height:1.8" data-i18n="available_desc" data-i18n="available_desc">أبحث حالياً عن فرص في مجال تحليل البيانات والأتمتة. مستعد للعمل عن بعد أو في الموقع.</div>
           <div style="display:flex;gap:8px;justify-content:center;margin-top:16px;flex-wrap:wrap">
-            <span style="padding:5px 14px;border-radius:20px;font-size:11px;background:rgba(59,130,246,0.08);color:var(--accent-blue);border:1px solid rgba(59,130,246,0.15)">Full-time</span>
+            <span style="padding:5px 14px;border-radius:20px;font-size:11px;background:rgba(212,175,106,0.08);color:var(--accent-blue);border:1px solid rgba(212,175,106,0.15)">Full-time</span>
             <span style="padding:5px 14px;border-radius:20px;font-size:11px;background:rgba(16,185,129,0.08);color:var(--accent-emerald);border:1px solid rgba(16,185,129,0.15)">Remote</span>
-            <span style="padding:5px 14px;border-radius:20px;font-size:11px;background:rgba(139,92,246,0.08);color:var(--accent-purple);border:1px solid rgba(139,92,246,0.15)">Freelance</span>
+            <span style="padding:5px 14px;border-radius:20px;font-size:11px;background:rgba(176,141,87,0.08);color:var(--accent-purple);border:1px solid rgba(176,141,87,0.15)">Freelance</span>
           </div>
         </div>
       </div>
@@ -2219,7 +2232,7 @@ body::after {
       </div>
       <div style="display:flex;align-items:center;gap:12px">
         <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted)" id="modalDate"></div>
-        <button class="modal-close" onclick="closeModal()" style="position:static;width:30px;height:30px;font-size:14px">✕</button>
+        <button class="modal-close" aria-label="إغلاق النافذة" onclick="closeModal()" style="position:static;width:30px;height:30px;font-size:14px">✕</button>
       </div>
     </div>
     <!-- Dashboard Content -->
@@ -2229,7 +2242,7 @@ body::after {
 
 <!-- Lightbox for project screenshots -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <button class="lb-close" onclick="closeLightbox()">✕</button>
+  <button class="lb-close" aria-label="إغلاق الصورة" onclick="closeLightbox()">✕</button>
   <img id="lightboxImg" src="" alt="Project screenshot">
 </div>
 
@@ -2247,9 +2260,9 @@ function openProject(index) {
   var dash = document.getElementById('modalDashboard');
   var builders = [buildSalesDashboard, buildExcelDashboard, buildAutomationDashboard, buildShotOnly, buildShotOnly];
   var meta = [
-    { title:'Sales Performance Dashboard', tag:'Power BI', tagColor:'#3b82f6', icon:'📊', iconBg:'linear-gradient(135deg,#3b82f6,#1d4ed8)' },
+    { title:'Sales Performance Dashboard', tag:'Power BI', tagColor:'#c8a45f', icon:'📊', iconBg:'linear-gradient(135deg,#d4af6a,#a8853e)' },
     { title:'Data Analysis Report', tag:'Excel Analytics', tagColor:'#10b981', icon:'📈', iconBg:'linear-gradient(135deg,#10b981,#059669)' },
-    { title:'Automation Monitoring', tag:'Process Automation', tagColor:'#8b5cf6', icon:'⚙️', iconBg:'linear-gradient(135deg,#8b5cf6,#7c3aed)' },
+    { title:'Automation Monitoring', tag:'Process Automation', tagColor:'#b08d57', icon:'⚙️', iconBg:'linear-gradient(135deg,#b08d57,#7c3aed)' },
     { title:'HR Analytics Dashboard', tag:'HR Analytics', tagColor:'#22d3ee', icon:'👥', iconBg:'linear-gradient(135deg,#22d3ee,#0891b2)' },
     { title:'Data Cleaning Project', tag:'Data Cleaning', tagColor:'#34d399', icon:'🧹', iconBg:'linear-gradient(135deg,#34d399,#059669)' },
   ];
@@ -2260,10 +2273,8 @@ function openProject(index) {
   document.getElementById('modalTag2').textContent = m.tag;
   document.getElementById('modalTag2').style.color = m.tagColor;
   document.getElementById('modalDate').textContent = new Date().toLocaleDateString('ar-SA');
-  var shots = ['sales-dashboard.png','excel-dashboard.png','automation-dashboard.png','hr-dashboard.png','cleaning-project.png'];
-  var shotHtml = '<div class="modal-shot-wrap"><img src="'+shots[index]+'" alt="'+m.title+'" '+
-    'onclick="openLightbox(this.src)" '+
-    'onerror="this.parentElement.style.display=\'none\'"></div>';
+  var demos = ['demo-sales.html','demo-excel.html','demo-automation.html','demo-hr.html','demo-cleaning.html'];
+  var shotHtml = '<a href="'+demos[index]+'" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;padding:16px;background:linear-gradient(135deg,#d4af6a,#a8853e);border-radius:12px;color:#16120a;text-decoration:none;font-family:Cairo,sans-serif;font-size:14px;font-weight:700;box-shadow:0 4px 18px rgba(212,175,106,0.3)">▶ تشغيل المشروع التفاعلي — يفتح في تبويب جديد</a>';
   dash.innerHTML = shotHtml + builders[index]();
   modal.classList.add('show');
   document.body.style.overflow = 'hidden';
@@ -2284,19 +2295,19 @@ document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ closeMod
 
 function kpi(value, label, change, color, up) {
   if(up===undefined) up=true;
-  return '<div class="mkpi" style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px;position:relative;overflow:hidden"><div style="position:absolute;top:0;left:0;width:100%;height:3px;background:'+color+'"></div><div class="mkpi-lbl" style="font-size:11px;color:var(--text-muted);margin-bottom:8px">'+label+'</div><div class="mkpi-val" style="font-family:JetBrains Mono,monospace;font-size:24px;font-weight:700;color:var(--text-primary);margin-bottom:6px;line-height:1.15;word-break:break-word">'+value+'</div><div class="mkpi-chg" style="font-family:JetBrains Mono,monospace;font-size:11px;color:'+(up?'#10b981':'#f43f5e')+'">'+(up?'▲':'▼')+' '+change+'</div></div>';
+  return '<div class="mkpi" style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px;position:relative;overflow:hidden"><div style="position:absolute;top:0;left:0;width:100%;height:3px;background:'+color+'"></div><div class="mkpi-lbl" style="font-size:11px;color:var(--text-muted);margin-bottom:8px">'+label+'</div><div class="mkpi-val" style="font-family:JetBrains Mono,monospace;font-size:24px;font-weight:700;color:var(--text-primary);margin-bottom:6px;line-height:1.15;word-break:break-word">'+value+'</div><div class="mkpi-chg" style="font-family:JetBrains Mono,monospace;font-size:11px;color:'+(up?'#10b981':'#c0654a')+'">'+(up?'▲':'▼')+' '+change+'</div></div>';
 }
 
 function buildSalesDashboard() {
-  return '<div class="modal-kpis" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px">'+kpi('SAR 2.4M',t('إجمالي الإيرادات','Total Revenue'),'+18.2%','#3b82f6')+kpi('SAR 890K',t('صافي الربح','Net Profit'),'+12.5%','#10b981')+kpi('1,247',t('عدد الطلبات','Orders'),'+23.1%','#f59e0b')+kpi('37.1%',t('هامش الربح','Profit Margin'),'+2.4%','#8b5cf6')+'</div><div style="display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-bottom:16px"><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('الإيرادات الشهرية','Monthly Revenue')+'</div><canvas id="dc_revenue" style="width:100%;height:220px"></canvas></div><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('المبيعات حسب المنطقة','Sales by Region')+'</div><canvas id="dc_region" style="width:100%;height:220px"></canvas></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('أفضل المنتجات','Top Products')+'</div><canvas id="dc_products" style="width:100%;height:180px"></canvas></div><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('أداء الفريق','Team Performance')+'</div><div id="dc_team" style="display:flex;flex-direction:column;gap:10px"></div></div></div>';
+  return '<div class="modal-kpis" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px">'+kpi('SAR 2.4M',t('إجمالي الإيرادات','Total Revenue'),'+18.2%','#c8a45f')+kpi('SAR 890K',t('صافي الربح','Net Profit'),'+12.5%','#10b981')+kpi('1,247',t('عدد الطلبات','Orders'),'+23.1%','#d4af6a')+kpi('37.1%',t('هامش الربح','Profit Margin'),'+2.4%','#b08d57')+'</div><div style="display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-bottom:16px"><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('الإيرادات الشهرية','Monthly Revenue')+'</div><canvas id="dc_revenue" style="width:100%;height:220px"></canvas></div><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('المبيعات حسب المنطقة','Sales by Region')+'</div><canvas id="dc_region" style="width:100%;height:220px"></canvas></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('أفضل المنتجات','Top Products')+'</div><canvas id="dc_products" style="width:100%;height:180px"></canvas></div><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('أداء الفريق','Team Performance')+'</div><div id="dc_team" style="display:flex;flex-direction:column;gap:10px"></div></div></div>';
 }
 
 function buildExcelDashboard() {
-  return '<div class="modal-kpis" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px">'+kpi('52,847',t('إجمالي السجلات','Total Records'),t(t('تم تحليلها','Fully Analyzed'),'Analyzed'),'#10b981')+kpi('98.3%',t('جودة البيانات','Data Quality'),'+5.2%','#3b82f6')+kpi('24',t('تقرير محوري','Pivot Reports'),'Pivot Tables','#f59e0b')+kpi('12','Insights',t(t('مستخرجة','Extracted'),'Extracted'),'#8b5cf6')+'</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px"><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('توزيع البيانات','Data Distribution')+'</div><canvas id="dc_dist" style="width:100%;height:220px"></canvas></div><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('اتجاه الأداء','Performance Trend')+'</div><canvas id="dc_trend" style="width:100%;height:220px"></canvas></div></div><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;overflow:hidden"><div style="padding:14px 16px;border-bottom:1px solid var(--border)"><div style="font-size:13px;font-weight:700;color:var(--text-primary)">'+t('ملخص التحليل','Analysis Summary')+'</div></div><table style="width:100%;border-collapse:collapse;font-size:12px"><thead><tr style="background:rgba(255,255,255,0.02)"><th style="padding:10px 16px;text-align:right;color:var(--text-muted);border-bottom:1px solid var(--border)">'+t('المؤشر','Metric')+'</th><th style="padding:10px;text-align:center;color:var(--text-muted);border-bottom:1px solid var(--border)">'+t('القيمة','Value')+'</th><th style="padding:10px;text-align:center;color:var(--text-muted);border-bottom:1px solid var(--border)">'+t('التغيّر','Change')+'</th><th style="padding:10px;text-align:center;color:var(--text-muted);border-bottom:1px solid var(--border)">'+t('الحالة','Status')+'</th></tr></thead><tbody><tr style="border-bottom:1px solid var(--border)"><td style="padding:10px 16px;color:var(--text-primary)">'+t('معدل التحويل','Conversion Rate')+'</td><td style="padding:10px;text-align:center;font-family:monospace;color:var(--text-primary)">34.2%</td><td style="padding:10px;text-align:center;color:#10b981;font-family:monospace">+8.1%</td><td style="text-align:center"><span style="padding:3px 10px;border-radius:20px;font-size:10px;background:rgba(16,185,129,0.1);color:#10b981">'+t('ممتاز','Excellent')+'</span></td></tr><tr style="border-bottom:1px solid var(--border)"><td style="padding:10px 16px;color:var(--text-primary)">'+t('متوسط قيمة الطلب','Avg Order Value')+'</td><td style="padding:10px;text-align:center;font-family:monospace;color:var(--text-primary)">SAR 1,920</td><td style="padding:10px;text-align:center;color:#10b981;font-family:monospace">+12.3%</td><td style="text-align:center"><span style="padding:3px 10px;border-radius:20px;font-size:10px;background:rgba(16,185,129,0.1);color:#10b981">'+t('ممتاز','Excellent')+'</span></td></tr><tr style="border-bottom:1px solid var(--border)"><td style="padding:10px 16px;color:var(--text-primary)">'+t('رضا العملاء NPS','Customer NPS')+'</td><td style="padding:10px;text-align:center;font-family:monospace;color:var(--text-primary)">72</td><td style="padding:10px;text-align:center;color:#10b981;font-family:monospace">+15</td><td style="text-align:center"><span style="padding:3px 10px;border-radius:20px;font-size:10px;background:rgba(16,185,129,0.1);color:#10b981">'+t('ممتاز','Excellent')+'</span></td></tr><tr><td style="padding:10px 16px;color:var(--text-primary)">'+t('وقت الاستجابة','Response Time')+'</td><td style="padding:10px;text-align:center;font-family:monospace;color:var(--text-primary)">2.4h</td><td style="padding:10px;text-align:center;color:#10b981;font-family:monospace">-45%</td><td style="text-align:center"><span style="padding:3px 10px;border-radius:20px;font-size:10px;background:rgba(16,185,129,0.1);color:#10b981">'+t('ممتاز','Excellent')+'</span></td></tr></tbody></table></div>';
+  return '<div class="modal-kpis" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px">'+kpi('52,847',t('إجمالي السجلات','Total Records'),t(t('تم تحليلها','Fully Analyzed'),'Analyzed'),'#10b981')+kpi('98.3%',t('جودة البيانات','Data Quality'),'+5.2%','#c8a45f')+kpi('24',t('تقرير محوري','Pivot Reports'),'Pivot Tables','#d4af6a')+kpi('12','Insights',t(t('مستخرجة','Extracted'),'Extracted'),'#b08d57')+'</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px"><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('توزيع البيانات','Data Distribution')+'</div><canvas id="dc_dist" style="width:100%;height:220px"></canvas></div><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('اتجاه الأداء','Performance Trend')+'</div><canvas id="dc_trend" style="width:100%;height:220px"></canvas></div></div><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;overflow:hidden"><div style="padding:14px 16px;border-bottom:1px solid var(--border)"><div style="font-size:13px;font-weight:700;color:var(--text-primary)">'+t('ملخص التحليل','Analysis Summary')+'</div></div><table style="width:100%;border-collapse:collapse;font-size:12px"><thead><tr style="background:rgba(255,255,255,0.02)"><th style="padding:10px 16px;text-align:right;color:var(--text-muted);border-bottom:1px solid var(--border)">'+t('المؤشر','Metric')+'</th><th style="padding:10px;text-align:center;color:var(--text-muted);border-bottom:1px solid var(--border)">'+t('القيمة','Value')+'</th><th style="padding:10px;text-align:center;color:var(--text-muted);border-bottom:1px solid var(--border)">'+t('التغيّر','Change')+'</th><th style="padding:10px;text-align:center;color:var(--text-muted);border-bottom:1px solid var(--border)">'+t('الحالة','Status')+'</th></tr></thead><tbody><tr style="border-bottom:1px solid var(--border)"><td style="padding:10px 16px;color:var(--text-primary)">'+t('معدل التحويل','Conversion Rate')+'</td><td style="padding:10px;text-align:center;font-family:monospace;color:var(--text-primary)">34.2%</td><td style="padding:10px;text-align:center;color:#10b981;font-family:monospace">+8.1%</td><td style="text-align:center"><span style="padding:3px 10px;border-radius:20px;font-size:10px;background:rgba(16,185,129,0.1);color:#10b981">'+t('ممتاز','Excellent')+'</span></td></tr><tr style="border-bottom:1px solid var(--border)"><td style="padding:10px 16px;color:var(--text-primary)">'+t('متوسط قيمة الطلب','Avg Order Value')+'</td><td style="padding:10px;text-align:center;font-family:monospace;color:var(--text-primary)">SAR 1,920</td><td style="padding:10px;text-align:center;color:#10b981;font-family:monospace">+12.3%</td><td style="text-align:center"><span style="padding:3px 10px;border-radius:20px;font-size:10px;background:rgba(16,185,129,0.1);color:#10b981">'+t('ممتاز','Excellent')+'</span></td></tr><tr style="border-bottom:1px solid var(--border)"><td style="padding:10px 16px;color:var(--text-primary)">'+t('رضا العملاء NPS','Customer NPS')+'</td><td style="padding:10px;text-align:center;font-family:monospace;color:var(--text-primary)">72</td><td style="padding:10px;text-align:center;color:#10b981;font-family:monospace">+15</td><td style="text-align:center"><span style="padding:3px 10px;border-radius:20px;font-size:10px;background:rgba(16,185,129,0.1);color:#10b981">'+t('ممتاز','Excellent')+'</span></td></tr><tr><td style="padding:10px 16px;color:var(--text-primary)">'+t('وقت الاستجابة','Response Time')+'</td><td style="padding:10px;text-align:center;font-family:monospace;color:var(--text-primary)">2.4h</td><td style="padding:10px;text-align:center;color:#10b981;font-family:monospace">-45%</td><td style="text-align:center"><span style="padding:3px 10px;border-radius:20px;font-size:10px;background:rgba(16,185,129,0.1);color:#10b981">'+t('ممتاز','Excellent')+'</span></td></tr></tbody></table></div>';
 }
 
 function buildAutomationDashboard() {
-  return '<div class="modal-kpis" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px">'+kpi('156',t('عملية مؤتمتة','Automated Processes'),t('+34 هذا الشهر','+34 this month'),'#8b5cf6')+kpi('99.2%',t('معدل النجاح','Success Rate'),'+0.8%','#10b981')+kpi('847h',t('ساعات موفّرة','Hours Saved'),t('هذا الربع','This Quarter'),'#f59e0b')+kpi('SAR 125K',t('توفير التكلفة','Cost Savings'),t('سنوياً','Annually'),'#06b6d4')+'</div><div style="display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-bottom:16px"><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('العمليات المؤتمتة يومياً','Daily Automated Processes')+'</div><canvas id="dc_auto_daily" style="width:100%;height:200px"></canvas></div><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('نوع العمليات','Process Types')+'</div><canvas id="dc_auto_types" style="width:100%;height:200px"></canvas></div></div><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('حالة العمليات','Process Status')+'</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(16,185,129,0.04);border:1px solid rgba(16,185,129,0.1);border-radius:8px"><div style="width:10px;height:10px;border-radius:50%;background:#10b981;box-shadow:0 0 8px rgba(16,185,129,0.5)"></div><div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text-primary)">'+t('تحديث التقارير','Report Updates')+'</div><div style="font-size:10px;color:var(--text-muted)">'+t('منذ 12 دقيقة','12 min ago')+'</div></div><div style="font-family:monospace;font-size:11px;color:#10b981">RUNNING</div></div><div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(16,185,129,0.04);border:1px solid rgba(16,185,129,0.1);border-radius:8px"><div style="width:10px;height:10px;border-radius:50%;background:#10b981;box-shadow:0 0 8px rgba(16,185,129,0.5)"></div><div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text-primary)">'+t('مزامنة البيانات','Data Sync')+'</div><div style="font-size:10px;color:var(--text-muted)">'+t('منذ 5 دقائق','5 min ago')+'</div></div><div style="font-family:monospace;font-size:11px;color:#10b981">RUNNING</div></div><div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(59,130,246,0.04);border:1px solid rgba(59,130,246,0.1);border-radius:8px"><div style="width:10px;height:10px;border-radius:50%;background:#3b82f6"></div><div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text-primary)">'+t('تقارير KPI','KPI Reports')+'</div><div style="font-size:10px;color:var(--text-muted)">'+t('كل أحد 8:00 ص','Every Sun 8:00 AM')+'</div></div><div style="font-family:monospace;font-size:11px;color:#3b82f6">SCHEDULED</div></div><div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(59,130,246,0.04);border:1px solid rgba(59,130,246,0.1);border-radius:8px"><div style="width:10px;height:10px;border-radius:50%;background:#3b82f6"></div><div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text-primary)">'+t('نسخ احتياطي','Backup')+'</div><div style="font-size:10px;color:var(--text-muted)">'+t('يومياً 11:00 م','Daily 11:00 PM')+'</div></div><div style="font-family:monospace;font-size:11px;color:#3b82f6">SCHEDULED</div></div></div></div>';
+  return '<div class="modal-kpis" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px">'+kpi('156',t('عملية مؤتمتة','Automated Processes'),t('+34 هذا الشهر','+34 this month'),'#b08d57')+kpi('99.2%',t('معدل النجاح','Success Rate'),'+0.8%','#10b981')+kpi('847h',t('ساعات موفّرة','Hours Saved'),t('هذا الربع','This Quarter'),'#d4af6a')+kpi('SAR 125K',t('توفير التكلفة','Cost Savings'),t('سنوياً','Annually'),'#d9bd80')+'</div><div style="display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-bottom:16px"><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('العمليات المؤتمتة يومياً','Daily Automated Processes')+'</div><canvas id="dc_auto_daily" style="width:100%;height:200px"></canvas></div><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('نوع العمليات','Process Types')+'</div><canvas id="dc_auto_types" style="width:100%;height:200px"></canvas></div></div><div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px"><div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px">'+t('حالة العمليات','Process Status')+'</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(16,185,129,0.04);border:1px solid rgba(16,185,129,0.1);border-radius:8px"><div style="width:10px;height:10px;border-radius:50%;background:#10b981;box-shadow:0 0 8px rgba(16,185,129,0.5)"></div><div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text-primary)">'+t('تحديث التقارير','Report Updates')+'</div><div style="font-size:10px;color:var(--text-muted)">'+t('منذ 12 دقيقة','12 min ago')+'</div></div><div style="font-family:monospace;font-size:11px;color:#10b981">RUNNING</div></div><div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(16,185,129,0.04);border:1px solid rgba(16,185,129,0.1);border-radius:8px"><div style="width:10px;height:10px;border-radius:50%;background:#10b981;box-shadow:0 0 8px rgba(16,185,129,0.5)"></div><div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text-primary)">'+t('مزامنة البيانات','Data Sync')+'</div><div style="font-size:10px;color:var(--text-muted)">'+t('منذ 5 دقائق','5 min ago')+'</div></div><div style="font-family:monospace;font-size:11px;color:#10b981">RUNNING</div></div><div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(212,175,106,0.04);border:1px solid rgba(212,175,106,0.1);border-radius:8px"><div style="width:10px;height:10px;border-radius:50%;background:#c8a45f"></div><div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text-primary)">'+t('تقارير KPI','KPI Reports')+'</div><div style="font-size:10px;color:var(--text-muted)">'+t('كل أحد 8:00 ص','Every Sun 8:00 AM')+'</div></div><div style="font-family:monospace;font-size:11px;color:#c8a45f">SCHEDULED</div></div><div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(212,175,106,0.04);border:1px solid rgba(212,175,106,0.1);border-radius:8px"><div style="width:10px;height:10px;border-radius:50%;background:#c8a45f"></div><div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text-primary)">'+t('نسخ احتياطي','Backup')+'</div><div style="font-size:10px;color:var(--text-muted)">'+t('يومياً 11:00 م','Daily 11:00 PM')+'</div></div><div style="font-family:monospace;font-size:11px;color:#c8a45f">SCHEDULED</div></div></div></div>';
 }
 
 function drawDashboardCharts(index) {
@@ -2315,18 +2326,18 @@ function drawGrid(ctx, w, h) {
   for(var i=0;i<=4;i++){var y=10+i*((h-35)/4);ctx.beginPath();ctx.moveTo(35,y);ctx.lineTo(w-10,y);ctx.stroke();}
 }
 function drawSalesCharts() {
-  var r=initCanvas('dc_revenue',220);if(r){var ctx=r.ctx,w=r.w,h=r.h;drawGrid(ctx,w,h);var d=[180,210,195,240,260,230,280,310,290,320,350,340];var bw=(w-60)/12-4;d.forEach(function(v,i){var bh=(v/400)*(h-45);var x=40+i*(bw+4);var g=ctx.createLinearGradient(x,h-25-bh,x,h-25);g.addColorStop(0,'#3b82f6');g.addColorStop(1,'#3b82f644');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(x,h-25-bh,bw,bh,3);ctx.fill();});ctx.strokeStyle='#f59e0b';ctx.lineWidth=2;ctx.beginPath();d.forEach(function(v,i){var x=40+i*(bw+4)+bw/2;var y=h-25-(v/400)*(h-45);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});ctx.stroke();}
-  var rg=initCanvas('dc_region',220);if(rg){var ctx=rg.ctx,w=rg.w,h=rg.h;var data=[{v:35,c:'#3b82f6',l:t('الرياض','Riyadh')},{v:25,c:'#10b981',l:t('جدة','Jeddah')},{v:20,c:'#f59e0b',l:t('الدمام','Dammam')},{v:12,c:'#8b5cf6',l:t('مكة','Makkah')},{v:8,c:'#06b6d4',l:t('أخرى','Others')}];var cx=w/2,cy=h/2-10,rad=65,sa=-Math.PI/2;data.forEach(function(d){var sw=(d.v/100)*Math.PI*2;ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,rad,sa,sa+sw);ctx.closePath();ctx.fillStyle=d.c;ctx.fill();sa+=sw;});ctx.beginPath();ctx.arc(cx,cy,38,0,Math.PI*2);ctx.fillStyle='#1a2035';ctx.fill();ctx.fillStyle='#f1f5f9';ctx.font='700 18px monospace';ctx.textAlign='center';ctx.fillText('5',cx,cy+4);ctx.fillStyle='#64748b';ctx.font='10px Cairo';ctx.fillText(t('مناطق','Regions'),cx,cy+18);data.forEach(function(d,i){var ly=h-8-(data.length-1-i)*16;ctx.fillStyle=d.c;ctx.beginPath();ctx.roundRect(10,ly-8,8,8,2);ctx.fill();ctx.fillStyle='#94a3b8';ctx.font='10px Cairo';ctx.textAlign='left';ctx.fillText(d.l+' '+d.v+'%',22,ly);});}
-  var pr=initCanvas('dc_products',180);if(pr){var ctx=pr.ctx,w=pr.w,h=pr.h;var ps=[{n:t('المنتج A','Product A'),v:92},{n:t('المنتج B','Product B'),v:78},{n:t('المنتج C','Product C'),v:65},{n:t('المنتج D','Product D'),v:52},{n:t('المنتج E','Product E'),v:40}];var bh=22,gap=12,mx=w-130;var cols=['#3b82f6','#06b6d4','#10b981','#f59e0b','#8b5cf6'];ps.forEach(function(p,i){var y=8+i*(bh+gap);ctx.fillStyle='#e2e8f0';ctx.font='600 11px Cairo';ctx.textAlign='right';ctx.fillText(p.n,75,y+bh/2+4);ctx.fillStyle='#1e293b';ctx.beginPath();ctx.roundRect(85,y,mx,bh,4);ctx.fill();var fl=(p.v/100)*mx;var g=ctx.createLinearGradient(85,0,85+fl,0);g.addColorStop(0,cols[i]);g.addColorStop(1,cols[i]+'66');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(85,y,fl,bh,4);ctx.fill();ctx.fillStyle='#f1f5f9';ctx.font='600 10px monospace';ctx.textAlign='left';ctx.fillText(p.v+'%',90+fl+6,y+bh/2+4);});}
-  var team=document.getElementById('dc_team');if(team){var ms=[{n:t('أحمد','Ahmed'),v:95,c:'#10b981'},{n:t('محمد','Mohammed'),v:88,c:'#3b82f6'},{n:t('خالد','Khalid'),v:82,c:'#f59e0b'},{n:t('عبدالله','Abdullah'),v:76,c:'#8b5cf6'}];team.innerHTML=ms.map(function(m){return '<div style="display:flex;align-items:center;gap:10px"><div style="width:28px;height:28px;border-radius:50%;background:'+m.c+'22;color:'+m.c+';display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">'+m.n[0]+'</div><div style="flex:1"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:12px;color:var(--text-primary);font-weight:600">'+m.n+'</span><span style="font-size:11px;color:'+m.c+';font-family:monospace">'+m.v+'%</span></div><div style="height:5px;background:var(--border);border-radius:5px;overflow:hidden"><div style="height:100%;width:'+m.v+'%;background:'+m.c+';border-radius:5px"></div></div></div></div>';}).join('');}
+  var r=initCanvas('dc_revenue',220);if(r){var ctx=r.ctx,w=r.w,h=r.h;drawGrid(ctx,w,h);var d=[180,210,195,240,260,230,280,310,290,320,350,340];var bw=(w-60)/12-4;d.forEach(function(v,i){var bh=(v/400)*(h-45);var x=40+i*(bw+4);var g=ctx.createLinearGradient(x,h-25-bh,x,h-25);g.addColorStop(0,'#c8a45f');g.addColorStop(1,'#c8a45f44');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(x,h-25-bh,bw,bh,3);ctx.fill();});ctx.strokeStyle='#d4af6a';ctx.lineWidth=2;ctx.beginPath();d.forEach(function(v,i){var x=40+i*(bw+4)+bw/2;var y=h-25-(v/400)*(h-45);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});ctx.stroke();}
+  var rg=initCanvas('dc_region',220);if(rg){var ctx=rg.ctx,w=rg.w,h=rg.h;var data=[{v:35,c:'#c8a45f',l:t('الرياض','Riyadh')},{v:25,c:'#10b981',l:t('جدة','Jeddah')},{v:20,c:'#d4af6a',l:t('الدمام','Dammam')},{v:12,c:'#b08d57',l:t('مكة','Makkah')},{v:8,c:'#d9bd80',l:t('أخرى','Others')}];var cx=w/2,cy=h/2-10,rad=65,sa=-Math.PI/2;data.forEach(function(d){var sw=(d.v/100)*Math.PI*2;ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,rad,sa,sa+sw);ctx.closePath();ctx.fillStyle=d.c;ctx.fill();sa+=sw;});ctx.beginPath();ctx.arc(cx,cy,38,0,Math.PI*2);ctx.fillStyle='#1a2035';ctx.fill();ctx.fillStyle='#f1f5f9';ctx.font='700 18px monospace';ctx.textAlign='center';ctx.fillText('5',cx,cy+4);ctx.fillStyle='#64748b';ctx.font='10px Cairo';ctx.fillText(t('مناطق','Regions'),cx,cy+18);data.forEach(function(d,i){var ly=h-8-(data.length-1-i)*16;ctx.fillStyle=d.c;ctx.beginPath();ctx.roundRect(10,ly-8,8,8,2);ctx.fill();ctx.fillStyle='#94a3b8';ctx.font='10px Cairo';ctx.textAlign='left';ctx.fillText(d.l+' '+d.v+'%',22,ly);});}
+  var pr=initCanvas('dc_products',180);if(pr){var ctx=pr.ctx,w=pr.w,h=pr.h;var ps=[{n:t('المنتج A','Product A'),v:92},{n:t('المنتج B','Product B'),v:78},{n:t('المنتج C','Product C'),v:65},{n:t('المنتج D','Product D'),v:52},{n:t('المنتج E','Product E'),v:40}];var bh=22,gap=12,mx=w-130;var cols=['#c8a45f','#d9bd80','#10b981','#d4af6a','#b08d57'];ps.forEach(function(p,i){var y=8+i*(bh+gap);ctx.fillStyle='#e2e8f0';ctx.font='600 11px Cairo';ctx.textAlign='right';ctx.fillText(p.n,75,y+bh/2+4);ctx.fillStyle='#1e293b';ctx.beginPath();ctx.roundRect(85,y,mx,bh,4);ctx.fill();var fl=(p.v/100)*mx;var g=ctx.createLinearGradient(85,0,85+fl,0);g.addColorStop(0,cols[i]);g.addColorStop(1,cols[i]+'66');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(85,y,fl,bh,4);ctx.fill();ctx.fillStyle='#f1f5f9';ctx.font='600 10px monospace';ctx.textAlign='left';ctx.fillText(p.v+'%',90+fl+6,y+bh/2+4);});}
+  var team=document.getElementById('dc_team');if(team){var ms=[{n:t('أحمد','Ahmed'),v:95,c:'#10b981'},{n:t('محمد','Mohammed'),v:88,c:'#c8a45f'},{n:t('خالد','Khalid'),v:82,c:'#d4af6a'},{n:t('عبدالله','Abdullah'),v:76,c:'#b08d57'}];team.innerHTML=ms.map(function(m){return '<div style="display:flex;align-items:center;gap:10px"><div style="width:28px;height:28px;border-radius:50%;background:'+m.c+'22;color:'+m.c+';display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">'+m.n[0]+'</div><div style="flex:1"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:12px;color:var(--text-primary);font-weight:600">'+m.n+'</span><span style="font-size:11px;color:'+m.c+';font-family:monospace">'+m.v+'%</span></div><div style="height:5px;background:var(--border);border-radius:5px;overflow:hidden"><div style="height:100%;width:'+m.v+'%;background:'+m.c+';border-radius:5px"></div></div></div></div>';}).join('');}
 }
 function drawExcelCharts() {
-  var d=initCanvas('dc_dist',220);if(d){var ctx=d.ctx,w=d.w,h=d.h;drawGrid(ctx,w,h);var cats=[t('إلكترونيات','Electronics'),t('ملابس','Apparel'),t('أغذية','Food'),t('أثاث','Furniture'),t('خدمات','Services'),'أخرى'];var vals=[8500,6200,5100,3800,2900,1800];var bw=(w-70)/6-8;var cols=['#3b82f6','#10b981','#f59e0b','#8b5cf6','#06b6d4','#f43f5e'];cats.forEach(function(c,i){var x=42+i*(bw+8);var bh=(vals[i]/10000)*(h-50);var y=h-25-bh;var g=ctx.createLinearGradient(x,y,x,h-25);g.addColorStop(0,cols[i]);g.addColorStop(1,cols[i]+'33');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(x,y,bw,bh,4);ctx.fill();ctx.fillStyle='#f1f5f9';ctx.font='9px monospace';ctx.textAlign='center';ctx.fillText((vals[i]/1000).toFixed(1)+'K',x+bw/2,y-6);ctx.fillStyle='#64748b';ctx.font='9px Cairo';ctx.fillText(c,x+bw/2,h-8);});}
+  var d=initCanvas('dc_dist',220);if(d){var ctx=d.ctx,w=d.w,h=d.h;drawGrid(ctx,w,h);var cats=[t('إلكترونيات','Electronics'),t('ملابس','Apparel'),t('أغذية','Food'),t('أثاث','Furniture'),t('خدمات','Services'),'أخرى'];var vals=[8500,6200,5100,3800,2900,1800];var bw=(w-70)/6-8;var cols=['#c8a45f','#10b981','#d4af6a','#b08d57','#d9bd80','#c0654a'];cats.forEach(function(c,i){var x=42+i*(bw+8);var bh=(vals[i]/10000)*(h-50);var y=h-25-bh;var g=ctx.createLinearGradient(x,y,x,h-25);g.addColorStop(0,cols[i]);g.addColorStop(1,cols[i]+'33');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(x,y,bw,bh,4);ctx.fill();ctx.fillStyle='#f1f5f9';ctx.font='9px monospace';ctx.textAlign='center';ctx.fillText((vals[i]/1000).toFixed(1)+'K',x+bw/2,y-6);ctx.fillStyle='#64748b';ctx.font='9px Cairo';ctx.fillText(c,x+bw/2,h-8);});}
   var t=initCanvas('dc_trend',220);if(t){var ctx=t.ctx,w=t.w,h=t.h;drawGrid(ctx,w,h);var vals=[42,48,45,55,52,60,58,68,72,65,78,82];ctx.beginPath();vals.forEach(function(v,i){var x=40+i*((w-55)/11);var y=h-25-(v/100)*(h-45);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});ctx.lineTo(40+11*((w-55)/11),h-25);ctx.lineTo(40,h-25);ctx.closePath();var grad=ctx.createLinearGradient(0,0,0,h);grad.addColorStop(0,'rgba(16,185,129,0.15)');grad.addColorStop(1,'rgba(16,185,129,0)');ctx.fillStyle=grad;ctx.fill();ctx.strokeStyle='#10b981';ctx.lineWidth=2.5;ctx.beginPath();vals.forEach(function(v,i){var x=40+i*((w-55)/11);var y=h-25-(v/100)*(h-45);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});ctx.stroke();vals.forEach(function(v,i){var x=40+i*((w-55)/11);var y=h-25-(v/100)*(h-45);ctx.beginPath();ctx.arc(x,y,3,0,Math.PI*2);ctx.fillStyle='#10b981';ctx.fill();});}
 }
 function drawAutoCharts() {
   var a=initCanvas('dc_auto_daily',200);if(a){var ctx=a.ctx,w=a.w,h=a.h;drawGrid(ctx,w,h);var days=[t('سبت','Sat'),t('أحد','Sun'),t('إثنين','Mon'),t('ثلاثاء','Tue'),t('أربعاء','Wed'),t('خميس','Thu'),t('جمعة','Fri')];var vals=[45,52,48,55,60,58,42];var bw=(w-60)/7-6;days.forEach(function(d,i){var x=40+i*(bw+6);var bh=(vals[i]/70)*(h-45);var g=ctx.createLinearGradient(x,h-25-bh,x,h-25);g.addColorStop(0,'#10b981');g.addColorStop(1,'#10b98133');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(x,h-25-bh,bw,bh,3);ctx.fill();ctx.fillStyle='#94a3b8';ctx.font='9px monospace';ctx.textAlign='center';ctx.fillText(vals[i],x+bw/2,h-28-bh);ctx.fillStyle='#64748b';ctx.font='10px Cairo';ctx.fillText(d,x+bw/2,h-8);});}
-  var tp=initCanvas('dc_auto_types',200);if(tp){var ctx=tp.ctx,w=tp.w,h=tp.h;var data=[{v:40,c:'#8b5cf6',l:t('تقارير','Reports')},{v:25,c:'#3b82f6',l:t('مزامنة','Sync')},{v:20,c:'#10b981',l:t('تنبيهات','Alerts')},{v:15,c:'#f59e0b',l:t('نسخ احتياطي','Backup')}];var cx=w/2,cy=h/2-10,rad=60,sa=-Math.PI/2;data.forEach(function(d){var sw=(d.v/100)*Math.PI*2;ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,rad,sa,sa+sw);ctx.closePath();ctx.fillStyle=d.c;ctx.fill();sa+=sw;});ctx.beginPath();ctx.arc(cx,cy,35,0,Math.PI*2);ctx.fillStyle='#1a2035';ctx.fill();ctx.fillStyle='#f1f5f9';ctx.font='700 16px monospace';ctx.textAlign='center';ctx.fillText('156',cx,cy+4);ctx.fillStyle='#64748b';ctx.font='9px Cairo';ctx.fillText(t('عملية','processes'),cx,cy+18);data.forEach(function(d,i){var ly=h-6-(data.length-1-i)*16;ctx.fillStyle=d.c;ctx.beginPath();ctx.roundRect(8,ly-8,8,8,2);ctx.fill();ctx.fillStyle='#94a3b8';ctx.font='10px Cairo';ctx.textAlign='left';ctx.fillText(d.l+' '+d.v+'%',20,ly);});}
+  var tp=initCanvas('dc_auto_types',200);if(tp){var ctx=tp.ctx,w=tp.w,h=tp.h;var data=[{v:40,c:'#b08d57',l:t('تقارير','Reports')},{v:25,c:'#c8a45f',l:t('مزامنة','Sync')},{v:20,c:'#10b981',l:t('تنبيهات','Alerts')},{v:15,c:'#d4af6a',l:t('نسخ احتياطي','Backup')}];var cx=w/2,cy=h/2-10,rad=60,sa=-Math.PI/2;data.forEach(function(d){var sw=(d.v/100)*Math.PI*2;ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,rad,sa,sa+sw);ctx.closePath();ctx.fillStyle=d.c;ctx.fill();sa+=sw;});ctx.beginPath();ctx.arc(cx,cy,35,0,Math.PI*2);ctx.fillStyle='#1a2035';ctx.fill();ctx.fillStyle='#f1f5f9';ctx.font='700 16px monospace';ctx.textAlign='center';ctx.fillText('156',cx,cy+4);ctx.fillStyle='#64748b';ctx.font='9px Cairo';ctx.fillText(t('عملية','processes'),cx,cy+18);data.forEach(function(d,i){var ly=h-6-(data.length-1-i)*16;ctx.fillStyle=d.c;ctx.beginPath();ctx.roundRect(8,ly-8,8,8,2);ctx.fill();ctx.fillStyle='#94a3b8';ctx.font='10px Cairo';ctx.textAlign='left';ctx.fillText(d.l+' '+d.v+'%',20,ly);});}
 }
 
 // ======== NAVIGATION ========
@@ -2335,8 +2346,17 @@ function showPage(page, el) {
   document.querySelectorAll('.nav-tab').forEach(function(t){t.classList.remove('active');});
   document.getElementById('page-' + page).classList.add('active');
   el.classList.add('active');
+  try { history.replaceState(null, '', '#' + page); } catch(e) {}
   setTimeout(function(){animateSkillBars();drawProjectCharts();}, 150);
 }
+// Open the right tab when visiting a direct link like /#projects
+(function(){
+  var h = location.hash.replace('#','');
+  if (h && document.getElementById('page-' + h)) {
+    var tab = document.querySelector('.nav-tab[data-page="' + h + '"]');
+    if (tab) { showPage(h, tab); }
+  }
+})();
 
 // ======== CLOCK ========
 function updateTime() {
@@ -2352,20 +2372,20 @@ function animateSkillBars() {
 
 // ======== PROJECT PREVIEW CHARTS ========
 function drawProjectCharts() {
-  var c1=document.getElementById('chart1');if(c1&&c1.getContext){var ctx=c1.getContext('2d');c1.width=c1.offsetWidth*2;c1.height=c1.offsetHeight*2;ctx.scale(2,2);var w=c1.offsetWidth,h=c1.offsetHeight;var d=[65,85,45,92,70,88,55,78,95,60,82,73];var bw=(w-40)/12-4;d.forEach(function(v,i){var bh=(v/100)*(h-40);var x=20+i*(bw+4);var g=ctx.createLinearGradient(x,h-20-bh,x,h-20);g.addColorStop(0,'#3b82f6');g.addColorStop(1,'#1e40af');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(x,h-20-bh,bw,bh,2);ctx.fill();});}
+  var c1=document.getElementById('chart1');if(c1&&c1.getContext){var ctx=c1.getContext('2d');c1.width=c1.offsetWidth*2;c1.height=c1.offsetHeight*2;ctx.scale(2,2);var w=c1.offsetWidth,h=c1.offsetHeight;var d=[65,85,45,92,70,88,55,78,95,60,82,73];var bw=(w-40)/12-4;d.forEach(function(v,i){var bh=(v/100)*(h-40);var x=20+i*(bw+4);var g=ctx.createLinearGradient(x,h-20-bh,x,h-20);g.addColorStop(0,'#c8a45f');g.addColorStop(1,'#1e40af');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(x,h-20-bh,bw,bh,2);ctx.fill();});}
   var c2=document.getElementById('chart2');if(c2&&c2.getContext){var ctx=c2.getContext('2d');c2.width=c2.offsetWidth*2;c2.height=c2.offsetHeight*2;ctx.scale(2,2);var w=c2.offsetWidth,h=c2.offsetHeight;var d=[40,55,35,70,60,80,65,90,75,95];ctx.strokeStyle='#10b981';ctx.lineWidth=2;ctx.beginPath();d.forEach(function(v,i){var x=20+i*((w-40)/9);var y=h-20-(v/100)*(h-40);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});ctx.stroke();var lx=20+9*((w-40)/9);ctx.lineTo(lx,h-20);ctx.lineTo(20,h-20);ctx.closePath();var g=ctx.createLinearGradient(0,0,0,h);g.addColorStop(0,'rgba(16,185,129,0.15)');g.addColorStop(1,'rgba(16,185,129,0)');ctx.fillStyle=g;ctx.fill();}
-  var c3=document.getElementById('chart3');if(c3&&c3.getContext){var ctx=c3.getContext('2d');c3.width=c3.offsetWidth*2;c3.height=c3.offsetHeight*2;ctx.scale(2,2);var w=c3.offsetWidth,h=c3.offsetHeight;var nodes=[];for(var i=0;i<12;i++)nodes.push({x:30+Math.random()*(w-60),y:20+Math.random()*(h-40),r:4+Math.random()*6});ctx.strokeStyle='rgba(139,92,246,0.2)';ctx.lineWidth=1;nodes.forEach(function(a,i){nodes.forEach(function(b,j){if(j>i&&Math.random()>0.5){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}});});nodes.forEach(function(n){ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,Math.PI*2);ctx.fillStyle='rgba(139,92,246,'+(0.3+Math.random()*0.5)+')';ctx.fill();});}
+  var c3=document.getElementById('chart3');if(c3&&c3.getContext){var ctx=c3.getContext('2d');c3.width=c3.offsetWidth*2;c3.height=c3.offsetHeight*2;ctx.scale(2,2);var w=c3.offsetWidth,h=c3.offsetHeight;var nodes=[];for(var i=0;i<12;i++)nodes.push({x:30+Math.random()*(w-60),y:20+Math.random()*(h-40),r:4+Math.random()*6});ctx.strokeStyle='rgba(176,141,87,0.2)';ctx.lineWidth=1;nodes.forEach(function(a,i){nodes.forEach(function(b,j){if(j>i&&Math.random()>0.5){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}});});nodes.forEach(function(n){ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,Math.PI*2);ctx.fillStyle='rgba(176,141,87,'+(0.3+Math.random()*0.5)+')';ctx.fill();});}
   drawImpactChart();drawGrowthChart();drawExpCharts();
 }
 
-function drawImpactChart(){var c=document.getElementById('impactChart');if(!c||!c.getContext)return;var ctx=c.getContext('2d');c.width=c.offsetWidth*2;c.height=400;ctx.scale(2,2);var w=c.offsetWidth,h=200;var cats=[t('تقليل الأخطاء','Error Reduction'),t('توفير الوقت','Time Saved'),t('رضا العملاء','Customer Satisfaction'),t('كفاءة العمليات','Operations Efficiency'),t('جودة التقارير','Report Quality')];var vals=[85,92,88,95,90];var cols=['#3b82f6','#10b981','#f59e0b','#8b5cf6','#06b6d4'];cats.forEach(function(cat,i){var y=10+i*40;ctx.fillStyle='#94a3b8';ctx.font='600 12px Cairo';ctx.textAlign='right';ctx.fillText(cat,120,y+16);ctx.fillStyle='#1e293b';ctx.beginPath();ctx.roundRect(130,y,w-180,24,4);ctx.fill();var fl=(vals[i]/100)*(w-180);var g=ctx.createLinearGradient(130,0,130+fl,0);g.addColorStop(0,cols[i]);g.addColorStop(1,cols[i]+'88');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(130,y,fl,24,4);ctx.fill();ctx.fillStyle='#f1f5f9';ctx.font='600 11px monospace';ctx.textAlign='left';ctx.fillText(vals[i]+'%',135+fl+8,y+16);});}
+function drawImpactChart(){var c=document.getElementById('impactChart');if(!c||!c.getContext)return;var ctx=c.getContext('2d');c.width=c.offsetWidth*2;c.height=400;ctx.scale(2,2);var w=c.offsetWidth,h=200;var cats=[t('تقليل الأخطاء','Error Reduction'),t('توفير الوقت','Time Saved'),t('رضا العملاء','Customer Satisfaction'),t('كفاءة العمليات','Operations Efficiency'),t('جودة التقارير','Report Quality')];var vals=[85,92,88,95,90];var cols=['#c8a45f','#10b981','#d4af6a','#b08d57','#d9bd80'];cats.forEach(function(cat,i){var y=10+i*40;ctx.fillStyle='#94a3b8';ctx.font='600 12px Cairo';ctx.textAlign='right';ctx.fillText(cat,120,y+16);ctx.fillStyle='#1e293b';ctx.beginPath();ctx.roundRect(130,y,w-180,24,4);ctx.fill();var fl=(vals[i]/100)*(w-180);var g=ctx.createLinearGradient(130,0,130+fl,0);g.addColorStop(0,cols[i]);g.addColorStop(1,cols[i]+'88');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(130,y,fl,24,4);ctx.fill();ctx.fillStyle='#f1f5f9';ctx.font='600 11px monospace';ctx.textAlign='left';ctx.fillText(vals[i]+'%',135+fl+8,y+16);});}
 
-function drawGrowthChart(){var c=document.getElementById('growthChart');if(!c||!c.getContext)return;var ctx=c.getContext('2d');c.width=c.offsetWidth*2;c.height=360;ctx.scale(2,2);var w=c.offsetWidth,h=180;var d=[20,35,45,60,75,90,95];var labels=['2019','2020','2021','2022','2023','2024','2025'];ctx.strokeStyle='#1e293b';ctx.lineWidth=0.5;for(var i=0;i<=4;i++){var y=10+i*((h-30)/4);ctx.beginPath();ctx.moveTo(30,y);ctx.lineTo(w-10,y);ctx.stroke();}ctx.strokeStyle='#f43f5e';ctx.lineWidth=2.5;ctx.beginPath();d.forEach(function(v,i){var x=30+i*((w-40)/6);var y=h-20-(v/100)*(h-30);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});ctx.stroke();d.forEach(function(v,i){var x=30+i*((w-40)/6);var y=h-20-(v/100)*(h-30);ctx.beginPath();ctx.arc(x,y,4,0,Math.PI*2);ctx.fillStyle='#f43f5e';ctx.fill();ctx.fillStyle='#64748b';ctx.font='10px monospace';ctx.textAlign='center';ctx.fillText(labels[i],x,h-4);});ctx.beginPath();d.forEach(function(v,i){var x=30+i*((w-40)/6);var y=h-20-(v/100)*(h-30);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});ctx.lineTo(30+6*((w-40)/6),h-20);ctx.lineTo(30,h-20);ctx.closePath();var g=ctx.createLinearGradient(0,0,0,h);g.addColorStop(0,'rgba(244,63,94,0.12)');g.addColorStop(1,'rgba(244,63,94,0)');ctx.fillStyle=g;ctx.fill();}
+function drawGrowthChart(){var c=document.getElementById('growthChart');if(!c||!c.getContext)return;var ctx=c.getContext('2d');c.width=c.offsetWidth*2;c.height=360;ctx.scale(2,2);var w=c.offsetWidth,h=180;var d=[20,35,45,60,75,90,95];var labels=['2019','2020','2021','2022','2023','2024','2025'];ctx.strokeStyle='#1e293b';ctx.lineWidth=0.5;for(var i=0;i<=4;i++){var y=10+i*((h-30)/4);ctx.beginPath();ctx.moveTo(30,y);ctx.lineTo(w-10,y);ctx.stroke();}ctx.strokeStyle='#c0654a';ctx.lineWidth=2.5;ctx.beginPath();d.forEach(function(v,i){var x=30+i*((w-40)/6);var y=h-20-(v/100)*(h-30);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});ctx.stroke();d.forEach(function(v,i){var x=30+i*((w-40)/6);var y=h-20-(v/100)*(h-30);ctx.beginPath();ctx.arc(x,y,4,0,Math.PI*2);ctx.fillStyle='#c0654a';ctx.fill();ctx.fillStyle='#64748b';ctx.font='10px monospace';ctx.textAlign='center';ctx.fillText(labels[i],x,h-4);});ctx.beginPath();d.forEach(function(v,i){var x=30+i*((w-40)/6);var y=h-20-(v/100)*(h-30);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});ctx.lineTo(30+6*((w-40)/6),h-20);ctx.lineTo(30,h-20);ctx.closePath();var g=ctx.createLinearGradient(0,0,0,h);g.addColorStop(0,'rgba(192,101,74,0.12)');g.addColorStop(1,'rgba(192,101,74,0)');ctx.fillStyle=g;ctx.fill();}
 
 function drawExpCharts(){
-  var c1=document.getElementById('expChart1');if(c1&&c1.getContext){var ctx=c1.getContext('2d');c1.width=c1.offsetWidth*2;c1.height=400;ctx.scale(2,2);var w=c1.offsetWidth,h=200;var months=[t('يناير','Jan'),t('فبراير','Feb'),t('مارس','Mar'),t('أبريل','Apr'),t('مايو','May'),t('يونيو','Jun')];var tasks=[8,14,20,28,35,42];var hours=[5,10,16,22,30,38];var bw=16;var gw=(w-50)/6;drawGrid(ctx,w,h);months.forEach(function(m,i){var cx=40+i*gw+gw/2;var th=(tasks[i]/50)*(h-50);var g1=ctx.createLinearGradient(0,h-25-th,0,h-25);g1.addColorStop(0,'#3b82f6');g1.addColorStop(1,'#3b82f622');ctx.fillStyle=g1;ctx.beginPath();ctx.roundRect(cx-bw-2,h-25-th,bw,th,3);ctx.fill();var hh=(hours[i]/50)*(h-50);var g2=ctx.createLinearGradient(0,h-25-hh,0,h-25);g2.addColorStop(0,'#06b6d4');g2.addColorStop(1,'#06b6d422');ctx.fillStyle=g2;ctx.beginPath();ctx.roundRect(cx+2,h-25-hh,bw,hh,3);ctx.fill();ctx.fillStyle='#64748b';ctx.font='10px Cairo';ctx.textAlign='center';ctx.fillText(m,cx,h-8);});}
-  var c2=document.getElementById('expChart2');if(c2&&c2.getContext){var ctx=c2.getContext('2d');c2.width=c2.offsetWidth*2;c2.height=400;ctx.scale(2,2);var w=c2.offsetWidth,h=200;var items=[t('التقارير الشهرية','Monthly Reports'),t('تقارير KPI','KPI Reports'),t('تحليل الأداء','Performance'),t('تقارير المشاريع','Projects')];var before=[48,24,36,40];var after=[12,6,10,15];items.forEach(function(item,i){var y=15+i*44;ctx.fillStyle='#e2e8f0';ctx.font='600 11px Cairo';ctx.textAlign='right';ctx.fillText(item,105,y+6);var bw=(before[i]/50)*(w-120);var g1=ctx.createLinearGradient(110,0,110+bw,0);g1.addColorStop(0,'#f43f5e');g1.addColorStop(1,'#f43f5e55');ctx.fillStyle=g1;ctx.beginPath();ctx.roundRect(110,y-2,bw,18,3);ctx.fill();var aw=(after[i]/50)*(w-120);var g2=ctx.createLinearGradient(110,0,110+aw,0);g2.addColorStop(0,'#10b981');g2.addColorStop(1,'#10b98155');ctx.fillStyle=g2;ctx.beginPath();ctx.roundRect(110,y+20,aw,18,3);ctx.fill();});}
-  var c3=document.getElementById('expChart3');if(c3&&c3.getContext){var ctx=c3.getContext('2d');c3.width=c3.offsetWidth*2;c3.height=400;ctx.scale(2,2);var w=c3.offsetWidth,h=200;var qs=['Q1','Q2','Q3','Q4'];var ach=[95,110,125,130];var bw=36;var gw=(w-60)/4;drawGrid(ctx,w,h);var ty=h-25-(100/150)*(h-50);ctx.setLineDash([6,4]);ctx.strokeStyle='#f59e0b';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(35,ty);ctx.lineTo(w-10,ty);ctx.stroke();ctx.setLineDash([]);qs.forEach(function(q,i){var cx=40+i*gw+gw/2;var bh=(ach[i]/150)*(h-50);var y=h-25-bh;var col=ach[i]>=100?'#10b981':'#f43f5e';var g=ctx.createLinearGradient(0,y,0,h-25);g.addColorStop(0,col);g.addColorStop(1,col+'22');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(cx-bw/2,y,bw,bh,4);ctx.fill();ctx.fillStyle='#f1f5f9';ctx.font='700 12px monospace';ctx.textAlign='center';ctx.fillText(ach[i]+'%',cx,y-8);ctx.fillStyle='#64748b';ctx.font='12px Cairo';ctx.fillText(q,cx,h-8);});}
+  var c1=document.getElementById('expChart1');if(c1&&c1.getContext){var ctx=c1.getContext('2d');c1.width=c1.offsetWidth*2;c1.height=400;ctx.scale(2,2);var w=c1.offsetWidth,h=200;var months=[t('يناير','Jan'),t('فبراير','Feb'),t('مارس','Mar'),t('أبريل','Apr'),t('مايو','May'),t('يونيو','Jun')];var tasks=[8,14,20,28,35,42];var hours=[5,10,16,22,30,38];var bw=16;var gw=(w-50)/6;drawGrid(ctx,w,h);months.forEach(function(m,i){var cx=40+i*gw+gw/2;var th=(tasks[i]/50)*(h-50);var g1=ctx.createLinearGradient(0,h-25-th,0,h-25);g1.addColorStop(0,'#c8a45f');g1.addColorStop(1,'#c8a45f22');ctx.fillStyle=g1;ctx.beginPath();ctx.roundRect(cx-bw-2,h-25-th,bw,th,3);ctx.fill();var hh=(hours[i]/50)*(h-50);var g2=ctx.createLinearGradient(0,h-25-hh,0,h-25);g2.addColorStop(0,'#d9bd80');g2.addColorStop(1,'#d9bd8022');ctx.fillStyle=g2;ctx.beginPath();ctx.roundRect(cx+2,h-25-hh,bw,hh,3);ctx.fill();ctx.fillStyle='#64748b';ctx.font='10px Cairo';ctx.textAlign='center';ctx.fillText(m,cx,h-8);});}
+  var c2=document.getElementById('expChart2');if(c2&&c2.getContext){var ctx=c2.getContext('2d');c2.width=c2.offsetWidth*2;c2.height=400;ctx.scale(2,2);var w=c2.offsetWidth,h=200;var items=[t('التقارير الشهرية','Monthly Reports'),t('تقارير KPI','KPI Reports'),t('تحليل الأداء','Performance'),t('تقارير المشاريع','Projects')];var before=[48,24,36,40];var after=[12,6,10,15];items.forEach(function(item,i){var y=15+i*44;ctx.fillStyle='#e2e8f0';ctx.font='600 11px Cairo';ctx.textAlign='right';ctx.fillText(item,105,y+6);var bw=(before[i]/50)*(w-120);var g1=ctx.createLinearGradient(110,0,110+bw,0);g1.addColorStop(0,'#c0654a');g1.addColorStop(1,'#c0654a55');ctx.fillStyle=g1;ctx.beginPath();ctx.roundRect(110,y-2,bw,18,3);ctx.fill();var aw=(after[i]/50)*(w-120);var g2=ctx.createLinearGradient(110,0,110+aw,0);g2.addColorStop(0,'#10b981');g2.addColorStop(1,'#10b98155');ctx.fillStyle=g2;ctx.beginPath();ctx.roundRect(110,y+20,aw,18,3);ctx.fill();});}
+  var c3=document.getElementById('expChart3');if(c3&&c3.getContext){var ctx=c3.getContext('2d');c3.width=c3.offsetWidth*2;c3.height=400;ctx.scale(2,2);var w=c3.offsetWidth,h=200;var qs=['Q1','Q2','Q3','Q4'];var ach=[95,110,125,130];var bw=36;var gw=(w-60)/4;drawGrid(ctx,w,h);var ty=h-25-(100/150)*(h-50);ctx.setLineDash([6,4]);ctx.strokeStyle='#d4af6a';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(35,ty);ctx.lineTo(w-10,ty);ctx.stroke();ctx.setLineDash([]);qs.forEach(function(q,i){var cx=40+i*gw+gw/2;var bh=(ach[i]/150)*(h-50);var y=h-25-bh;var col=ach[i]>=100?'#10b981':'#c0654a';var g=ctx.createLinearGradient(0,y,0,h-25);g.addColorStop(0,col);g.addColorStop(1,col+'22');ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(cx-bw/2,y,bw,bh,4);ctx.fill();ctx.fillStyle='#f1f5f9';ctx.font='700 12px monospace';ctx.textAlign='center';ctx.fillText(ach[i]+'%',cx,y-8);ctx.fillStyle='#64748b';ctx.font='12px Cairo';ctx.fillText(q,cx,h-8);});}
 }
 
 // ======== FILTER CHIPS ========
@@ -2381,7 +2401,7 @@ var translations={en:{nav_overview:'Overview',nav_projects:'Projects',nav_experi
 function toggleLang(){currentLang=currentLang==='ar'?'en':'ar';document.getElementById('langBtn').textContent=currentLang==='ar'?'EN':'عربي';document.documentElement.dir=currentLang==='ar'?'rtl':'ltr';document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(translations[currentLang][k])el.textContent=translations[currentLang][k];});var ni=document.getElementById('contactName');if(ni){ni.placeholder=currentLang==='ar'?'أدخل اسمك':'Enter your name';document.getElementById('contactEmail').placeholder='example@email.com';document.getElementById('contactSubject').placeholder=currentLang==='ar'?'موضوع الرسالة':'Message subject';document.getElementById('contactMsg').placeholder=currentLang==='ar'?'اكتب رسالتك هنا...':'Write your message here...';}var sb=document.getElementById('sendBtn');if(sb)sb.textContent=currentLang==='ar'?'إرسال الرسالة':'Send Message';drawProjectCharts();}
 
 // ======== CONTACT FORM (Formspree) ========
-function sendMessage(){var name=document.getElementById('contactName').value.trim();var email=document.getElementById('contactEmail').value.trim();var subject=document.getElementById('contactSubject').value.trim();var msg=document.getElementById('contactMsg').value.trim();var btn=document.getElementById('sendBtn');var success=document.getElementById('sendSuccess');if(!name||!email||!msg){btn.style.background='linear-gradient(135deg,#f43f5e,#e11d48)';btn.textContent=currentLang==='ar'?'يرجى تعبئة جميع الحقول':'Please fill all fields';setTimeout(function(){btn.style.background='linear-gradient(135deg,#3b82f6,#1d4ed8)';btn.textContent=currentLang==='ar'?'إرسال الرسالة':'Send Message';},2000);return;}btn.textContent=currentLang==='ar'?'جاري الإرسال...':'Sending...';btn.style.opacity='0.7';btn.disabled=true;fetch('https://formspree.io/f/xykbwzra',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:name,email:email,subject:subject,message:msg})}).then(function(r){if(r.ok){btn.style.display='none';success.style.display='block';document.getElementById('contactName').value='';document.getElementById('contactEmail').value='';document.getElementById('contactSubject').value='';document.getElementById('contactMsg').value='';setTimeout(function(){btn.style.display='block';btn.style.opacity='1';btn.disabled=false;btn.textContent=currentLang==='ar'?'إرسال الرسالة':'Send Message';btn.style.background='linear-gradient(135deg,#3b82f6,#1d4ed8)';success.style.display='none';},5000);}else{btn.textContent=currentLang==='ar'?'حدث خطأ':'Error occurred';btn.style.opacity='1';btn.disabled=false;setTimeout(function(){btn.style.background='linear-gradient(135deg,#3b82f6,#1d4ed8)';btn.textContent=currentLang==='ar'?'إرسال الرسالة':'Send Message';},3000);}}).catch(function(){btn.textContent=currentLang==='ar'?'خطأ في الاتصال':'Connection error';btn.style.opacity='1';btn.disabled=false;setTimeout(function(){btn.style.background='linear-gradient(135deg,#3b82f6,#1d4ed8)';btn.textContent=currentLang==='ar'?'إرسال الرسالة':'Send Message';},3000);});}
+function sendMessage(){var name=document.getElementById('contactName').value.trim();var email=document.getElementById('contactEmail').value.trim();var subject=document.getElementById('contactSubject').value.trim();var msg=document.getElementById('contactMsg').value.trim();var btn=document.getElementById('sendBtn');var success=document.getElementById('sendSuccess');if(!name||!email||!msg){btn.style.background='linear-gradient(135deg,#c0654a,#e11d48)';btn.textContent=currentLang==='ar'?'يرجى تعبئة جميع الحقول':'Please fill all fields';setTimeout(function(){btn.style.background='linear-gradient(135deg,#d4af6a,#a8853e)';btn.textContent=currentLang==='ar'?'إرسال الرسالة':'Send Message';},2000);return;}btn.textContent=currentLang==='ar'?'جاري الإرسال...':'Sending...';btn.style.opacity='0.7';btn.disabled=true;fetch('https://formspree.io/f/xykbwzra',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:name,email:email,subject:subject,message:msg})}).then(function(r){if(r.ok){btn.style.display='none';success.style.display='block';document.getElementById('contactName').value='';document.getElementById('contactEmail').value='';document.getElementById('contactSubject').value='';document.getElementById('contactMsg').value='';setTimeout(function(){btn.style.display='block';btn.style.opacity='1';btn.disabled=false;btn.textContent=currentLang==='ar'?'إرسال الرسالة':'Send Message';btn.style.background='linear-gradient(135deg,#d4af6a,#a8853e)';success.style.display='none';},5000);}else{btn.textContent=currentLang==='ar'?'حدث خطأ':'Error occurred';btn.style.opacity='1';btn.disabled=false;setTimeout(function(){btn.style.background='linear-gradient(135deg,#d4af6a,#a8853e)';btn.textContent=currentLang==='ar'?'إرسال الرسالة':'Send Message';},3000);}}).catch(function(){btn.textContent=currentLang==='ar'?'خطأ في الاتصال':'Connection error';btn.style.opacity='1';btn.disabled=false;setTimeout(function(){btn.style.background='linear-gradient(135deg,#d4af6a,#a8853e)';btn.textContent=currentLang==='ar'?'إرسال الرسالة':'Send Message';},3000);});}
 
 // ======== INIT ========
 window.addEventListener('load',function(){animateSkillBars();drawProjectCharts();});

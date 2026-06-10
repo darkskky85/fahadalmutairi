@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Excel Data Analysis Suite | Fahad Al-Mutairi</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=El+Messiri:wght@500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0c0a09;--card:#171310;--card2:#1d1813;--border:#2a2118;--gold:#d4af6a;--gold2:#a8853e;--champ:#e6c98c;--bronze:#b08d57;--ink:#f5efe3;--sub:#b3a78f;--mut:#7d7259;--pos:#2f9e6e;--neg:#c0654a}
+body{background:var(--bg);color:var(--ink);font-family:'Cairo',sans-serif;min-height:100vh;padding:28px 4vw 60px}
+body::before{content:'';position:fixed;inset:0;background:linear-gradient(rgba(212,175,106,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,106,.025) 1px,transparent 1px);background-size:56px 56px;pointer-events:none}
+.wrap{max-width:1180px;margin:0 auto;position:relative}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:26px;border-bottom:1px solid var(--border);padding-bottom:18px}
+h1{font-family:'El Messiri','Cairo',sans-serif;font-size:clamp(24px,4vw,34px);background:linear-gradient(120deg,#faf4e4,#e9cf96 55%,#c8a45f);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.sub{color:var(--sub);font-size:13px;margin-top:4px}
+.live{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--pos);font-family:'JetBrains Mono',monospace}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--pos);animation:p 2s infinite}
+@keyframes p{0%,100%{box-shadow:0 0 0 0 rgba(47,158,110,.4)}50%{box-shadow:0 0 0 6px rgba(47,158,110,0)}}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-bottom:22px}
+.kpi{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 18px;border-top:2px solid var(--gold)}
+.kpi .l{font-size:11px;color:var(--mut);letter-spacing:1px;text-transform:uppercase}
+.kpi .v{font-family:'El Messiri',sans-serif;font-size:27px;color:var(--gold);margin:4px 0 2px}
+.kpi .d{font-size:11px;color:var(--pos)}
+.kpi .d.neg{color:var(--neg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px}
+.ct{font-family:'El Messiri',sans-serif;font-size:15px;color:var(--ink);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.ct::before{content:'';width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+.ctrl{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.btn{background:var(--card);border:1px solid var(--border);color:var(--sub);padding:7px 16px;border-radius:8px;font-family:'Cairo',sans-serif;font-size:12.5px;cursor:pointer;transition:.25s}
+.btn:hover{border-color:var(--gold2);color:var(--champ)}
+.btn.on{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#16120a;font-weight:700;border-color:transparent}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{text-align:right;color:var(--mut);font-size:11px;letter-spacing:.5px;padding:8px 10px;border-bottom:1px solid var(--border);cursor:pointer;user-select:none}
+td{padding:8px 10px;border-bottom:1px solid var(--border);color:var(--sub)}
+tr:hover td{background:var(--card2)}
+.bar{height:8px;border-radius:4px;background:linear-gradient(90deg,var(--gold),var(--champ));transition:width .6s ease}
+.barbg{background:var(--border);border-radius:4px;overflow:hidden}
+footer{margin-top:34px;text-align:center;font-size:11.5px;color:var(--mut)}
+footer a{color:var(--gold);text-decoration:none}
+svg text{font-family:'Cairo',sans-serif}
+@media(max-width:640px){body{padding:18px 14px 40px}}
+</style></head><body><div class="wrap">
+<header><div><h1>Excel Data Analysis Suite</h1><div class="sub">تحليل 50K+ سجل · جدول قابل للترتيب ورؤى Pivot</div></div>
+<div class="live"><span class="dot"></span>LIVE DEMO</div></header>
+<div class="kpis">
+<div class="kpi"><div class="l">Records Analyzed</div><div class="v">50,000+</div><div class="d">98% accuracy</div></div>
+<div class="kpi"><div class="l">Top Sub-Category</div><div class="v">Refrigerators</div><div class="d">4.6M SAR</div></div>
+<div class="kpi"><div class="l">Categories</div><div class="v">4</div><div class="d">12 sub-categories</div></div>
+<div class="kpi"><div class="l">Insight Coverage</div><div class="v">100%</div><div class="d">Pivot + Power Pivot</div></div>
+</div>
+<div class="grid">
+<div class="card" style="grid-column:1/-1"><div class="ct">Sub-Category Performance — اضغط على عنوان أي عمود للترتيب</div>
+<table id="tbl"><thead><tr>
+<th data-k="0">Sub-Category</th><th data-k="1">Sales (SAR)</th><th data-k="2">Orders</th><th data-k="3">Margin %</th><th data-k="4">Trend</th>
+</tr></thead><tbody></tbody></table></div>
+<div class="card"><div class="ct">Sales by Category</div><svg id="cat" viewBox="0 0 420 230" width="100%"></svg></div>
+<div class="card"><div class="ct">Key Insights</div>
+<div style="font-size:13px;color:var(--sub);line-height:2.1">
+<div>◆ الأجهزة الكبيرة (Appliances) تقود الإيرادات بهامش ربح 29%</div>
+<div>◆ Smartphones الأسرع نموًا: +18% ربع سنوي</div>
+<div>◆ Desks أضعف أداء — مرشّح لمراجعة التسعير</div>
+<div>◆ 80% من الإيرادات تأتي من 6 أصناف فقط (قاعدة باريتو)</div>
+</div></div>
+</div>
+<script>
+var rows=[["Refrigerators",4620000,412,29.1,+9],["Laptops",4180000,388,24.6,+6],["Air Conditioners",3760000,355,27.8,+11],
+["Smartphones",3410000,520,21.4,+18],["Tablets",1890000,236,19.7,-3],["Desks",1520000,148,15.2,-7],
+["Washing Machines",2480000,231,26.3,+4],["Monitors",1340000,189,18.9,+2]];
+var dir=-1,last=1;
+function fmt(n){return n.toLocaleString("en-US")}
+function draw(){var tb=document.querySelector("#tbl tbody"),h="";
+ rows.forEach(function(r){var t=r[4]>=0?'<span style="color:var(--pos)">▲ '+r[4]+'%</span>':'<span style="color:var(--neg)">▼ '+Math.abs(r[4])+'%</span>';
+ h+="<tr><td style='color:var(--ink);font-weight:600'>"+r[0]+"</td><td style='font-family:JetBrains Mono,monospace'>"+fmt(r[1])+"</td><td>"+r[2]+"</td><td>"+r[3]+"%</td><td>"+t+"</td></tr>";});
+ tb.innerHTML=h;}
+document.querySelector("#tbl thead").addEventListener("click",function(e){var k=e.target.dataset.k;if(k==null)return;k=+k;
+ dir=(k===last)?-dir:-1;last=k;
+ rows.sort(function(a,b){return (a[k]>b[k]?1:-1)*dir});draw();});
+draw();
+var cats=[["Appliances",10860,"#d4af6a"],["Electronics",10820,"#b08d57"],["Furniture",1520,"#2f9e6e"],["Office",1340,"#7d7259"]];
+var total=cats.reduce(function(s,c){return s+c[1]},0),a0=-Math.PI/2,g="";
+cats.forEach(function(c){var a1=a0+c[1]/total*2*Math.PI;
+ var x0=210+85*Math.cos(a0),y0=115+85*Math.sin(a0),x1=210+85*Math.cos(a1),y1=115+85*Math.sin(a1);
+ g+='<path d="M'+x0+','+y0+' A85,85 0 '+((a1-a0)>Math.PI?1:0)+',1 '+x1+','+y1+'" fill="none" stroke="'+c[2]+'" stroke-width="30"/>';a0=a1;});
+g+='<text x="210" y="110" fill="#e9cf96" font-size="20" text-anchor="middle" font-family="El Messiri">24.5M</text><text x="210" y="130" fill="#7d7259" font-size="10" text-anchor="middle">SAR TOTAL</text>';
+cats.forEach(function(c,i){g+='<rect x="10" y="'+(40+i*26)+'" width="10" height="10" rx="2" fill="'+c[2]+'"/><text x="28" y="'+(50+i*26)+'" fill="#b3a78f" font-size="11">'+c[0]+' — '+(c[1]/total*100).toFixed(0)+'%</text>';});
+document.getElementById("cat").innerHTML=g;
+</script><footer>مشروع تفاعلي توضيحي ببيانات تجريبية · Built by <a href="https://fahadalmutairi.vercel.app">Fahad Al-Mutairi</a> · <a href="https://fahadalmutairi.vercel.app/#projects">← العودة للموقع</a></footer>
+</div></body></html>
