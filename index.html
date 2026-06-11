@@ -78,6 +78,13 @@
   --grid-color: rgba(168,129,60,0.05);
 }
 
+/* Case study blocks */
+.case-wrap{display:grid;gap:10px;margin-bottom:16px}
+.case-b{background:rgba(212,175,106,.04);border:1px solid var(--border);border-right:3px solid var(--accent-rose);border-radius:10px;padding:12px 14px}
+.case-im{border-right-color:var(--accent-emerald);background:rgba(47,158,110,.05)}
+.case-l{font-family:'El Messiri','Cairo',sans-serif;font-size:12px;color:var(--accent-amber);margin-bottom:5px;letter-spacing:.3px}
+.case-t{font-size:12.5px;color:var(--text-secondary);line-height:1.85}
+
 /* Visibility hard-lock for project cards & buttons */
 .project-card,.project-content,.project-actions,.demo-tile{opacity:1 !important;visibility:visible !important}
 .pa-btn{opacity:1 !important;visibility:visible !important}
@@ -89,6 +96,8 @@
 .pa-demo:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(212,175,106,.4)}
 .pa-xlsx{background:transparent;border:1.5px solid var(--accent-rose);color:var(--accent-amber)}
 .pa-xlsx:hover{background:rgba(212,175,106,.1);transform:translateY(-2px)}
+.pa-case{background:transparent;border:1.5px solid var(--border-light);color:var(--text-secondary);cursor:pointer}
+.pa-case:hover{border-color:var(--accent-amber);color:var(--accent-amber);transform:translateY(-2px)}
 
 /* Live demo tiles */
 .file-chip{position:absolute;top:10px;right:12px;z-index:2;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;color:#16120a;background:linear-gradient(135deg,#e6c98c,#d4af6a);padding:4px 10px;border-radius:6px;text-decoration:none;box-shadow:0 2px 8px rgba(212,175,106,.35)}
@@ -1467,6 +1476,7 @@ body::after {
   height: 200px;
 }
 </style>
+<script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
@@ -1771,14 +1781,14 @@ body::after {
       </div>
       <div class="project-content">
         <div class="project-title" data-i18n="proj1_title">Power BI Sales Dashboard</div>
-        <div class="project-desc" data-i18n="proj1_desc">داشبورد تفاعلي لتتبع مؤشرات الأداء الرئيسية وأداء المبيعات مع فلاتر ديناميكية وتحليل مقارن للفترات الزمنية</div>
+        <div class="project-desc" data-i18n="proj1_desc">كانت القرارات التنفيذية تنتظر تقارير يدوية تتأخر أسبوعاً — داشبورد موحّد خفض زمن الإعداد 50% وجعل الأداء مرئياً لحظياً</div>
         <div class="project-tech">
           <span class="tech-tag">Power BI</span>
           <span class="tech-tag">DAX</span>
           <span class="tech-tag">Power Query</span>
           <span class="tech-tag">KPI</span>
         </div>
-        <div class="project-actions"><a class="pa-btn pa-demo" href="demo-sales.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">▶ عرض حي</a></div>
+        <div class="project-actions"><button type="button" class="pa-btn pa-case" onclick="event.stopPropagation();openProject(0)">📋 دراسة الحالة</button><a class="pa-btn pa-demo" href="demo-sales.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">▶ عرض حي</a></div>
       </div>
     </div>
 
@@ -1790,14 +1800,14 @@ body::after {
       </div>
       <div class="project-content">
         <div class="project-title" data-i18n="proj2_title">Excel Data Analysis</div>
-        <div class="project-desc" data-i18n="proj2_desc">تحليل بيانات متقدم لاكتشاف الأنماط والاتجاهات واستخراج رؤى قابلة للتنفيذ باستخدام Pivot Tables و Advanced Formulas</div>
+        <div class="project-desc" data-i18n="proj2_desc">50 ألف سجل مبعثر بلا رؤى — نموذج Power Pivot ومعادلات متقدمة حوّلته لتحليل بدقة 98% يكشف الأصناف الرابحة</div>
         <div class="project-tech">
           <span class="tech-tag">Excel</span>
           <span class="tech-tag">Pivot Tables</span>
           <span class="tech-tag">VLOOKUP</span>
           <span class="tech-tag">Charts</span>
         </div>
-        <div class="project-actions"><a class="pa-btn pa-demo" href="demo-excel.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">▶ عرض حي</a><a class="pa-btn pa-xlsx" href="Fahad_Excel_Analysis.xlsx" download onclick="event.stopPropagation()">⬇ تحميل Excel</a></div>
+        <div class="project-actions"><button type="button" class="pa-btn pa-case" onclick="event.stopPropagation();openProject(1)">📋 دراسة الحالة</button><a class="pa-btn pa-demo" href="demo-excel.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">▶ عرض حي</a><a class="pa-btn pa-xlsx" href="Fahad_Excel_Analysis.xlsx" download onclick="event.stopPropagation()">⬇ تحميل Excel</a></div>
       </div>
     </div>
 
@@ -1809,14 +1819,14 @@ body::after {
       </div>
       <div class="project-content">
         <div class="project-title" data-i18n="proj3_title">Automation Solutions</div>
-        <div class="project-desc" data-i18n="proj3_desc">بناء حلول أتمتة لتقليل المهام المتكررة والأخطاء البشرية وتحسين الإنتاجية بنسبة تزيد عن 40%</div>
+        <div class="project-desc" data-i18n="proj3_desc">الفريق كان يفقد يومين أسبوعياً بالنسخ اليدوي — 15+ أتمتة وفّرت 850+ ساعة سنوياً وخفّضت الأخطاء 95%</div>
         <div class="project-tech">
           <span class="tech-tag">VBA</span>
           <span class="tech-tag">Scripts</span>
           <span class="tech-tag">Workflow</span>
           <span class="tech-tag">APIs</span>
         </div>
-        <div class="project-actions"><a class="pa-btn pa-demo" href="demo-automation.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">▶ عرض حي</a></div>
+        <div class="project-actions"><button type="button" class="pa-btn pa-case" onclick="event.stopPropagation();openProject(2)">📋 دراسة الحالة</button><a class="pa-btn pa-demo" href="demo-automation.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">▶ عرض حي</a></div>
       </div>
     </div>
 
@@ -1828,14 +1838,14 @@ body::after {
       </div>
       <div class="project-content">
         <div class="project-title" data-i18n="proj4_title">HR Analytics Dashboard</div>
-        <div class="project-desc" data-i18n="proj4_desc">تحليل بيانات 320 موظف: معدل دوران الموظفين، التوزيع حسب الأقسام والأعمار والتعليم، ومؤشرات الأداء والرضا الوظيفي</div>
+        <div class="project-desc" data-i18n="proj4_desc">معدل دوران 21% بلا تفسير واضح — تحليل 320 موظفاً كشف الأقسام الحرجة فوق 24% ووجّه خطط الاحتفاظ</div>
         <div class="project-tech">
           <span class="tech-tag">Excel</span>
           <span class="tech-tag">Pivot Tables</span>
           <span class="tech-tag">KPI</span>
           <span class="tech-tag">HR</span>
         </div>
-        <div class="project-actions"><a class="pa-btn pa-demo" href="demo-hr.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">▶ عرض حي</a></div>
+        <div class="project-actions"><button type="button" class="pa-btn pa-case" onclick="event.stopPropagation();openProject(3)">📋 دراسة الحالة</button><a class="pa-btn pa-demo" href="demo-hr.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">▶ عرض حي</a></div>
       </div>
     </div>
 
@@ -1847,14 +1857,14 @@ body::after {
       </div>
       <div class="project-content">
         <div class="project-title" data-i18n="proj5_title">Data Cleaning Project</div>
-        <div class="project-desc" data-i18n="proj5_desc">تحويل بيانات فوضوية إلى بيانات نظيفة جاهزة للتحليل: إزالة التكرارات، توحيد التنسيقات، معالجة القيم المفقودة، والتحقق من صحة البيانات</div>
+        <div class="project-desc" data-i18n="proj5_desc">130 صف عملاء غير قابلة للاستخدام: تكرارات و4 صيغ تواريخ — خط تنظيف موثّق أصلح 206 مشكلة وسلّم 122 صفاً جاهزاً للتحليل</div>
         <div class="project-tech">
           <span class="tech-tag">Excel</span>
           <span class="tech-tag">Power Query</span>
           <span class="tech-tag">Data Cleaning</span>
           <span class="tech-tag">ETL</span>
         </div>
-        <div class="project-actions"><a class="pa-btn pa-demo" href="demo-cleaning.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">▶ عرض حي</a><a class="pa-btn pa-xlsx" href="Fahad_Data_Cleaning.xlsx" download onclick="event.stopPropagation()">⬇ تحميل Excel</a></div>
+        <div class="project-actions"><button type="button" class="pa-btn pa-case" onclick="event.stopPropagation();openProject(4)">📋 دراسة الحالة</button><a class="pa-btn pa-demo" href="demo-cleaning.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">▶ عرض حي</a><a class="pa-btn pa-xlsx" href="Fahad_Data_Cleaning.xlsx" download onclick="event.stopPropagation()">⬇ تحميل Excel</a></div>
       </div>
     </div>
   </div>
@@ -2290,6 +2300,27 @@ function openProject(index) {
   document.getElementById('modalTag2').style.color = m.tagColor;
   document.getElementById('modalDate').textContent = new Date().toLocaleDateString('ar-SA');
   var demos = ['demo-sales.html','demo-excel.html','demo-automation.html','demo-hr.html','demo-cleaning.html'];
+  var CASES=[
+   {ch:t('كانت الإدارة التنفيذية تعتمد على تقارير شهرية يدوية تصل متأخرة أسبوعاً وبصيغ متضاربة من 5 أقسام، فتُتخذ القرارات ببيانات قديمة.','Executive leadership relied on manual monthly reports arriving a week late in conflicting formats from 5 departments — decisions were made on stale data.'),
+    ap:t('وحّدت مصادر البيانات بـ Power Query، بنيت نموذج بيانات بعلاقات سليمة، وكتبت مقاييس DAX موحدة، ثم صممت داشبورداً تنفيذياً بفلترة متقاطعة وتحديث تلقائي.','Unified sources with Power Query, built a proper data model, authored standardized DAX measures, then designed an executive dashboard with cross-filtering and auto-refresh.'),
+    im:t('انخفض وقت إعداد التقارير 50%، واعتمدت 5 أقسام النموذج الموحد، وصارت الإدارة ترى الأداء لحظياً بدل انتظار أسبوع.','Report prep time dropped 50%, 5 departments adopted the unified model, and leadership now sees performance live instead of waiting a week.')},
+   {ch:t('أكثر من 50 ألف سجل مبيعات مبعثرة بلا بنية، يستحيل استخراج رؤى منها، والقرارات التجارية تُبنى على الحدس.','Over 50K sales records sat scattered and unstructured — insights were impossible and commercial decisions ran on gut feeling.'),
+    ap:t('بنيت نموذج Power Pivot، ونظّمت التحليل بـ PivotTables ودوال البحث المتقدمة (VLOOKUP/XLOOKUP) وSUMIFS عبر شيتات مترابطة بالكامل.','Built a Power Pivot model and structured the analysis with PivotTables, advanced lookups (VLOOKUP/XLOOKUP) and SUMIFS across fully linked sheets.'),
+    im:t('دقة 98% في النتائج، وكشف التحليل أن 80% من الإيرادات تأتي من 6 أصناف فقط — ما وجّه قرارات التسعير والمخزون.','98% accuracy, and the analysis revealed 80% of revenue comes from just 6 sub-categories — directly informing pricing and inventory decisions.')},
+   {ch:t('كان الفريق يفقد قرابة يومين أسبوعياً في نسخ البيانات وإعداد التقارير يدوياً، مع أخطاء معالجة متكررة تهز الثقة بالأرقام.','The team lost nearly two days a week to manual copy-paste reporting, with recurring processing errors eroding trust in the numbers.'),
+    ap:t('أتمتّ 15+ سير عمل باستخدام VBA و Power Automate، وبنيت لوحة مراقبة لحالة العمليات تكشف أي تعثر فوراً.','Automated 15+ workflows with VBA and Power Automate, and built a monitoring dashboard that surfaces any failure instantly.'),
+    im:t('850+ ساعة موفرة سنوياً، انخفاض أخطاء المعالجة 95%، وخفض الجهد اليدوي 40% — تفرّغ الفريق للتحليل بدل النسخ.','850+ hours saved annually, processing errors down 95%, manual effort down 40% — the team now analyzes instead of copying.')},
+   {ch:t('معدل دوران موظفين بلغ 21.2% دون فهم واضح لأسبابه، وبيانات القوى العاملة لـ320 موظفاً موزعة بلا رؤية موحدة.','Attrition hit 21.2% with no clear understanding of its drivers, and workforce data for 320 employees sat fragmented with no unified view.'),
+    ap:t('بنيت نموذج بيانات للقوى العاملة وحللت الدوران والديموغرافيا والرضا حسب القسم والعمر والمستوى التعليمي.','Built a workforce data model and analyzed attrition, demographics and satisfaction by department, age and education level.'),
+    im:t('تحديد قسمين تجاوز الدوران فيهما 24% كأولوية تدخل، ورؤية موحدة تدعم قرارات الاحتفاظ بالكفاءات.','Pinpointed two departments above 24% attrition as intervention priorities, with a unified view supporting retention decisions.')},
+   {ch:t('وصلت بيانات طلبات العملاء (130 صفاً) بحالة غير قابلة للاستخدام: تكرارات، 4 صيغ تواريخ، كميات نصية، وأسعار بتنسيقات متضاربة.','Customer order data (130 rows) arrived unusable: duplicates, 4 date formats, text quantities, and prices in conflicting formats.'),
+    ap:t('صممت خط تنظيف من 6 خطوات موثقة: إزالة التكرارات، توحيد النصوص، تصحيح الأنواع، توحيد التواريخ، والتحقق من البريد — مع سجل تدقيق لكل صف.','Designed a documented 6-step pipeline: dedupe, text standardization, type fixes, date unification and email validation — with a per-row audit trail.'),
+    im:t('206 مشكلة أُصلحت، وتسليم 122 صفاً فريداً جاهزاً للتحليل — كل صف يحمل سجل ما أُصلح فيه.','206 issues fixed and 122 unique analysis-ready rows delivered — every row carries its own fix log.')}];
+  var c=CASES[index];
+  var caseHtml='<div class="case-wrap">'
+   +'<div class="case-b"><div class="case-l">◆ '+t('التحدي','Challenge')+'</div><div class="case-t">'+c.ch+'</div></div>'
+   +'<div class="case-b"><div class="case-l">◆ '+t('المنهجية','Approach')+'</div><div class="case-t">'+c.ap+'</div></div>'
+   +'<div class="case-b case-im"><div class="case-l">◆ '+t('الأثر','Impact')+'</div><div class="case-t">'+c.im+'</div></div></div>';
   // ملفات حقيقية قابلة للتحميل لكل مشروع (null = لا يوجد ملف)
   var files = [null, 'Fahad_Excel_Analysis.xlsx', null, null, 'Fahad_Data_Cleaning.xlsx'];
   // ▼ الصق هنا رابط "Publish to Web" من Power BI Service ليظهر الداشبورد الحقيقي مضمّناً
@@ -2301,7 +2332,7 @@ function openProject(index) {
   if (files[index]) {
     shotHtml += '<a href="'+files[index]+'" download style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;padding:13px;background:transparent;border:1px solid #a8853e;border-radius:12px;color:#e6c98c;text-decoration:none;font-family:Cairo,sans-serif;font-size:13px;font-weight:700">⬇ تحميل ملف Excel الحقيقي — VLOOKUP · XLOOKUP · SUMIFS · Charts</a>';
   }
-  dash.innerHTML = shotHtml + builders[index]();
+  dash.innerHTML = caseHtml + shotHtml + builders[index]();
   modal.classList.add('show');
   document.body.style.overflow = 'hidden';
   if (index < 3) setTimeout(function(){ drawDashboardCharts(index); }, 150);
@@ -2423,7 +2454,7 @@ function toggleTheme(){var html=document.documentElement;var btn=document.getEle
 // ======== LANGUAGE TOGGLE ========
 var currentLang='ar';
 function t(ar,en){return currentLang==='en'?en:ar;}
-var translations={en:{nav_overview:'Overview',nav_projects:'Projects',nav_experience:'Experience',nav_contact:'Contact Me',hero_name:'Fahad M. Al-Mutairi',hero_desc:'Data Analyst & Automation Specialist with a strong background in building dashboards and improving operational efficiency. Skilled in Microsoft Excel and Power BI for data analysis, workflow automation, and decision support.',stat_years:'Years Experience',stat_projects:'Key Projects',stat_gpa:'GPA',kpi_dashboards:'Data Records Analyzed',kpi_efficiency:'Operational Efficiency',kpi_automation:'Hours Saved by Automation',kpi_certs:'Reports & Dashboards Delivered',skills_title:'Technical Skills',expertise_title:'Expertise Distribution',languages_title:'Languages',edu_title:'Education & Certifications',edu_degree:"Bachelor's in Software Engineering",contact_info_title:'Contact Information',proj1_desc:'Interactive dashboard to track KPIs and sales performance with dynamic filters and comparative analysis',proj2_desc:'Advanced data analysis to discover patterns and trends using Pivot Tables and Advanced Formulas',proj3_desc:'Built automation solutions to reduce repetitive tasks, improving productivity by over 40%',send_msg_title:'Send a Message',form_name:'Full Name',form_email:'Email Address',form_subject:'Subject',form_message:'Message',available_title:'Available for Work',available_desc:'Currently seeking opportunities in data analysis and automation. Open to remote and on-site.',growth_title:'Career Growth',achievements_title:'Key Achievements',tasks_title:'Tasks & Achievements',donut_years:'Years',legend_data:'Data Analysis 35%',legend_dash:'Dashboards 24%',legend_auto:'Automation 19%',legend_eng:'Software Engineering 22%',lbl_phone:'Phone',lbl_email:'Email',lbl_location:'Location',val_location:'Saudi Arabia',val_location2:'Saudi Arabia',impact_title:'Project Impact',job1_task1:'Workflow Automation',job1_task2:'System Optimization',job1_task3:'Scalable Solutions',job2_task1:'Reports & Dashboards',job2_task2:'Process Simplification',job2_task3:'Operations Coordination',job3_task1:'Exceeding Targets',job3_task2:'Client Relations',job3_task3:'Revenue Growth',mini_perf:'Performance',mini_built:'Solutions Built',mini_team:'Automated Workflows',mini_dash:'Dashboards',mini_report_time:'Report Time',mini_mgmt:'Departments Served',mini_target:'Target Achievement',mini_clients:'Clients',mini_csat:'Customer Satisfaction',chart1_title:'Monthly Automation',chart2_title:'Report Efficiency (Before/After)',chart3_title:'Quarterly Sales',leg_tasks:'Automated Tasks',leg_before:'Before',leg_after:'After',leg_achieved:'Achieved',leg_target:'Target',ach1:'Operational Efficiency',ach2:'Strategic Dashboards',ach3:'Sales Target Exceeded',ach4:'Report Time Reduction',contact_email_label:'Email Address',leg_hours:'Hours Saved',lang_arabic:'Arabic',download_cv:'Download CV',dur_1yr:'+1 Year',dur_4yr:'4 Years',dur_1yr2:'1 Year',present:'Present',send_success:'✓ Message sent successfully! Will contact you soon',job1_d1:'Automated internal workflows to reduce manual effort and improve team productivity',job1_d2:'Improved system processing efficiency and response time',job1_d3:'Developed scalable solutions aligned with business requirements',job2_d1:'Created interactive reports and dashboards for management decisions',job2_d2:'Streamlined reporting processes and reduced turnaround time',job2_d3:'Coordinated operations and improved communication efficiency',job3_d1:'Consistently achieved and exceeded sales targets',job3_d2:'Built strong client relationships and improved conversion rates',job3_d3:'Contributed to revenue growth through consistent performance',ach1_desc:'-40% manual effort via automation solutions',ach2_desc:'20+ dashboards for strategic decisions',ach3_desc:'120% target achievement in banking sector',ach4_desc:'-50% in periodic report preparation time'},ar:{nav_overview:'نظرة عامة',nav_projects:'المشاريع',nav_experience:'الخبرات',nav_contact:'تواصل معي',hero_name:'فهد محمد المطيري',hero_desc:'محلل بيانات ومتخصص أتمتة بخلفية قوية في بناء الداشبوردات وتحسين كفاءة العمليات. خبرة في Microsoft Excel و Power BI لتحليل البيانات وأتمتة سير العمل ودعم اتخاذ القرارات.',stat_years:'سنوات خبرة',stat_projects:'مشاريع رئيسية',stat_gpa:'GPA',kpi_dashboards:'سجلات بيانات محللّة',kpi_efficiency:'تحسين كفاءة العمليات',kpi_automation:'ساعات عمل موفّرة بالأتمتة',kpi_certs:'تقارير وداشبوردات مُنجزة',skills_title:'المهارات التقنية',expertise_title:'توزيع الخبرات',languages_title:'اللغات',edu_title:'التعليم والشهادات',edu_degree:'بكالوريوس هندسة البرمجيات',contact_info_title:'معلومات التواصل',proj1_desc:'داشبورد تفاعلي لتتبع مؤشرات الأداء الرئيسية وأداء المبيعات مع فلاتر ديناميكية وتحليل مقارن للفترات الزمنية',proj2_desc:'تحليل بيانات متقدم لاكتشاف الأنماط والاتجاهات واستخراج رؤى قابلة للتنفيذ باستخدام Pivot Tables و Advanced Formulas',proj3_desc:'بناء حلول أتمتة لتقليل المهام المتكررة والأخطاء البشرية وتحسين الإنتاجية بنسبة تزيد عن 40%',send_msg_title:'أرسل رسالة',form_name:'الاسم الكامل',form_email:'البريد الإلكتروني',form_subject:'الموضوع',form_message:'الرسالة',available_title:'متاح للعمل',available_desc:'أبحث حالياً عن فرص في مجال تحليل البيانات والأتمتة. مستعد للعمل عن بعد أو في الموقع.',growth_title:'النمو المهني',achievements_title:'الإنجازات الرئيسية',tasks_title:'المهام والإنجازات',donut_years:'سنوات',legend_data:'تحليل البيانات 35%',legend_dash:'الداشبوردات 24%',legend_auto:'الأتمتة 19%',legend_eng:'هندسة البرمجيات 22%',lbl_phone:'الهاتف',lbl_email:'الإيميل',lbl_location:'الموقع',val_location:'السعودية',val_location2:'المملكة العربية السعودية',impact_title:'تأثير المشاريع',job1_task1:'أتمتة سير العمل',job1_task2:'تحسين أداء الأنظمة',job1_task3:'حلول قابلة للتوسع',job2_task1:'تقارير وداشبوردات',job2_task2:'تبسيط العمليات',job2_task3:'تنسيق العمليات',job3_task1:'تجاوز المستهدفات',job3_task2:'علاقات العملاء',job3_task3:'نمو الإيرادات',mini_perf:'تحسين الأداء',mini_built:'حلول مبنية',mini_team:'عمليات مؤتمتة',mini_dash:'داشبورد',mini_report_time:'وقت التقارير',mini_mgmt:'أقسام مخدومة',mini_target:'تحقيق الهدف',mini_clients:'عميل',mini_csat:'رضا العملاء',chart1_title:'أداء الأتمتة الشهري',chart2_title:'كفاءة التقارير (قبل / بعد)',chart3_title:'أداء المبيعات الربع سنوي',leg_tasks:'مهام مؤتمتة',leg_before:'قبل التحسين',leg_after:'بعد التحسين',leg_achieved:'المحقق',leg_target:'المستهدف',ach1:'تحسين الكفاءة التشغيلية',ach2:'داشبوردات استراتيجية',ach3:'تجاوز أهداف المبيعات',ach4:'خفض زمن التقارير',contact_email_label:'البريد الإلكتروني',leg_hours:'وقت موفّر (ساعات)',lang_arabic:'العربية',download_cv:'تحميل السيرة الذاتية',dur_1yr:'+1 سنة',dur_4yr:'4 سنوات',dur_1yr2:'1 سنة',present:'الحالي',send_success:'✓ تم إرسال رسالتك بنجاح! سأتواصل معك قريباً',job1_d1:'أتمتة العمليات الداخلية لتقليل الجهد اليدوي وتحسين إنتاجية الفريق بشكل ملحوظ',job1_d2:'تحسين كفاءة المعالجة وسرعة الاستجابة للأنظمة القائمة',job1_d3:'تطوير وصيانة حلول برمجية متوافقة مع متطلبات العمل المتغيرة',job2_d1:'إنشاء تقارير وداشبوردات تفاعلية لدعم اتخاذ القرارات الإدارية',job2_d2:'تبسيط عمليات إعداد التقارير وتقليل وقت الإنجاز بنسبة كبيرة',job2_d3:'تنسيق العمليات بين الأقسام وتحسين كفاءة التواصل الداخلي',job3_d1:'تحقيق وتجاوز أهداف المبيعات الشهرية والسنوية باستمرار',job3_d2:'بناء علاقات قوية ومستدامة مع العملاء وتحسين معدلات التحويل',job3_d3:'المساهمة في نمو الإيرادات من خلال أداء مبيعات متميز ومستمر',ach1_desc:'-40% في الجهد اليدوي عبر حلول الأتمتة',ach2_desc:'20+ داشبورد لدعم القرارات الإدارية',ach3_desc:'120% تحقيق المستهدف في القطاع البنكي',ach4_desc:'-50% في وقت إعداد التقارير الدورية'}};
+var translations={en:{nav_overview:'Overview',nav_projects:'Projects',nav_experience:'Experience',nav_contact:'Contact Me',hero_name:'Fahad M. Al-Mutairi',hero_desc:'Data Analyst & Automation Specialist with a strong background in building dashboards and improving operational efficiency. Skilled in Microsoft Excel and Power BI for data analysis, workflow automation, and decision support.',stat_years:'Years Experience',stat_projects:'Key Projects',stat_gpa:'GPA',kpi_dashboards:'Data Records Analyzed',kpi_efficiency:'Operational Efficiency',kpi_automation:'Hours Saved by Automation',kpi_certs:'Reports & Dashboards Delivered',skills_title:'Technical Skills',expertise_title:'Expertise Distribution',languages_title:'Languages',edu_title:'Education & Certifications',edu_degree:"Bachelor's in Software Engineering",contact_info_title:'Contact Information',proj1_desc:'Executive decisions waited a week for manual reports — a unified dashboard cut prep time 50% and made performance visible in real time',proj2_desc:'50K scattered records with no insight — a Power Pivot model and advanced formulas turned them into 98%-accurate analysis revealing top performers',proj3_desc:'The team lost two days weekly to manual copy-paste — 15+ automations saved 850+ hours/year and cut errors by 95%',proj4_desc:'21% attrition with no clear cause — analyzing 320 employees exposed critical departments above 24% and guided retention plans',proj5_desc:'130 unusable customer rows with duplicates and 4 date formats — a documented pipeline fixed 206 issues and delivered 122 analysis-ready rows',send_msg_title:'Send a Message',form_name:'Full Name',form_email:'Email Address',form_subject:'Subject',form_message:'Message',available_title:'Available for Work',available_desc:'Currently seeking opportunities in data analysis and automation. Open to remote and on-site.',growth_title:'Career Growth',achievements_title:'Key Achievements',tasks_title:'Tasks & Achievements',donut_years:'Years',legend_data:'Data Analysis 35%',legend_dash:'Dashboards 24%',legend_auto:'Automation 19%',legend_eng:'Software Engineering 22%',lbl_phone:'Phone',lbl_email:'Email',lbl_location:'Location',val_location:'Saudi Arabia',val_location2:'Saudi Arabia',impact_title:'Project Impact',job1_task1:'Workflow Automation',job1_task2:'System Optimization',job1_task3:'Scalable Solutions',job2_task1:'Reports & Dashboards',job2_task2:'Process Simplification',job2_task3:'Operations Coordination',job3_task1:'Exceeding Targets',job3_task2:'Client Relations',job3_task3:'Revenue Growth',mini_perf:'Performance',mini_built:'Solutions Built',mini_team:'Automated Workflows',mini_dash:'Dashboards',mini_report_time:'Report Time',mini_mgmt:'Departments Served',mini_target:'Target Achievement',mini_clients:'Clients',mini_csat:'Customer Satisfaction',chart1_title:'Monthly Automation',chart2_title:'Report Efficiency (Before/After)',chart3_title:'Quarterly Sales',leg_tasks:'Automated Tasks',leg_before:'Before',leg_after:'After',leg_achieved:'Achieved',leg_target:'Target',ach1:'Operational Efficiency',ach2:'Strategic Dashboards',ach3:'Sales Target Exceeded',ach4:'Report Time Reduction',contact_email_label:'Email Address',leg_hours:'Hours Saved',lang_arabic:'Arabic',download_cv:'Download CV',dur_1yr:'+1 Year',dur_4yr:'4 Years',dur_1yr2:'1 Year',present:'Present',send_success:'✓ Message sent successfully! Will contact you soon',job1_d1:'Automated internal workflows to reduce manual effort and improve team productivity',job1_d2:'Improved system processing efficiency and response time',job1_d3:'Developed scalable solutions aligned with business requirements',job2_d1:'Created interactive reports and dashboards for management decisions',job2_d2:'Streamlined reporting processes and reduced turnaround time',job2_d3:'Coordinated operations and improved communication efficiency',job3_d1:'Consistently achieved and exceeded sales targets',job3_d2:'Built strong client relationships and improved conversion rates',job3_d3:'Contributed to revenue growth through consistent performance',ach1_desc:'-40% manual effort via automation solutions',ach2_desc:'20+ dashboards for strategic decisions',ach3_desc:'120% target achievement in banking sector',ach4_desc:'-50% in periodic report preparation time'},ar:{nav_overview:'نظرة عامة',nav_projects:'المشاريع',nav_experience:'الخبرات',nav_contact:'تواصل معي',hero_name:'فهد محمد المطيري',hero_desc:'محلل بيانات ومتخصص أتمتة بخلفية قوية في بناء الداشبوردات وتحسين كفاءة العمليات. خبرة في Microsoft Excel و Power BI لتحليل البيانات وأتمتة سير العمل ودعم اتخاذ القرارات.',stat_years:'سنوات خبرة',stat_projects:'مشاريع رئيسية',stat_gpa:'GPA',kpi_dashboards:'سجلات بيانات محللّة',kpi_efficiency:'تحسين كفاءة العمليات',kpi_automation:'ساعات عمل موفّرة بالأتمتة',kpi_certs:'تقارير وداشبوردات مُنجزة',skills_title:'المهارات التقنية',expertise_title:'توزيع الخبرات',languages_title:'اللغات',edu_title:'التعليم والشهادات',edu_degree:'بكالوريوس هندسة البرمجيات',contact_info_title:'معلومات التواصل',proj1_desc:'كانت القرارات التنفيذية تنتظر تقارير يدوية تتأخر أسبوعاً — داشبورد موحّد خفض زمن الإعداد 50% وجعل الأداء مرئياً لحظياً',proj2_desc:'50 ألف سجل مبعثر بلا رؤى — نموذج Power Pivot ومعادلات متقدمة حوّلته لتحليل بدقة 98% يكشف الأصناف الرابحة',proj3_desc:'الفريق كان يفقد يومين أسبوعياً بالنسخ اليدوي — 15+ أتمتة وفّرت 850+ ساعة سنوياً وخفّضت الأخطاء 95%',send_msg_title:'أرسل رسالة',form_name:'الاسم الكامل',form_email:'البريد الإلكتروني',form_subject:'الموضوع',form_message:'الرسالة',available_title:'متاح للعمل',available_desc:'أبحث حالياً عن فرص في مجال تحليل البيانات والأتمتة. مستعد للعمل عن بعد أو في الموقع.',growth_title:'النمو المهني',achievements_title:'الإنجازات الرئيسية',tasks_title:'المهام والإنجازات',donut_years:'سنوات',legend_data:'تحليل البيانات 35%',legend_dash:'الداشبوردات 24%',legend_auto:'الأتمتة 19%',legend_eng:'هندسة البرمجيات 22%',lbl_phone:'الهاتف',lbl_email:'الإيميل',lbl_location:'الموقع',val_location:'السعودية',val_location2:'المملكة العربية السعودية',impact_title:'تأثير المشاريع',job1_task1:'أتمتة سير العمل',job1_task2:'تحسين أداء الأنظمة',job1_task3:'حلول قابلة للتوسع',job2_task1:'تقارير وداشبوردات',job2_task2:'تبسيط العمليات',job2_task3:'تنسيق العمليات',job3_task1:'تجاوز المستهدفات',job3_task2:'علاقات العملاء',job3_task3:'نمو الإيرادات',mini_perf:'تحسين الأداء',mini_built:'حلول مبنية',mini_team:'عمليات مؤتمتة',mini_dash:'داشبورد',mini_report_time:'وقت التقارير',mini_mgmt:'أقسام مخدومة',mini_target:'تحقيق الهدف',mini_clients:'عميل',mini_csat:'رضا العملاء',chart1_title:'أداء الأتمتة الشهري',chart2_title:'كفاءة التقارير (قبل / بعد)',chart3_title:'أداء المبيعات الربع سنوي',leg_tasks:'مهام مؤتمتة',leg_before:'قبل التحسين',leg_after:'بعد التحسين',leg_achieved:'المحقق',leg_target:'المستهدف',ach1:'تحسين الكفاءة التشغيلية',ach2:'داشبوردات استراتيجية',ach3:'تجاوز أهداف المبيعات',ach4:'خفض زمن التقارير',contact_email_label:'البريد الإلكتروني',leg_hours:'وقت موفّر (ساعات)',lang_arabic:'العربية',download_cv:'تحميل السيرة الذاتية',dur_1yr:'+1 سنة',dur_4yr:'4 سنوات',dur_1yr2:'1 سنة',present:'الحالي',send_success:'✓ تم إرسال رسالتك بنجاح! سأتواصل معك قريباً',job1_d1:'أتمتة العمليات الداخلية لتقليل الجهد اليدوي وتحسين إنتاجية الفريق بشكل ملحوظ',job1_d2:'تحسين كفاءة المعالجة وسرعة الاستجابة للأنظمة القائمة',job1_d3:'تطوير وصيانة حلول برمجية متوافقة مع متطلبات العمل المتغيرة',job2_d1:'إنشاء تقارير وداشبوردات تفاعلية لدعم اتخاذ القرارات الإدارية',job2_d2:'تبسيط عمليات إعداد التقارير وتقليل وقت الإنجاز بنسبة كبيرة',job2_d3:'تنسيق العمليات بين الأقسام وتحسين كفاءة التواصل الداخلي',job3_d1:'تحقيق وتجاوز أهداف المبيعات الشهرية والسنوية باستمرار',job3_d2:'بناء علاقات قوية ومستدامة مع العملاء وتحسين معدلات التحويل',job3_d3:'المساهمة في نمو الإيرادات من خلال أداء مبيعات متميز ومستمر',ach1_desc:'-40% في الجهد اليدوي عبر حلول الأتمتة',ach2_desc:'20+ داشبورد لدعم القرارات الإدارية',ach3_desc:'120% تحقيق المستهدف في القطاع البنكي',ach4_desc:'-50% في وقت إعداد التقارير الدورية'}};
 function toggleLang(){currentLang=currentLang==='ar'?'en':'ar';document.getElementById('langBtn').textContent=currentLang==='ar'?'EN':'عربي';document.documentElement.dir=currentLang==='ar'?'rtl':'ltr';document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(translations[currentLang][k])el.textContent=translations[currentLang][k];});var ni=document.getElementById('contactName');if(ni){ni.placeholder=currentLang==='ar'?'أدخل اسمك':'Enter your name';document.getElementById('contactEmail').placeholder='example@email.com';document.getElementById('contactSubject').placeholder=currentLang==='ar'?'موضوع الرسالة':'Message subject';document.getElementById('contactMsg').placeholder=currentLang==='ar'?'اكتب رسالتك هنا...':'Write your message here...';}var sb=document.getElementById('sendBtn');if(sb)sb.textContent=currentLang==='ar'?'إرسال الرسالة':'Send Message';drawProjectCharts();}
 
 // ======== CONTACT FORM (Formspree) ========
