@@ -244,6 +244,11 @@
       line-height: 1.9;
     }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .hero-work-cta {
+      min-height: 58px;
+      padding-inline: 29px;
+      font-size: 16px;
+    }
     .button {
       display: inline-flex;
       min-height: 50px;
@@ -366,11 +371,16 @@
     .about-copy h2 {
       margin: 14px 0 24px;
       font-family: var(--display);
-      font-size: clamp(44px, 6vw, 78px);
-      line-height: 1.02;
+      font-size: clamp(34px, 4vw, 58px);
+      line-height: 1.12;
       letter-spacing: -.035em;
     }
     [dir="rtl"] .about-copy h2 { letter-spacing: -.015em; }
+    .about-copy .eyebrow {
+      font-size: 15px;
+      letter-spacing: 0;
+    }
+    .about-copy .eyebrow::before { width: 34px; height: 3px; }
     .about-copy p { margin: 0 0 16px; color: var(--ink-soft); font-size: 16px; }
     .about-copy strong { color: var(--ink); }
     .about-profile {
@@ -724,6 +734,7 @@
       .section { padding-block: 78px; }
       .section-head { gap: 24px; margin-bottom: 38px; }
       .section h2 { font-size: 44px; }
+      .about-copy h2 { font-size: 38px; }
       .toolbox { grid-template-columns: 1fr; }
       .about-facts { grid-template-columns: 1fr; }
       .form-grid { grid-template-columns: 1fr; }
@@ -775,8 +786,7 @@
         </h1>
         <p class="hero-lead" data-ar="أجمع بين العمق التقني والفهم التجاري لأحوّل البيانات والمنتجات الرقمية إلى قيمة يفهمها العميل ويثق بها صاحب القرار." data-en="I combine technical depth with commercial instinct to turn data and digital products into value clients understand and decision-makers trust.">أجمع بين العمق التقني والفهم التجاري لأحوّل البيانات والمنتجات الرقمية إلى قيمة يفهمها العميل ويثق بها صاحب القرار.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#work"><span data-ar="شاهد الأعمال" data-en="Explore the work">شاهد الأعمال</span><span class="arrow">↙</span></a>
-          <a class="button ghost" href="Fahad_AlMutairi_CV.pdf" download><span data-ar="حمّل السيرة" data-en="Download CV">حمّل السيرة</span><span class="arrow">↓</span></a>
+          <a class="button primary hero-work-cta" href="#work"><span data-ar="شاهد الأعمال" data-en="Explore the work">شاهد الأعمال</span><span class="arrow">↙</span></a>
         </div>
       </div>
 
