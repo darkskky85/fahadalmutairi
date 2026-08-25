@@ -1,0 +1,66 @@
+:root {
+  --bg: #17211f !important;
+  --card: #222d2a !important;
+  --cardS: #222d2a !important;
+  --card2: #2a3733 !important;
+  --border: #48564f !important;
+  --gold: #dfa72f !important;
+  --gold2: #b84432 !important;
+  --champ: #f0d08b !important;
+  --bronze: #8fa080 !important;
+  --ink: #f3ede2 !important;
+  --sub: #c9c0b4 !important;
+  --mut: #8f9a93 !important;
+  --pos: #8bb882 !important;
+  --neg: #e2765e !important;
+}
+
+body {
+  background-color: var(--bg) !important;
+  background-image: radial-gradient(circle at 15% 8%, rgba(223, 167, 47, .08), transparent 26%) !important;
+}
+
+body::before {
+  opacity: .2 !important;
+  background-size: 28px 28px !important;
+}
+
+.card,
+.kpi,
+.table-wrap,
+.panel {
+  border-radius: 5px 18px 7px 18px !important;
+  box-shadow: 7px 8px 0 rgba(8, 12, 11, .2) !important;
+}
+
+.kpi {
+  border-top-color: var(--gold) !important;
+}
+
+.btn {
+  border-radius: 999px !important;
+}
+
+.btn.on,
+.active {
+  background-color: var(--gold) !important;
+  background-image: none !important;
+}
+
+h1 {
+  background: none !important;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+h1::after {
+  content: "";
+  display: inline-block;
+  width: 36px;
+  height: 8px;
+  margin-inline-start: 12px;
+  background: var(--gold);
+  transform: rotate(-3deg);
+}
+
+footer a { color: var(--gold) !important; }

@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0"><title>HR Workforce Analytics | Fahad Al-Mutairi</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=El+Messiri:wght@500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0c0a09;--card:#171310;--card2:#1d1813;--border:#2a2118;--gold:#d4af6a;--gold2:#a8853e;--champ:#e6c98c;--bronze:#b08d57;--ink:#f5efe3;--sub:#b3a78f;--mut:#7d7259;--pos:#2f9e6e;--neg:#c0654a}
+body{background:var(--bg);color:var(--ink);font-family:'Cairo',sans-serif;min-height:100vh;padding:28px 4vw 60px}
+body::before{content:'';position:fixed;inset:0;background:linear-gradient(rgba(212,175,106,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,106,.025) 1px,transparent 1px);background-size:56px 56px;pointer-events:none}
+.wrap{max-width:1180px;margin:0 auto;position:relative}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:26px;border-bottom:1px solid var(--border);padding-bottom:18px}
+h1{font-family:'El Messiri','Cairo',sans-serif;font-size:clamp(24px,4vw,34px);background:linear-gradient(120deg,#faf4e4,#e9cf96 55%,#c8a45f);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.sub{color:var(--sub);font-size:13px;margin-top:4px}
+.live{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--pos);font-family:'JetBrains Mono',monospace}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--pos);animation:p 2s infinite}
+@keyframes p{0%,100%{box-shadow:0 0 0 0 rgba(47,158,110,.4)}50%{box-shadow:0 0 0 6px rgba(47,158,110,0)}}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-bottom:22px}
+.kpi{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 18px;border-top:2px solid var(--gold)}
+.kpi .l{font-size:11px;color:var(--mut);letter-spacing:1px;text-transform:uppercase}
+.kpi .v{font-family:'El Messiri',sans-serif;font-size:27px;color:var(--gold);margin:4px 0 2px}
+.kpi .d{font-size:11px;color:var(--pos)}
+.kpi .d.neg{color:var(--neg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px}
+.ct{font-family:'El Messiri',sans-serif;font-size:15px;color:var(--ink);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.ct::before{content:'';width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+.ctrl{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.btn{background:var(--card);border:1px solid var(--border);color:var(--sub);padding:7px 16px;border-radius:8px;font-family:'Cairo',sans-serif;font-size:12.5px;cursor:pointer;transition:.25s}
+.btn:hover{border-color:var(--gold2);color:var(--champ)}
+.btn.on{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#16120a;font-weight:700;border-color:transparent}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{text-align:right;color:var(--mut);font-size:11px;letter-spacing:.5px;padding:8px 10px;border-bottom:1px solid var(--border);cursor:pointer;user-select:none}
+td{padding:8px 10px;border-bottom:1px solid var(--border);color:var(--sub)}
+tr:hover td{background:var(--card2)}
+.bar{height:8px;border-radius:4px;background:linear-gradient(90deg,var(--gold),var(--champ));transition:width .6s ease}
+.barbg{background:var(--border);border-radius:4px;overflow:hidden}
+footer{margin-top:34px;text-align:center;font-size:11.5px;color:var(--mut)}
+footer a{color:var(--gold);text-decoration:none}
+svg text{font-family:'Cairo',sans-serif}
+@media(max-width:640px){body{padding:18px 14px 40px}}
+</style><link rel="stylesheet" href="demo-theme.css"><script defer src="/_vercel/insights/script.js"></script>
+</head><body><div class="wrap">
+<header><div><h1>HR Workforce Analytics</h1><div class="sub">320 موظف عبر 6 أقسام · فلترة حسب القسم</div></div>
+<div class="live"><span class="dot"></span>LIVE DEMO</div></header>
+<div class="ctrl" id="dep"></div>
+<div class="kpis">
+<div class="kpi"><div class="l">Employees</div><div class="v" id="h1">—</div><div class="d" id="h1d">—</div></div>
+<div class="kpi"><div class="l">Avg Salary</div><div class="v" id="h2">—</div><div class="d">SAR / month</div></div>
+<div class="kpi"><div class="l">Attrition Rate</div><div class="v" id="h3">—</div><div class="d neg" id="h3d">—</div></div>
+<div class="kpi"><div class="l">Avg Satisfaction</div><div class="v" id="h4">—</div><div class="d">out of 5</div></div>
+</div>
+<div class="grid">
+<div class="card"><div class="ct">Headcount by Department</div><div id="hc"></div></div>
+<div class="card"><div class="ct">Age Distribution</div><svg id="age" viewBox="0 0 420 220" width="100%"></svg></div>
+<div class="card" style="grid-column:1/-1"><div class="ct">Attrition by Department (%)</div><div id="att"></div></div>
+</div>
+<script>
+var deps={"All":{n:320,sal:12774,att:21.2,sat:3.6,age:[59,110,79,72]},
+"Sales":{n:64,sal:11200,att:18.1,sat:3.4,age:[14,24,15,11]},
+"Finance":{n:56,sal:14100,att:24.6,sat:3.5,age:[8,19,16,13]},
+"Marketing":{n:54,sal:12300,att:18.3,sat:3.8,age:[13,21,12,8]},
+"Operations":{n:51,sal:11800,att:19.4,sat:3.5,age:[10,18,13,10]},
+"HR":{n:48,sal:12950,att:24.8,sat:3.7,age:[7,15,14,12]},
+"Engineering":{n:47,sal:14900,att:21.5,sat:3.9,age:[7,13,9,18]}};
+var ctrl=document.getElementById("dep");
+Object.keys(deps).forEach(function(k,i){ctrl.innerHTML+='<button class="btn'+(i?'':' on')+'" data-d="'+k+'">'+(k==="All"?"كل الأقسام":k)+'</button>';});
+function render(k){var d=deps[k];
+ document.getElementById("h1").textContent=d.n;
+ document.getElementById("h1d").textContent=k==="All"?"across 6 departments":"in "+k;
+ document.getElementById("h2").textContent=d.sal.toLocaleString("en-US");
+ document.getElementById("h3").textContent=d.att+"%";
+ document.getElementById("h3d").textContent=d.att>21?"above company avg":"below company avg";
+ document.getElementById("h4").textContent=d.sat;
+ var hmax=64,h="";
+ ["Sales","Finance","Marketing","Operations","HR","Engineering"].forEach(function(x){var v=deps[x].n,hot=(x===k);
+  h+='<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;opacity:'+((k==="All"||hot)?1:.35)+'"><span style="width:84px;font-size:12px;color:var(--sub)">'+x+'</span><div class="barbg" style="flex:1"><div class="bar" style="width:'+(v/hmax*100)+'%"></div></div><span style="font-family:JetBrains Mono,monospace;font-size:11px;color:var(--champ);width:30px;text-align:left">'+v+'</span></div>';});
+ document.getElementById("hc").innerHTML=h;
+ var labels=["20-30","31-40","41-50","51-60"],amax=Math.max.apply(null,d.age)*1.2,g="";
+ var pts=d.age.map(function(v,i){return [60+i*100,180-(v/amax)*150]});
+ var path=pts.map(function(p,i){return (i?"L":"M")+p[0]+","+p[1]}).join(" ");
+ g+='<path d="'+path+' L'+pts[3][0]+',180 L'+pts[0][0]+',180 Z" fill="rgba(212,175,106,.09)"/>';
+ g+='<path d="'+path+'" fill="none" stroke="#d4af6a" stroke-width="2.5"/>';
+ pts.forEach(function(p,i){g+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="4" fill="#e9cf96"/><text x="'+p[0]+'" y="'+(p[1]-12)+'" fill="#e6c98c" font-size="11" text-anchor="middle" font-family="JetBrains Mono">'+d.age[i]+'</text><text x="'+p[0]+'" y="205" fill="#7d7259" font-size="11" text-anchor="middle">'+labels[i]+'</text>';});
+ document.getElementById("age").innerHTML=g;
+ var a="";
+ ["Sales","Finance","Marketing","Operations","HR","Engineering"].forEach(function(x){var v=deps[x].att;
+  a+='<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="width:84px;font-size:12px;color:var(--sub)">'+x+'</span><div class="barbg" style="flex:1"><div class="bar" style="width:'+(v/25*100)+'%;background:linear-gradient(90deg,#c0654a,#d98a6e)"></div></div><span style="font-family:JetBrains Mono,monospace;font-size:11px;color:#d98a6e;width:42px;text-align:left">'+v+'%</span></div>';});
+ document.getElementById("att").innerHTML=a;}
+ctrl.addEventListener("click",function(e){if(!e.target.dataset.d)return;
+ document.querySelectorAll("#dep .btn").forEach(function(b){b.classList.remove("on")});
+ e.target.classList.add("on");render(e.target.dataset.d);});
+render("All");
+</script><footer>مشروع تفاعلي توضيحي ببيانات تجريبية · Built by <a href="index.html">Fahad Al-Mutairi</a> · <a href="index.html#work">← العودة للموقع</a></footer>
+</div></body></html>

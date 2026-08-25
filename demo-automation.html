@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Automation Monitoring | Fahad Al-Mutairi</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=El+Messiri:wght@500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0c0a09;--card:#171310;--card2:#1d1813;--border:#2a2118;--gold:#d4af6a;--gold2:#a8853e;--champ:#e6c98c;--bronze:#b08d57;--ink:#f5efe3;--sub:#b3a78f;--mut:#7d7259;--pos:#2f9e6e;--neg:#c0654a}
+body{background:var(--bg);color:var(--ink);font-family:'Cairo',sans-serif;min-height:100vh;padding:28px 4vw 60px}
+body::before{content:'';position:fixed;inset:0;background:linear-gradient(rgba(212,175,106,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,106,.025) 1px,transparent 1px);background-size:56px 56px;pointer-events:none}
+.wrap{max-width:1180px;margin:0 auto;position:relative}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:26px;border-bottom:1px solid var(--border);padding-bottom:18px}
+h1{font-family:'El Messiri','Cairo',sans-serif;font-size:clamp(24px,4vw,34px);background:linear-gradient(120deg,#faf4e4,#e9cf96 55%,#c8a45f);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.sub{color:var(--sub);font-size:13px;margin-top:4px}
+.live{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--pos);font-family:'JetBrains Mono',monospace}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--pos);animation:p 2s infinite}
+@keyframes p{0%,100%{box-shadow:0 0 0 0 rgba(47,158,110,.4)}50%{box-shadow:0 0 0 6px rgba(47,158,110,0)}}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-bottom:22px}
+.kpi{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 18px;border-top:2px solid var(--gold)}
+.kpi .l{font-size:11px;color:var(--mut);letter-spacing:1px;text-transform:uppercase}
+.kpi .v{font-family:'El Messiri',sans-serif;font-size:27px;color:var(--gold);margin:4px 0 2px}
+.kpi .d{font-size:11px;color:var(--pos)}
+.kpi .d.neg{color:var(--neg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px}
+.ct{font-family:'El Messiri',sans-serif;font-size:15px;color:var(--ink);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.ct::before{content:'';width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+.ctrl{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.btn{background:var(--card);border:1px solid var(--border);color:var(--sub);padding:7px 16px;border-radius:8px;font-family:'Cairo',sans-serif;font-size:12.5px;cursor:pointer;transition:.25s}
+.btn:hover{border-color:var(--gold2);color:var(--champ)}
+.btn.on{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#16120a;font-weight:700;border-color:transparent}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{text-align:right;color:var(--mut);font-size:11px;letter-spacing:.5px;padding:8px 10px;border-bottom:1px solid var(--border);cursor:pointer;user-select:none}
+td{padding:8px 10px;border-bottom:1px solid var(--border);color:var(--sub)}
+tr:hover td{background:var(--card2)}
+.bar{height:8px;border-radius:4px;background:linear-gradient(90deg,var(--gold),var(--champ));transition:width .6s ease}
+.barbg{background:var(--border);border-radius:4px;overflow:hidden}
+footer{margin-top:34px;text-align:center;font-size:11.5px;color:var(--mut)}
+footer a{color:var(--gold);text-decoration:none}
+svg text{font-family:'Cairo',sans-serif}
+@media(max-width:640px){body{padding:18px 14px 40px}}
+</style><link rel="stylesheet" href="demo-theme.css"><script defer src="/_vercel/insights/script.js"></script>
+</head><body><div class="wrap">
+<header><div><h1>Automation Monitoring</h1><div class="sub">Workflow control center · عدادات حية وسجل عمليات</div></div>
+<div class="live"><span class="dot"></span>LIVE DEMO</div></header>
+<div class="kpis">
+<div class="kpi"><div class="l">Automated Processes</div><div class="v" data-n="156">0</div><div class="d">▲ +34 this month</div></div>
+<div class="kpi"><div class="l">Success Rate</div><div class="v" data-n="99.2" data-suf="%">0</div><div class="d">▲ +0.8%</div></div>
+<div class="kpi"><div class="l">Hours Saved</div><div class="v" data-n="847" data-suf="h">0</div><div class="d">this quarter</div></div>
+<div class="kpi"><div class="l">Cost Savings</div><div class="v" data-n="125" data-suf="K SAR">0</div><div class="d">annually</div></div>
+</div>
+<div class="grid">
+<div class="card" style="grid-column:1/-1"><div class="ct">Automated Tasks — Last 14 Days</div><svg id="days" viewBox="0 0 900 240" width="100%"></svg></div>
+<div class="card"><div class="ct">Manual vs Automated (mins/report)</div><svg id="mv" viewBox="0 0 420 220" width="100%"></svg></div>
+<div class="card"><div class="ct">Live Process Log</div><div id="log" style="font-family:'JetBrains Mono',monospace;font-size:11.5px;line-height:2.2;color:var(--sub)"></div></div>
+</div>
+<script>
+document.querySelectorAll("[data-n]").forEach(function(el){var t=+el.dataset.n,suf=el.dataset.suf||"",s=0,steps=40;
+ var iv=setInterval(function(){s++;var v=t*s/steps;el.textContent=(t%1?v.toFixed(1):Math.round(v))+suf;if(s>=steps)clearInterval(iv);},25);});
+var d=[42,55,38,61,49,72,57,80,66,75,62,87,70,89],g="",max=95;
+d.forEach(function(v,i){var h=v/max*160,x=30+i*62;
+ g+='<rect x="'+x+'" y="'+(190-h)+'" width="40" height="'+h+'" rx="5" fill="url(#gg)"><animate attributeName="height" from="0" to="'+h+'" dur=".6s" fill="freeze"/><animate attributeName="y" from="190" to="'+(190-h)+'" dur=".6s" fill="freeze"/></rect>';
+ g+='<text x="'+(x+20)+'" y="210" fill="#7d7259" font-size="10" text-anchor="middle">'+(14-i)+'d</text>';});
+document.getElementById("days").innerHTML='<defs><linearGradient id="gg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9cf96"/><stop offset="1" stop-color="#a8853e"/></linearGradient></defs>'+g;
+var mm=[120,118,124,121,119,121],aa=[27,24,21,20,18,15],mo=["Jan","Feb","Mar","Apr","May","Jun"],s2="";
+mm.forEach(function(v,i){var x=30+i*64;
+ s2+='<rect x="'+x+'" y="'+(180-v*1.2)+'" width="22" height="'+(v*1.2)+'" rx="4" fill="#c0654a" opacity=".8"/>';
+ s2+='<rect x="'+(x+26)+'" y="'+(180-aa[i]*1.2)+'" width="22" height="'+(aa[i]*1.2)+'" rx="4" fill="#2f9e6e"/>';
+ s2+='<text x="'+(x+24)+'" y="200" fill="#7d7259" font-size="10" text-anchor="middle">'+mo[i]+'</text>';});
+s2+='<rect x="250" y="8" width="10" height="10" rx="2" fill="#c0654a"/><text x="266" y="17" fill="#b3a78f" font-size="10">Manual</text><rect x="330" y="8" width="10" height="10" rx="2" fill="#2f9e6e"/><text x="346" y="17" fill="#b3a78f" font-size="10">Automated</text>';
+document.getElementById("mv").innerHTML=s2;
+var logs=[["Report Updates","RUNNING","#2f9e6e"],["Data Sync — 50K records","DONE ✓","#2f9e6e"],["KPI Refresh (Power BI)","RUNNING","#2f9e6e"],["Email Digest","QUEUED","#d4af6a"],["Nightly Backup","SCHEDULED 23:00","#b08d57"]];
+var L=document.getElementById("log"),i=0;
+function push(){if(i>=logs.length)return;var x=logs[i++];
+ L.innerHTML+='<div>› '+x[0]+' <span style="color:'+x[2]+'">['+x[1]+']</span></div>';setTimeout(push,700);}
+push();
+</script><footer>مشروع تفاعلي توضيحي ببيانات تجريبية · Built by <a href="index.html">Fahad Al-Mutairi</a> · <a href="index.html#work">← العودة للموقع</a></footer>
+</div></body></html>
