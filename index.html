@@ -3,26 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>فهد المطيري | محلل بيانات ومتخصص أتمتة</title>
-  <meta name="description" content="فهد المطيري — محلل بيانات ومتخصص أتمتة يحوّل البيانات المبعثرة إلى قرارات واضحة عبر Power BI وExcel وحلول الأتمتة.">
-  <meta name="keywords" content="فهد المطيري, محلل بيانات, Power BI, Excel, أتمتة, داشبورد, السعودية">
+  <title>فهد المطيري | المبيعات التقنية وتطوير الأعمال</title>
+  <meta name="description" content="فهد المطيري — متخصص مبيعات تقنية وتطوير أعمال بخلفية في هندسة البرمجيات وذكاء الأعمال وتحليل البيانات.">
+  <meta name="keywords" content="فهد المطيري, مبيعات تقنية, تطوير أعمال, محلل بيانات, Power BI, SQL, SaaS, السعودية">
   <meta name="author" content="Fahad M. Al-Mutairi">
   <meta name="robots" content="index, follow">
   <meta name="google-site-verification" content="O0l5Fd0SoMNQKLC6nLsDy_BRkiIUjRqyu9pQHLVdqN0">
   <link rel="canonical" href="https://fahadalmutairi.com/">
-  <meta property="og:title" content="فهد المطيري | محلل بيانات ومتخصص أتمتة">
-  <meta property="og:description" content="بيانات أوضح. قرارات أسرع. عمل أقل تكراراً.">
+  <meta property="og:title" content="فهد المطيري | المبيعات التقنية وتطوير الأعمال">
+  <meta property="og:description" content="عمق تقني، فهم تجاري، وحلول تحوّل البيانات إلى قيمة.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://fahadalmutairi.com/">
   <meta property="og:image" content="https://fahadalmutairi.com/og-image.png">
   <meta property="og:locale" content="ar_SA">
   <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Fahad Al-Mutairi | Data Analyst & Automation Specialist">
-  <meta name="twitter:description" content="Clearer data. Faster decisions. Less repetitive work.">
+  <meta name="twitter:title" content="Fahad Al-Mutairi | Technical Sales & Business Development">
+  <meta name="twitter:description" content="Technical fluency, commercial instinct, and a BI / data analytics background.">
   <meta name="twitter:image" content="https://fahadalmutairi.com/og-image.png">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","name":"Fahad M. Al-Mutairi","jobTitle":"Data Analyst & Automation Specialist","url":"https://fahadalmutairi.com/","email":"fahad.mf@outlook.com","address":{"@type":"PostalAddress","addressCountry":"SA"},"knowsAbout":["Data Analysis","Power BI","Excel","Process Automation","Dashboard Development"],"sameAs":["https://linkedin.com/in/fahad-m-al-mutairi-34474371"]}
+  {"@context":"https://schema.org","@type":"Person","name":"Fahad M. Al-Mutairi","jobTitle":"Technical Sales & Business Development","url":"https://fahadalmutairi.com/","email":"fahad.mf@outlook.com","address":{"@type":"PostalAddress","addressCountry":"SA"},"knowsAbout":["Technical Sales","Business Development","Data Analysis","Power BI","SQL","Process Automation","SaaS"],"sameAs":["https://linkedin.com/in/fahad-m-al-mutairi-34474371"]}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -356,6 +356,83 @@
     .proof-label { margin-top: 7px; color: var(--ink-soft); font-size: 13px; line-height: 1.5; }
 
     .section { padding-block: 110px; }
+    .about-section { position: relative; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      gap: clamp(34px, 7vw, 86px);
+      align-items: center;
+    }
+    .about-copy h2 {
+      margin: 14px 0 24px;
+      font-family: var(--display);
+      font-size: clamp(44px, 6vw, 78px);
+      line-height: 1.02;
+      letter-spacing: -.035em;
+    }
+    [dir="rtl"] .about-copy h2 { letter-spacing: -.015em; }
+    .about-copy p { margin: 0 0 16px; color: var(--ink-soft); font-size: 16px; }
+    .about-copy strong { color: var(--ink); }
+    .about-profile {
+      position: relative;
+      padding: clamp(28px, 5vw, 52px);
+      background: var(--ink);
+      color: var(--paper-2);
+      border-radius: 6px 32px 10px 32px;
+      box-shadow: 13px 15px 0 var(--mustard);
+      transform: rotate(.6deg);
+    }
+    .about-stamp {
+      display: inline-block;
+      margin-bottom: 30px;
+      padding: 7px 12px;
+      border: 1px solid color-mix(in srgb, var(--paper-2), transparent 55%);
+      border-radius: 999px;
+      color: var(--mustard);
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .08em;
+    }
+    .about-profile blockquote {
+      margin: 0;
+      font-family: var(--display);
+      font-size: clamp(26px, 3vw, 38px);
+      line-height: 1.35;
+    }
+    .about-path {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin: 32px 0;
+      color: color-mix(in srgb, var(--paper-2), transparent 22%);
+      font-family: var(--mono);
+      font-size: 10px;
+    }
+    .about-path span {
+      padding: 7px 10px;
+      border: 1px dashed color-mix(in srgb, var(--paper-2), transparent 62%);
+    }
+    .about-path b { color: var(--mustard); font-size: 15px; }
+    .about-facts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+    .about-fact {
+      padding: 14px;
+      border-top: 1px solid color-mix(in srgb, var(--paper-2), transparent 68%);
+    }
+    .about-fact small {
+      display: block;
+      color: color-mix(in srgb, var(--paper-2), transparent 48%);
+      font-family: var(--mono);
+      font-size: 9px;
+      text-transform: uppercase;
+    }
+    .about-fact strong { display: block; margin-top: 4px; color: var(--paper-2); font-size: 13px; }
+    .about-profile .button { border-color: var(--mustard); background: var(--mustard); color: #20231f; }
     .section-head {
       display: grid;
       grid-template-columns: .75fr 1.25fr;
@@ -619,7 +696,7 @@
       .menu-btn { display: block; }
       .hero { grid-template-columns: 1fr; padding-top: 58px; }
       .hero-art { width: min(650px, 100%); margin-inline: auto; }
-      .section-head, .experience-layout, .contact-grid { grid-template-columns: 1fr; }
+      .section-head, .about-grid, .experience-layout, .contact-grid { grid-template-columns: 1fr; }
       .experience-aside { position: static; }
       .projects { gap: 22px; }
       .project { grid-column: span 12; }
@@ -648,6 +725,7 @@
       .section-head { gap: 24px; margin-bottom: 38px; }
       .section h2 { font-size: 44px; }
       .toolbox { grid-template-columns: 1fr; }
+      .about-facts { grid-template-columns: 1fr; }
       .form-grid { grid-template-columns: 1fr; }
       .field.full { grid-column: auto; }
       .form-actions { align-items: flex-start; flex-direction: column; }
@@ -672,6 +750,7 @@
         <span class="brand-text">Fahad Al-Mutairi</span>
       </a>
       <div class="nav-links" id="navLinks">
+        <a href="#about" data-ar="نبذة عني" data-en="About">نبذة عني</a>
         <a href="#work" data-ar="الأعمال" data-en="Work">الأعمال</a>
         <a href="#method" data-ar="المنهج" data-en="Method">المنهج</a>
         <a href="#experience" data-ar="الخبرة" data-en="Experience">الخبرة</a>
@@ -689,12 +768,12 @@
   <main id="main">
     <section class="hero shell" id="top">
       <div class="hero-copy">
-        <span class="eyebrow" data-ar="فهد المطيري · محلل بيانات" data-en="Fahad Al-Mutairi · Data Analyst">فهد المطيري · محلل بيانات</span>
+        <span class="eyebrow" data-ar="فهد المطيري · مبيعات تقنية وذكاء أعمال" data-en="Fahad Al-Mutairi · Technical Sales & BI">فهد المطيري · مبيعات تقنية وذكاء أعمال</span>
         <h1>
           <span data-ar="أحوّل الفوضى إلى" data-en="I turn messy data into">أحوّل الفوضى إلى</span>
           <em data-ar="قرار واضح." data-en="clear decisions.">قرار واضح.</em>
         </h1>
-        <p class="hero-lead" data-ar="أبني لوحات معلومات وحلول أتمتة تكشف ما يهم، تختصر وقت العمل، وتمنح الفرق ثقة أكبر عند اتخاذ القرار." data-en="I build dashboards and automation systems that reveal what matters, reduce busywork, and help teams make decisions with confidence.">أبني لوحات معلومات وحلول أتمتة تكشف ما يهم، تختصر وقت العمل، وتمنح الفرق ثقة أكبر عند اتخاذ القرار.</p>
+        <p class="hero-lead" data-ar="أجمع بين العمق التقني والفهم التجاري لأحوّل البيانات والمنتجات الرقمية إلى قيمة يفهمها العميل ويثق بها صاحب القرار." data-en="I combine technical depth with commercial instinct to turn data and digital products into value clients understand and decision-makers trust.">أجمع بين العمق التقني والفهم التجاري لأحوّل البيانات والمنتجات الرقمية إلى قيمة يفهمها العميل ويثق بها صاحب القرار.</p>
         <div class="hero-actions">
           <a class="button primary" href="#work"><span data-ar="شاهد الأعمال" data-en="Explore the work">شاهد الأعمال</span><span class="arrow">↙</span></a>
           <a class="button ghost" href="Fahad_AlMutairi_CV.pdf" download><span data-ar="حمّل السيرة" data-en="Download CV">حمّل السيرة</span><span class="arrow">↓</span></a>
@@ -724,10 +803,34 @@
       </div>
     </section>
 
+    <section class="section about-section shell" id="about">
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <span class="eyebrow" data-ar="نبذة عني · 01" data-en="About me · 01">نبذة عني · 01</span>
+          <h2 data-ar="أفهم التقنية… وأعرف كيف أوصل قيمتها." data-en="I understand technology—and how to sell its value.">أفهم التقنية… وأعرف كيف أوصل قيمتها.</h2>
+          <p data-ar="أنا فهد المطيري، مهندس برمجيات تحوّل إلى متخصص تجاري تقني بخبرة تتجاوز خمس سنوات بين ذكاء الأعمال، تحليل البيانات، والمبيعات المباشرة مع العملاء." data-en="I'm Fahad Al-Mutairi, a software engineer turned commercial technologist with 5+ years across business intelligence, data analytics, and client-facing sales.">أنا فهد المطيري، مهندس برمجيات تحوّل إلى متخصص تجاري تقني بخبرة تتجاوز خمس سنوات بين ذكاء الأعمال، تحليل البيانات، والمبيعات المباشرة مع العملاء.</p>
+          <p data-ar="أعمل بعمق تقني في Power BI وSQL والأتمتة، ثم أترجم هذا العمق إلى قصة تجارية واضحة وحل عملي لأصحاب المصلحة والعملاء." data-en="I work hands-on with Power BI, SQL, and automation, then translate that technical depth into a clear business story and a practical solution for stakeholders and clients.">أعمل بعمق تقني في Power BI وSQL والأتمتة، ثم أترجم هذا العمق إلى قصة تجارية واضحة وحل عملي لأصحاب المصلحة والعملاء.</p>
+          <p><strong data-ar="كما أسست Nawah Labs، منصة ذكاء اصطناعي عربية، وخضت تجربة بناء وتسويق وبيع منتج رقمي في السوق الخليجي من البداية إلى النهاية." data-en="I also founded Nawah Labs, an Arabic AI SaaS platform, gaining end-to-end experience building, marketing, and selling a digital product in the Gulf market.">كما أسست Nawah Labs، منصة ذكاء اصطناعي عربية، وخضت تجربة بناء وتسويق وبيع منتج رقمي في السوق الخليجي من البداية إلى النهاية.</strong></p>
+        </div>
+        <aside class="about-profile reveal">
+          <span class="about-stamp">PROFILE / 2026</span>
+          <blockquote data-ar="عمق تقني عملي، وغريزة تجارية تعرف كيف تحوّل الميزة إلى قيمة." data-en="Hands-on technical depth, paired with the commercial instinct to turn features into value.">عمق تقني عملي، وغريزة تجارية تعرف كيف تحوّل الميزة إلى قيمة.</blockquote>
+          <div class="about-path" aria-label="المسار المهني">
+            <span>Software Engineer</span><b>→</b><span>BI & Analytics</span><b>→</b><span>Technical Sales</span>
+          </div>
+          <div class="about-facts">
+            <div class="about-fact"><small data-ar="الموقع" data-en="Based in">الموقع</small><strong data-ar="السعودية · متاح للرياض" data-en="Saudi Arabia · Open to Riyadh">السعودية · متاح للرياض</strong></div>
+            <div class="about-fact"><small data-ar="أسست" data-en="Founded">أسست</small><strong>Nawah Labs · Arabic AI SaaS</strong></div>
+          </div>
+          <a class="button" href="Fahad_AlMutairi_CV.pdf" download><span data-ar="حمّل سيرتي الجديدة" data-en="Download my new CV">حمّل سيرتي الجديدة</span><span>↓</span></a>
+        </aside>
+      </div>
+    </section>
+
     <section class="section shell" id="work">
       <div class="section-head reveal">
         <div>
-          <span class="eyebrow" data-ar="أعمال مختارة · 01" data-en="Selected work · 01">أعمال مختارة · 01</span>
+          <span class="eyebrow" data-ar="أعمال مختارة · 02" data-en="Selected work · 02">أعمال مختارة · 02</span>
           <h2 data-ar="أدلة، لا ادعاءات." data-en="Proof, not promises.">أدلة، لا ادعاءات.</h2>
         </div>
         <p class="section-intro" data-ar="كل مشروع بدأ بسؤال حقيقي: لماذا تتأخر التقارير؟ أين يتسرّب الوقت؟ وما الرقم الذي يحتاجه صاحب القرار الآن؟" data-en="Every project started with a real question: Why are reports late? Where is time being lost? Which number does the decision-maker need right now?">كل مشروع بدأ بسؤال حقيقي: لماذا تتأخر التقارير؟ أين يتسرّب الوقت؟ وما الرقم الذي يحتاجه صاحب القرار الآن؟</p>
@@ -829,7 +932,7 @@
       <div class="shell">
         <div class="section-head reveal">
           <div>
-            <span class="eyebrow" data-ar="طريقة العمل · 02" data-en="How I work · 02">طريقة العمل · 02</span>
+            <span class="eyebrow" data-ar="طريقة العمل · 03" data-en="How I work · 03">طريقة العمل · 03</span>
             <h2 data-ar="من سؤال مبهم إلى قرار." data-en="From vague question to decision.">من سؤال مبهم إلى قرار.</h2>
           </div>
           <p class="section-intro" data-ar="لا أبدأ بالرسم البياني. أبدأ بالشخص الذي سيستخدمه، والقرار الذي ينتظره، وما الذي سيصبح أسهل بعد التسليم." data-en="I do not start with a chart. I start with the person using it, the decision they are waiting on, and what becomes easier after delivery.">لا أبدأ بالرسم البياني. أبدأ بالشخص الذي سيستخدمه، والقرار الذي ينتظره، وما الذي سيصبح أسهل بعد التسليم.</p>
@@ -857,7 +960,7 @@
     <section class="section shell" id="experience">
       <div class="experience-layout">
         <aside class="experience-aside reveal">
-          <span class="eyebrow" data-ar="الخبرة · 03" data-en="Experience · 03">الخبرة · 03</span>
+          <span class="eyebrow" data-ar="الخبرة · 04" data-en="Experience · 04">الخبرة · 04</span>
           <h2 data-ar="خبرة على جانبي البيانات." data-en="Experience on both sides of data.">خبرة على جانبي البيانات.</h2>
           <p class="section-intro" data-ar="من المبيعات إلى التقارير ثم هندسة البرمجيات؛ مسار منحني فهماً للرقم، وللنظام الذي ينتجه، وللإنسان الذي يتخذ القرار به." data-en="From sales to reporting to software engineering—a path that taught me the number, the system behind it, and the person making the decision.">من المبيعات إلى التقارير ثم هندسة البرمجيات؛ مسار منحني فهماً للرقم، وللنظام الذي ينتجه، وللإنسان الذي يتخذ القرار به.</p>
           <div class="mini-note" data-ar="التقنية تخدم القرار، لا العكس." data-en="Technology serves the decision—not the other way around.">التقنية تخدم القرار، لا العكس.</div>
@@ -865,7 +968,7 @@
 
         <div class="timeline reveal">
           <article class="role">
-            <div class="role-period" data-ar="2024 — الآن" data-en="2024 — Present">2024 — الآن</div>
+            <div class="role-period" data-ar="2024 — أكتوبر 2025" data-en="2024 — Oct 2025">2024 — أكتوبر 2025</div>
             <h3>Software Engineer</h3>
             <div class="role-company">Continental</div>
             <p data-ar="أتمتة العمليات الداخلية، تحسين أداء الأنظمة، وتطوير حلول برمجية قابلة للتوسع مع احتياجات العمل." data-en="Automating internal workflows, improving system performance, and developing maintainable software solutions that scale with the business.">أتمتة العمليات الداخلية، تحسين أداء الأنظمة، وتطوير حلول برمجية قابلة للتوسع مع احتياجات العمل.</p>
@@ -892,7 +995,7 @@
     <section class="section shell" id="toolbox">
       <div class="section-head reveal">
         <div>
-          <span class="eyebrow" data-ar="صندوق الأدوات · 04" data-en="Toolbox · 04">صندوق الأدوات · 04</span>
+          <span class="eyebrow" data-ar="صندوق الأدوات · 05" data-en="Toolbox · 05">صندوق الأدوات · 05</span>
           <h2 data-ar="أدوات أعرف لماذا أستخدمها." data-en="Tools used with intent.">أدوات أعرف لماذا أستخدمها.</h2>
         </div>
         <p class="section-intro" data-ar="الأداة ليست البطولة؛ النتيجة هي البطولة. هذه هي التقنيات التي أستخدمها للوصول إليها." data-en="The tool is not the hero—the outcome is. These are the technologies I use to get there.">الأداة ليست البطولة؛ النتيجة هي البطولة. هذه هي التقنيات التي أستخدمها للوصول إليها.</p>
@@ -904,6 +1007,8 @@
             <span class="skill">Microsoft Excel</span>
             <span class="skill">Power BI</span>
             <span class="skill">DAX</span>
+            <span class="skill">Power Query</span>
+            <span class="skill">SQL</span>
             <span class="skill">Power Pivot</span>
             <span class="skill">Data Analysis</span>
             <span class="skill">Process Automation</span>
@@ -911,6 +1016,10 @@
             <span class="skill">KPI Tracking</span>
             <span class="skill">Data Cleaning</span>
             <span class="skill">Software Engineering</span>
+            <span class="skill">Solution Selling</span>
+            <span class="skill">Client Management</span>
+            <span class="skill">Requirements Gathering</span>
+            <span class="skill">SaaS / Digital Products</span>
             <span class="skill">Arabic — Native</span>
             <span class="skill">English — Professional</span>
           </div>
@@ -937,9 +1046,9 @@
       <div class="shell">
         <div class="contact-grid">
           <div class="contact-copy reveal">
-            <span class="eyebrow" data-ar="لنبدأ · 05" data-en="Let's talk · 05">لنبدأ · 05</span>
+            <span class="eyebrow" data-ar="لنبدأ · 06" data-en="Let's talk · 06">لنبدأ · 06</span>
             <h2 data-ar="عندك بيانات… خلّنا نخليها تتكلم." data-en="Got data? Let's make it speak.">عندك بيانات… خلّنا نخليها تتكلم.</h2>
-            <p data-ar="متاح لفرص تحليل البيانات والأتمتة، بدوام كامل أو عن بُعد أو كمستقل داخل المملكة العربية السعودية." data-en="Available for data analysis and automation opportunities—full-time, remote, or freelance across Saudi Arabia.">متاح لفرص تحليل البيانات والأتمتة، بدوام كامل أو عن بُعد أو كمستقل داخل المملكة العربية السعودية.</p>
+            <p data-ar="متاح لفرص المبيعات التقنية وتطوير الأعمال وحلول BI / SaaS، خصوصاً في الرياض، وكذلك للعمل عن بُعد داخل المملكة." data-en="Available for technical sales, business development, and BI / SaaS solutions roles—especially in Riyadh, as well as remote opportunities across Saudi Arabia.">متاح لفرص المبيعات التقنية وتطوير الأعمال وحلول BI / SaaS، خصوصاً في الرياض، وكذلك للعمل عن بُعد داخل المملكة.</p>
             <div class="contact-links">
               <a href="mailto:fahad.mf@outlook.com">fahad.mf@outlook.com</a>
               <a href="tel:0556949590">055 694 9590</a>
@@ -997,8 +1106,8 @@
       langButton.textContent = isArabic ? "EN" : "AR";
       langButton.setAttribute("aria-label", isArabic ? "Switch to English" : "التبديل إلى العربية");
       document.title = isArabic
-        ? "فهد المطيري | محلل بيانات ومتخصص أتمتة"
-        : "Fahad Al-Mutairi | Data Analyst & Automation Specialist";
+        ? "فهد المطيري | المبيعات التقنية وتطوير الأعمال"
+        : "Fahad Al-Mutairi | Technical Sales & Business Development";
       localStorage.setItem("portfolio-language", lang);
     }
 
