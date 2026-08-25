@@ -122,7 +122,7 @@
       gap: 9px;
       color: var(--brick);
       font-family: var(--mono);
-      font-size: 12px;
+      font-size: 15px;
       font-weight: 600;
       letter-spacing: .05em;
       text-transform: uppercase;
@@ -369,7 +369,7 @@
       align-items: center;
     }
     .about-copy h2 {
-      margin: 14px 0 24px;
+      margin: 14px 0 40px;
       font-family: var(--display);
       font-size: clamp(34px, 4vw, 58px);
       line-height: 1.12;
@@ -377,7 +377,7 @@
     }
     [dir="rtl"] .about-copy h2 { letter-spacing: -.015em; }
     .about-copy .eyebrow {
-      font-size: 15px;
+      font-size: 17px;
       letter-spacing: 0;
     }
     .about-copy .eyebrow::before { width: 34px; height: 3px; }
@@ -488,6 +488,115 @@
     .project:hover { transform: translateY(-5px) rotate(-.35deg); box-shadow: 12px 14px 0 color-mix(in srgb, var(--mustard) 54%, transparent); }
     .project:nth-child(2n):hover { transform: translateY(18px) rotate(-.35deg); }
     .project[hidden] { display: none; }
+    .project-featured {
+      grid-column: span 12;
+      display: grid;
+      grid-template-columns: .82fr 1.18fr;
+      background: #1d2527;
+      color: #fbf7ef;
+      border-radius: 7px 32px 10px 32px;
+      box-shadow: 11px 13px 0 var(--mustard);
+      transform: none !important;
+    }
+    .project-featured:hover {
+      transform: translateY(-5px) rotate(-.2deg) !important;
+      box-shadow: 15px 17px 0 color-mix(in srgb, var(--mustard) 86%, transparent);
+    }
+    .nawah-visual {
+      position: relative;
+      min-height: 590px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      padding: clamp(24px, 5vw, 52px);
+      background: var(--mustard);
+      color: #1d2527;
+      border-inline-end: 1px solid rgba(0,0,0,.22);
+    }
+    .nawah-visual::before,
+    .nawah-visual::after {
+      content: "";
+      position: absolute;
+      border: 2px solid rgba(29,37,39,.3);
+      border-radius: 50%;
+    }
+    .nawah-visual::before { width: 360px; height: 360px; top: -140px; inset-inline-start: -130px; }
+    .nawah-visual::after { width: 210px; height: 210px; bottom: -88px; inset-inline-end: -74px; }
+    .nawah-window {
+      position: relative;
+      z-index: 2;
+      width: min(100%, 420px);
+      padding: 18px 22px 28px;
+      background: #fbf7ef;
+      border: 1px solid rgba(29,37,39,.38);
+      border-radius: 5px 24px 7px 24px;
+      box-shadow: 10px 12px 0 rgba(29,37,39,.2);
+      transform: rotate(-2deg);
+    }
+    .nawah-window-bar {
+      display: flex;
+      gap: 6px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #d6ccbe;
+    }
+    .nawah-window-bar span { width: 8px; height: 8px; border-radius: 50%; background: #b84432; }
+    .nawah-window-bar span:nth-child(2) { background: #dfa72f; }
+    .nawah-window-bar span:nth-child(3) { background: #5f7054; }
+    .nawah-brand {
+      margin-top: 38px;
+      font-family: var(--display);
+      font-size: clamp(52px, 6vw, 84px);
+      font-weight: 900;
+      line-height: .78;
+      letter-spacing: -.06em;
+    }
+    .nawah-brand em { color: var(--brick); font-style: normal; }
+    .nawah-window p { margin: 28px 0 0; color: #586061; font-size: 13px; }
+    .nawah-window-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 24px; }
+    .nawah-window-tags span {
+      padding: 5px 9px;
+      border: 1px solid #bdb1a2;
+      border-radius: 999px;
+      font-family: var(--mono);
+      font-size: 9px;
+    }
+    .nawah-content { padding: clamp(30px, 5vw, 56px); }
+    .nawah-content .project-meta { color: var(--mustard); }
+    .project-featured .nawah-content h3 {
+      margin: 14px 0 12px;
+      color: #fbf7ef;
+      font-size: clamp(34px, 4vw, 54px);
+    }
+    .project-featured .nawah-content > p { max-width: 700px; color: rgba(251,247,239,.7); font-size: 15px; }
+    .nawah-case-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin: 30px 0;
+    }
+    .nawah-case-point {
+      padding-top: 14px;
+      border-top: 1px solid rgba(251,247,239,.22);
+    }
+    .nawah-case-point small {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--mustard);
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 600;
+    }
+    .nawah-case-point strong { display: block; color: #fbf7ef; font-size: 13px; line-height: 1.75; }
+    .nawah-results { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+    .nawah-results span {
+      padding: 7px 11px;
+      background: rgba(251,247,239,.07);
+      border: 1px dashed rgba(251,247,239,.28);
+      color: rgba(251,247,239,.78);
+      font-family: var(--mono);
+      font-size: 9px;
+    }
+    .nawah-content .button { width: fit-content; background: var(--mustard); color: #1d2527; border-color: var(--mustard); }
     .project-visual {
       position: relative;
       overflow: hidden;
@@ -711,6 +820,8 @@
       .projects { gap: 22px; }
       .project { grid-column: span 12; }
       .project:nth-child(2n), .project:nth-child(2n):hover { transform: none; }
+      .project-featured { grid-template-columns: 1fr; }
+      .nawah-visual { min-height: 430px; border-inline-end: 0; border-bottom: 1px solid rgba(0,0,0,.22); }
       .method-grid { grid-template-columns: 1fr; }
       .method-card { min-height: auto; }
       .method-card:nth-child(2) { transform: none; }
@@ -737,6 +848,7 @@
       .about-copy h2 { font-size: 38px; }
       .toolbox { grid-template-columns: 1fr; }
       .about-facts { grid-template-columns: 1fr; }
+      .nawah-case-grid { grid-template-columns: 1fr; }
       .form-grid { grid-template-columns: 1fr; }
       .field.full { grid-column: auto; }
       .form-actions { align-items: flex-start; flex-direction: column; }
@@ -848,16 +960,58 @@
 
       <div class="filter-row reveal" role="group" aria-label="تصفية المشاريع">
         <button class="filter-btn active" type="button" data-filter="all" data-ar="الكل" data-en="All">الكل</button>
+        <button class="filter-btn" type="button" data-filter="saas">SaaS</button>
         <button class="filter-btn" type="button" data-filter="bi">BI</button>
         <button class="filter-btn" type="button" data-filter="excel">Excel</button>
         <button class="filter-btn" type="button" data-filter="automation" data-ar="أتمتة" data-en="Automation">أتمتة</button>
       </div>
 
       <div class="projects">
+        <article class="project project-featured reveal" data-type="saas">
+          <div class="nawah-visual" aria-label="Nawah Labs Arabic AI SaaS">
+            <div class="nawah-window">
+              <div class="nawah-window-bar"><span></span><span></span><span></span></div>
+              <div class="nawah-brand">Nawah<br><em>Labs</em></div>
+              <p data-ar="منتج ذكاء اصطناعي عربي صُمم وبُني وأُطلق للسوق الخليجي من الفكرة إلى تحقيق الدخل." data-en="An Arabic AI product designed, built, and launched for the Gulf market—from idea to monetization.">منتج ذكاء اصطناعي عربي صُمم وبُني وأُطلق للسوق الخليجي من الفكرة إلى تحقيق الدخل.</p>
+              <div class="nawah-window-tags"><span>ARABIC AI</span><span>SAAS</span><span>GULF MARKET</span></div>
+            </div>
+          </div>
+          <div class="nawah-content">
+            <div class="project-meta"><span>FEATURED CASE STUDY</span><span data-ar="مؤسس · منتج رقمي" data-en="Founder · Digital Product">مؤسس · منتج رقمي</span></div>
+            <h3 data-ar="Nawah Labs — من الفكرة إلى السوق" data-en="Nawah Labs — From Idea to Market">Nawah Labs — من الفكرة إلى السوق</h3>
+            <p data-ar="منصة ذكاء اصطناعي عربية جمعت بين بناء المنتج وفهم المستخدم والتسويق وتحقيق الدخل؛ تجربة عملية كاملة في بيع وشحن منتج SaaS رقمي داخل السوق الخليجي." data-en="An Arabic AI platform combining product building, user understanding, marketing, and monetization—an end-to-end experience selling and shipping a digital SaaS product in the Gulf market.">منصة ذكاء اصطناعي عربية جمعت بين بناء المنتج وفهم المستخدم والتسويق وتحقيق الدخل؛ تجربة عملية كاملة في بيع وشحن منتج SaaS رقمي داخل السوق الخليجي.</p>
+            <div class="nawah-case-grid">
+              <div class="nawah-case-point">
+                <small data-ar="01 · المشكلة" data-en="01 · THE PROBLEM">01 · المشكلة</small>
+                <strong data-ar="الحاجة إلى تجربة ذكاء اصطناعي عربية أقرب للغة المستخدم الخليجي وسياقه، بدل منتج رقمي عام." data-en="The need for an Arabic AI experience closer to Gulf users, their language, and context—not another generic digital product.">الحاجة إلى تجربة ذكاء اصطناعي عربية أقرب للغة المستخدم الخليجي وسياقه، بدل منتج رقمي عام.</strong>
+              </div>
+              <div class="nawah-case-point">
+                <small data-ar="02 · دوري" data-en="02 · MY ROLE">02 · دوري</small>
+                <strong data-ar="قدت المشروع كمؤسس من تحديد الفكرة وبناء المنتج إلى المحتوى وتجربة الاستخدام والإطلاق." data-en="Led the venture as founder—from defining the idea and building the product to content, user experience, and launch.">قدت المشروع كمؤسس من تحديد الفكرة وبناء المنتج إلى المحتوى وتجربة الاستخدام والإطلاق.</strong>
+              </div>
+              <div class="nawah-case-point">
+                <small data-ar="03 · الوصول للسوق" data-en="03 · GO TO MARKET">03 · الوصول للسوق</small>
+                <strong data-ar="بنيت حضور المنتج عبر المحتوى وSEO، وربطت الرسالة التقنية باحتياج واضح لدى المستخدم العربي." data-en="Built market presence through content and SEO, connecting the technical proposition to a clear Arabic-user need.">بنيت حضور المنتج عبر المحتوى وSEO، وربطت الرسالة التقنية باحتياج واضح لدى المستخدم العربي.</strong>
+              </div>
+              <div class="nawah-case-point">
+                <small data-ar="04 · تحقيق الدخل" data-en="04 · MONETIZATION">04 · تحقيق الدخل</small>
+                <strong data-ar="حوّلت المنتج من تجربة تقنية إلى عرض رقمي قابل للبيع، مع مسار واضح لتحقيق الدخل في السوق الخليجي." data-en="Turned the product from a technical experiment into a sellable digital offer with a clear Gulf-market monetization path.">حوّلت المنتج من تجربة تقنية إلى عرض رقمي قابل للبيع، مع مسار واضح لتحقيق الدخل في السوق الخليجي.</strong>
+              </div>
+            </div>
+            <div class="nawah-results" aria-label="نتائج المشروع">
+              <span data-ar="منتج أُطلق فعليًا" data-en="PRODUCT SHIPPED">منتج أُطلق فعليًا</span>
+              <span data-ar="نمو عبر المحتوى وSEO" data-en="SEO-LED GROWTH">نمو عبر المحتوى وSEO</span>
+              <span data-ar="تحقيق دخل مفعّل" data-en="MONETIZATION LIVE">تحقيق دخل مفعّل</span>
+              <span data-ar="خبرة مباشرة بالسوق الخليجي" data-en="GULF MARKET EXPERIENCE">خبرة مباشرة بالسوق الخليجي</span>
+            </div>
+            <a class="button" href="https://nawahlabs.com" target="_blank" rel="noopener"><span data-ar="زيارة Nawah Labs" data-en="Visit Nawah Labs">زيارة Nawah Labs</span><span>↗</span></a>
+          </div>
+        </article>
+
         <article class="project reveal" data-type="bi">
           <div class="project-visual">
             <img src="sales-dashboard.png" loading="lazy" alt="لوحة أداء المبيعات">
-            <span class="project-no">01</span>
+            <span class="project-no">02</span>
           </div>
           <div class="project-body">
             <div class="project-meta"><span>POWER BI</span><span data-ar="مبيعات · 2025" data-en="Sales · 2025">مبيعات · 2025</span></div>
@@ -873,7 +1027,7 @@
         <article class="project reveal" data-type="excel">
           <div class="project-visual">
             <img src="excel-dashboard.png" loading="lazy" alt="لوحة تحليل بيانات Excel">
-            <span class="project-no">02</span>
+            <span class="project-no">03</span>
           </div>
           <div class="project-body">
             <div class="project-meta"><span>EXCEL</span><span data-ar="تحليل · 2025" data-en="Analysis · 2025">تحليل · 2025</span></div>
@@ -890,7 +1044,7 @@
         <article class="project reveal" data-type="automation">
           <div class="project-visual">
             <img src="automation-dashboard.png" loading="lazy" alt="لوحة مراقبة عمليات الأتمتة">
-            <span class="project-no">03</span>
+            <span class="project-no">04</span>
           </div>
           <div class="project-body">
             <div class="project-meta"><span>AUTOMATION</span><span data-ar="عمليات · 2025" data-en="Operations · 2025">عمليات · 2025</span></div>
@@ -906,7 +1060,7 @@
         <article class="project reveal" data-type="bi">
           <div class="project-visual">
             <img src="hr-dashboard.png" loading="lazy" alt="لوحة تحليلات الموارد البشرية">
-            <span class="project-no">04</span>
+            <span class="project-no">05</span>
           </div>
           <div class="project-body">
             <div class="project-meta"><span>HR ANALYTICS</span><span data-ar="أفراد · 2025" data-en="People · 2025">أفراد · 2025</span></div>
@@ -922,7 +1076,7 @@
         <article class="project reveal" data-type="excel">
           <div class="project-visual">
             <img src="cleaning-project.png" loading="lazy" alt="مشروع تنظيف بيانات العملاء">
-            <span class="project-no">05</span>
+            <span class="project-no">06</span>
           </div>
           <div class="project-body">
             <div class="project-meta"><span>DATA QUALITY</span><span data-ar="تنظيف · 2025" data-en="Cleaning · 2025">تنظيف · 2025</span></div>
